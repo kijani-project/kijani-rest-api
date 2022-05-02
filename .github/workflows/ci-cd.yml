@@ -19,7 +19,7 @@ on:
       - '*'
 
 env:
-  IMAGE_NAME: kijani
+  IMAGE_NAME: kijani-rest-api
   DEV_BRANCH: dev
 
 jobs:
