@@ -15,12 +15,12 @@ public class DemoController {
 
   @Autowired DemoRepository demoRepository;
 
-  @GetMapping()
+  @GetMapping("/")
   public String helloWorld() {
     return "kijani is running!";
   }
 
-  @GetMapping()
+  @GetMapping("/demo")
   public List<Demo> getAllDemoMessages() {
     return demoRepository.findAll();
   }
