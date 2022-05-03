@@ -26,6 +26,14 @@ public class Datamapper implements CommandLineRunner {
         product.setLink("www.brochurelibrary.dk/paustian");
         productRepository.save(product);
 
-
+        product = new Product();
+        product.setName("TestProduct");
+        product.setDescription("Some text about the product...");
+        product.setSupplier("Frits Hansen");
+        product.setNumber("ION451551193");
+        product.setCertificate("Some environment certificate");
+        product.setPicture("www.picturelibrary.dk/paustian");
+        product.setLink("www.brochurelibrary.dk/paustian");
+        productRepository.save(product);
     }
 }
