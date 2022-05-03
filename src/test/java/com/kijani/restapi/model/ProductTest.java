@@ -1,9 +1,6 @@
 package com.kijani.restapi.model;
-
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Christopher
@@ -26,7 +23,9 @@ class ProductTest {
         //arrange
         productTest.setProductId(1);
         //Assert
-        assertEquals(productTest.getProductId(), 1);
+        assertEquals(productTest.getProductId(),1);
+
+
     }
 
     @Test
@@ -36,7 +35,7 @@ class ProductTest {
         productTest.setSupplier("Frits Hansen");
         //act
         //assert
-        assertEquals(productTest.getSupplier(), "Frits Hansen");
+        assertEquals(productTest.getSupplier(),"Frits Hansen");
     }
 
     @Test
@@ -46,7 +45,7 @@ class ProductTest {
         //arrange
         productTest.setProductId(1234);
         //Assert
-        assertEquals(productTest.getProductId(), 1234);
+        assertEquals(productTest.getProductId(),1234);
     }
 
     @Test
