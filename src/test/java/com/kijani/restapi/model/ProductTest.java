@@ -32,10 +32,10 @@ class ProductTest {
     void setProductSupplier() {
         //arrange
         Product productTest = new Product();
-        productTest.setProductSupplier("Frits Hansen");
+        productTest.setSupplier("Frits Hansen");
         //act
         //assert
-        assertEquals(productTest.getProductSupplier(),"Frits Hansen");
+        assertEquals(productTest.getSupplier(),"Frits Hansen");
     }
 
     @Test
