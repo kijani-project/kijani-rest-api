@@ -1,66 +1,34 @@
 package com.kijani.restapi.service;
 
 import com.kijani.restapi.model.Product;
-import com.kijani.restapi.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 class ServiceProductTest {
 
-    @Autowired ProductRepository productRepository;
+  @Autowired ProductService productService;
 
-    @Autowired ProductService productService;
+  @Test
+  void testFindProductByName() {
 
-    @Test
-    void findProductByName() {
+    // Arrange
+    Product product = new Product();
+    String productName = "#Test01";
+    String supplierName = "#Test02";
+    product.setName(productName);
+    product.setSupplier(supplierName);
 
-        //Arrange
-        Product product = new Product();
-        product.setName("Testname113");
-        product.setSupplier("Something");
+    // Act
+    productService.create(product);
 
-        //Act
-        productService.create(product);
-        Product product2 = productService.findByName("Testname113");
+    Product productDb = productService.findByName(productName);
 
-        //Assert
-        assertEquals(product2.getSupplier(), "Something");
-        productService.delete(product.getProductId());
-
-    }
-
-    @Test
-    void createProduct() {
-        //Arrange
-        Product testProduct1 = new Product();
-
-        //Act
-        List<Product> createList = productRepository.findAll();
-        productRepository.save(testProduct1);
-
-        //Assert
-        assertEquals(createList.size(), productRepository.findAll().size()-1);
-        productRepository.delete(testProduct1);
-    }
-
-    @Test
-    void deleteProduct() {
-        //Arrange
-        Product testProduct2 = new Product();
-        productRepository.save(testProduct2);
-
-        //Act
-        List<Product> deleteList = productRepository.findAll();
-        productRepository.delete(testProduct2);
-
-        //Assert
-        assertEquals(deleteList.size(), productRepository.findAll().size() +1);
-
-    }
-
+    // Assert
+    assertEquals(productDb.getSupplier(), supplierName);
+    productService.delete(product.getProductId());
+  }
 }
