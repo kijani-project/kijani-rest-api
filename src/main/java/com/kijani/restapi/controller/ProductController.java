@@ -16,9 +16,9 @@ import java.util.Optional;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    @Autowired ProductService productService;
+    //Controller class only receives input from the frontend and dosnt handle business logic.
 
-    @Autowired ProductRepository productRepository;
+    @Autowired ProductService productService;
 
     @GetMapping("")
     public List<Product>findProducts(){
@@ -33,7 +33,7 @@ public class ProductController {
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public void postProduct(@RequestBody Product product) {
-        productRepository.save(product);
+        productService.createProduct(product);
     }
 
 

@@ -14,6 +14,9 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements ProductService {
 
+    //Service layer architecture
+    //Implemented to remove all business logic from the Controller
+
     @Autowired ProductRepository productRepository;
 
     @Override
@@ -33,7 +36,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void createProduct(Product product) {
-
+        productRepository.save(product);
     }
 
     @Override
