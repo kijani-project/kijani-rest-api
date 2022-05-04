@@ -27,7 +27,7 @@ public class Datamapper implements CommandLineRunner {
         productRepository.save(product);
 
         product = new Product();
-        product.setName("TestProduct");
+        product.setName("TestProduct1");
         product.setDescription("Some text about the product...");
         product.setSupplier("Frits Hansen");
         product.setNumber("ION451551193");
