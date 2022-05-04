@@ -1,10 +1,8 @@
 package com.kijani.restapi.model;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * @author Christopher
- */
 class ProductTest {
 
     @Test
@@ -24,8 +22,6 @@ class ProductTest {
         productTest.setProductId(1);
         //Assert
         assertEquals(productTest.getProductId(),1);
-
-
     }
 
     @Test
@@ -47,15 +43,5 @@ class ProductTest {
         //Assert
         assertEquals(productTest.getProductId(),1234);
     }
-
-    @Test
-    void getProductSupplier() {
-        //arrange
-
-        //act
-
-        //Assert
-    }
-
 
 }

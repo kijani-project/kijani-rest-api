@@ -20,23 +20,22 @@ class ServiceProductTest {
     @Autowired ProductService productService;
 
     @Test
-    void getProductName() {
+    void findProductByName() {
+
         //Arrange
         Product product = new Product();
         product.setName("Testname113");
         product.setSupplier("Something");
+
         //Act
         productService.create(product);
         Product product2 = productService.findByName("Testname113");
+
         //Assert
         assertEquals(product2.getSupplier(), "Something");
         productService.delete(product.getProductId());
-        System.out.println(product.getProductId());
 
     }
-
-
-
 
     @Test
     void createProduct() {
@@ -51,7 +50,6 @@ class ServiceProductTest {
         assertEquals(createList.size(), productRepository.findAll().size()-1);
         productRepository.delete(testProduct1);
     }
-
 
     @Test
     void deleteProduct() {
