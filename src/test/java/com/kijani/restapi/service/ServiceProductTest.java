@@ -2,10 +2,6 @@ package com.kijani.restapi.service;
 
 import com.kijani.restapi.model.Product;
 import com.kijani.restapi.repository.ProductRepository;
-import com.kijani.restapi.service.ProductService;
-import com.kijani.restapi.service.impl.ProductServiceImpl;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +10,33 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@SpringBootTest
 class ServiceProductTest {
 
     @Autowired ProductRepository productRepository;
+
+    @Autowired ProductService productService;
+
+    @Test
+    void getProductName() {
+        //Arrange
+        Product product = new Product();
+        product.setName("Testname113");
+        product.setSupplier("Something");
+        //Act
+        productService.create(product);
+        Product product2 = productService.findByName("Testname113");
+        //Assert
+        assertEquals(product2.getSupplier(), "Something");
+        productService.delete(product.getProductId());
+        System.out.println(product.getProductId());
+
+    }
+
+
+
 
     @Test
     void createProduct() {
@@ -29,7 +44,7 @@ class ServiceProductTest {
         Product testProduct1 = new Product();
 
         //Act
-        List createList = productRepository.findAll();
+        List<Product> createList = productRepository.findAll();
         productRepository.save(testProduct1);
 
         //Assert
@@ -45,7 +60,7 @@ class ServiceProductTest {
         productRepository.save(testProduct2);
 
         //Act
-        List deleteList = productRepository.findAll();
+        List<Product> deleteList = productRepository.findAll();
         productRepository.delete(testProduct2);
 
         //Assert

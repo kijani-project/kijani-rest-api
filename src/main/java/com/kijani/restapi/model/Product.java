@@ -2,6 +2,8 @@ package com.kijani.restapi.model;
 
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.activation.DataHandler;
 import javax.persistence.*;
 
 @Entity
@@ -19,5 +21,6 @@ public class Product {
     private String certificate;
     private String picture;
     private String link;
+
 }
 

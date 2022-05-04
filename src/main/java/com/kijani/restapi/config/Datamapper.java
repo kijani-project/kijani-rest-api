@@ -14,8 +14,12 @@ public class Datamapper implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        /*
+
         //Test method for product class
+        //These data should only be loaded first time the program run.
         //This test is running on local database: "kijani"
+
         Product product = new Product();
         product.setName("TestProduct");
         product.setDescription("Some text about the product...");
@@ -35,5 +39,8 @@ public class Datamapper implements CommandLineRunner {
         product.setPicture("www.picturelibrary.dk/paustian");
         product.setLink("www.brochurelibrary.dk/paustian");
         productRepository.save(product);
+
+
+         */
     }
 }

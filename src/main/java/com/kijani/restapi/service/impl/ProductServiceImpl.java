@@ -20,12 +20,12 @@ public class ProductServiceImpl implements ProductService {
     @Autowired ProductRepository productRepository;
 
     @Override
-    public List<Product> readProducts() {
+    public List<Product> findAll() {
         return productRepository.findAll();
     }
 
     @Override
-    public Product readProduct(int id) {
+    public Product findById(int id) {
         Optional<Product> product = productRepository.findById(id);
         if (product.isPresent()) {
             return product.get();
@@ -34,13 +34,25 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+
     @Override
-    public void createProduct(Product product) {
+    public Product findByName(String name) {
+        Optional<Product> product = productRepository.findProductByName(name);
+        if (product.isPresent()) {
+            return product.get();
+        } else {
+            return null;
+        }
+    }
+
+
+    @Override
+    public void create(Product product) {
         productRepository.save(product);
     }
 
     @Override
-    public ResponseEntity<Product> updateProduct(int id, Product product) {
+    public ResponseEntity<Product> update(int id, Product product) {
         Optional<Product> existingProduct = productRepository.findById(id);
         if (existingProduct.isPresent()){
             productRepository.save(product);
@@ -51,7 +63,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ResponseEntity<String> deleteProduct(int id) {
+    public ResponseEntity<String> delete(int id) {
         try {
             productRepository.deleteById(id);
             return new ResponseEntity<>("Deleted: " + id, HttpStatus.OK);

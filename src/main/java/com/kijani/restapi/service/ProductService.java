@@ -7,15 +7,17 @@ import java.util.List;
 
 public interface ProductService {
 
-    List<Product> readProducts();
+    List<Product> findAll();
 
-    Product readProduct(int id);
+    Product findById(int id);
 
-    void createProduct(Product product);
+    Product findByName(String name);
 
-    ResponseEntity<Product> updateProduct(int id, Product product);
+    void create(Product product);
 
-    ResponseEntity<String> deleteProduct(int id);
+    ResponseEntity<Product> update(int id, Product product);
+
+    ResponseEntity<String> delete(int id);
 
 
 }
