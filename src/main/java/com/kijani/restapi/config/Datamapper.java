@@ -9,31 +9,31 @@ import org.springframework.stereotype.Component;
 @Component
 public class Datamapper implements CommandLineRunner {
 
-    @Autowired ProductRepository productRepository;
+  @Autowired ProductRepository productRepository;
 
-    @Override
-    public void run(String... args) throws Exception {
+  @Override
+  public void run(String... args) throws Exception {
 
-        //Test method for product class
-        //This test is running on local database: "kijani"
-        Product product = new Product();
-        product.setName("TestProduct");
-        product.setDescription("Some text about the product...");
-        product.setSupplier("Ide Møbler");
-        product.setNumber("ION451551133");
-        product.setCertificate("Some certificate");
-        product.setPicture("www.picturelibrary.dk/paustian");
-        product.setLink("www.brochurelibrary.dk/paustian");
-        productRepository.save(product);
+    // Test method for product class
+    // This test is running on local database: "kijani"
+    Product product = new Product();
+    product.setName("TestProduct");
+    product.setDescription("Some text about the product...");
+    product.setSupplier("Ide Møbler");
+    product.setNumber("ION451551133");
+    product.setCertificate("Some certificate");
+    product.setPicture("www.picturelibrary.dk/paustian");
+    product.setLink("www.brochurelibrary.dk/paustian");
+    productRepository.save(product);
 
-        product = new Product();
-        product.setName("TestProduct1");
-        product.setDescription("Some text about the product...");
-        product.setSupplier("Frits Hansen");
-        product.setNumber("ION451551193");
-        product.setCertificate("Some environment certificate");
-        product.setPicture("www.picturelibrary.dk/paustian");
-        product.setLink("www.brochurelibrary.dk/paustian");
-        productRepository.save(product);
-    }
+    product = new Product();
+    product.setName("TestProduct1");
+    product.setDescription("Some text about the product...");
+    product.setSupplier("Frits Hansen");
+    product.setNumber("ION451551193");
+    product.setCertificate("Some environment certificate");
+    product.setPicture("www.picturelibrary.dk/paustian");
+    product.setLink("www.brochurelibrary.dk/paustian");
+    productRepository.save(product);
+  }
 }
