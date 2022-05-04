@@ -14,7 +14,7 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    //Service layer architecture
+    //Service layer architecture with all business logic
     //Implemented to remove all business logic from the Controller
 
     @Autowired ProductRepository productRepository;
@@ -48,8 +48,6 @@ public class ProductServiceImpl implements ProductService {
         }else {
             return  new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-
-
     }
 
     @Override
