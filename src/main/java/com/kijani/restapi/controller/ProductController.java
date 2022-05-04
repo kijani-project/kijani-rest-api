@@ -2,6 +2,7 @@ package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Product;
 import com.kijani.restapi.repository.ProductRepository;
+import com.kijani.restapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,21 +16,18 @@ import java.util.Optional;
 @RequestMapping("/api/products")
 public class ProductController {
 
+    @Autowired ProductService productService;
+
     @Autowired ProductRepository productRepository;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<Product>findProducts(){
-        return productRepository.findAll();
+        return productService.readProducts();
     }
 
     @GetMapping("/{id}")
     public Product findProductById(@PathVariable int id) {
-        Optional<Product> product = productRepository.findById(id);
-        if (product.isPresent()) {
-            return product.get();
-        } else {
-            return null;
-        }
+        return productService.readProduct(id);
     }
 
     @PostMapping()
@@ -42,24 +40,13 @@ public class ProductController {
     @PutMapping("/{id}")
     public ResponseEntity<Product> updateProduct(
             @PathVariable Integer id, @RequestBody Product product) {
-        Optional<Product> existingProduct = productRepository.findById(id);
-        if (existingProduct.isPresent()){
-            productRepository.save(product);
-            return  new ResponseEntity<>(product, HttpStatus.OK);
-        }else {
-            return  new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        return productService.updateProduct(id, product);
     }
 
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Integer id) {
-        try {
-            productRepository.deleteById(id);
-            return new ResponseEntity<>("Deleted: " + id, HttpStatus.OK);
-        } catch (Exception err) {
-            return new ResponseEntity<>("Error deleting: " + id, HttpStatus.NO_CONTENT);
-        }
+       return productService.deleteProduct(id);
     }
 
 }
