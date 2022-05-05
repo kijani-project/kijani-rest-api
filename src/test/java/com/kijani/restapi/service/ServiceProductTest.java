@@ -1,11 +1,10 @@
 package com.kijani.restapi.service;
 
 import com.kijani.restapi.model.Product;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 class ServiceProductTest {
@@ -17,10 +16,10 @@ class ServiceProductTest {
 
     // Arrange
     Product product = new Product();
-    String productName = "#Test01";
-    String supplierName = "#Test02";
+    String productName = "Test#01";
+    String productDesc = "Test#02";
     product.setName(productName);
-    product.setSupplier(supplierName);
+    product.setDescription(productDesc);
 
     // Act
     productService.create(product);
@@ -28,7 +27,7 @@ class ServiceProductTest {
     Product productDb = productService.findByName(productName);
 
     // Assert
-    assertEquals(productDb.getSupplier(), supplierName);
+    Assertions.assertEquals(productDb.getDescription(), productDesc);
     productService.delete(product.getProductId());
   }
 }
