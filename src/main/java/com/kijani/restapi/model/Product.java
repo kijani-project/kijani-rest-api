@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Setter
@@ -14,15 +15,23 @@ public class Product {
   @Column(name = "product_id", nullable = false)
   private Integer productId;
 
+  private Integer item_number;
+
   private String name;
 
   private String description;
 
-  private String supplier;
+  private String sub_category_id;
 
-  private String number;
+  private Integer supplier_id;
 
-  private String certificate;
+  private String ecolabels;
+
+  private String co2_mesurability;
+
+  private String tests;
+
+  private Date created;
 
   private String picture;
 

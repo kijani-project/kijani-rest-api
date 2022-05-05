@@ -1,6 +1,11 @@
 package com.kijani.restapi.config;
 
+import com.kijani.restapi.model.Product;
+import com.kijani.restapi.model.Supplier;
+import com.kijani.restapi.model.User;
 import com.kijani.restapi.repository.ProductRepository;
+import com.kijani.restapi.repository.SupplierRepository;
+import com.kijani.restapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -9,6 +14,8 @@ import org.springframework.stereotype.Component;
 public class Datamapper implements CommandLineRunner {
 
   @Autowired ProductRepository productRepository;
+  @Autowired SupplierRepository supplierRepository;
+  @Autowired UserRepository userRepository;
 
   @Override
   public void run(String... args) throws Exception {
@@ -38,5 +45,9 @@ public class Datamapper implements CommandLineRunner {
      product.setLink("www.brochurelibrary.dk/paustian");
      productRepository.save(product);
     */
+    User user = new User();
+    user.setName("test");
+    userRepository.save(user);
+
   }
 }
