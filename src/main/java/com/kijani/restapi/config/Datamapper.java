@@ -19,7 +19,7 @@ public class Datamapper implements CommandLineRunner {
      //These data should only be loaded first time the program run.
      //This test is running on local database: "kijani"
 
-     Product product = new Product();
+    /* Product product = new Product();
      product.setName("Tradition SK1 In Between Chair");
      product.setDescription("Chair smoked oiled oak wood");
      product.setSupplier("Målbar");
@@ -59,9 +59,7 @@ public class Datamapper implements CommandLineRunner {
      product.setLink("https://brochurelibrary.dk/paustian");
      productRepository.save(product);
 
-
-
-
+*/
 
 
   }
