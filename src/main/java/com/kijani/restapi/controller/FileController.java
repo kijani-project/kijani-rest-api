@@ -2,7 +2,6 @@ package com.kijani.restapi.controller;
 
 import com.kijani.restapi.service.FileService;
 import org.springframework.core.io.Resource;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +16,7 @@ import static org.springframework.http.MediaType.parseMediaType;
 /**
  * @author Christopher
  */
-@Log4j2
+
 @RestController
 @RequestMapping("/api/v1/file")
 public class FileController {
@@ -44,7 +43,7 @@ public class FileController {
         try {
             contentType = request.getServletContext().getMimeType(fileResource.getFile().getAbsolutePath());
         } catch (IOException e) {
-            log.error("Could not determine file type.");
+            throw new RuntimeException("Could not determine file type of  " + filename, e);
         }
 
         if (contentType == null) {

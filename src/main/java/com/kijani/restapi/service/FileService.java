@@ -1,7 +1,6 @@
 package com.kijani.restapi.service;
 
 import com.kijani.restapi.model.FileStorageProperties;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.UrlResource;
@@ -21,7 +20,7 @@ import static java.nio.file.Path.of;
 /**
  * @author Christopher
  */
-@Log4j2
+
 @Service
 public class FileService {
     private final Path fileStorageLocation;
@@ -34,7 +33,7 @@ public class FileService {
             //creates directory if directory already exist, it will not throw exception
             Files.createDirectories(fileStorageLocation);
         } catch (IOException e) {
-            log.error("Could not create the directory where the uploaded files will be stored.", e);
+            throw new RuntimeException("Could not create the directory where the uploaded files will be stored. " +  e);
         }
     }
 
