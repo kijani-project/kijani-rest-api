@@ -15,19 +15,19 @@ public class Product {
   @Column(name = "product_id", nullable = false)
   private Integer productId;
 
-  private Integer item_number;
+  private Integer itemNumber;
 
   private String name;
 
   private String description;
 
-  private String sub_category_id;
+  private String subCategoryId;
 
-  private Integer supplier_id;
+  private Integer supplierId;
 
   private String ecolabels;
 
-  private String co2_mesurability;
+  private String co2Mesurability;
 
   private String tests;
 

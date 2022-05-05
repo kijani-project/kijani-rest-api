@@ -1,6 +1,5 @@
 package com.kijani.restapi.repository;
 
-import com.kijani.restapi.model.Supplier;
 import com.kijani.restapi.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
