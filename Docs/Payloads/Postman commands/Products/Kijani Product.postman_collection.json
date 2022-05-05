@@ -6,60 +6,40 @@
 	},
 	"item": [
 		{
-			"name": "Get all products",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get product by id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/products/{id}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"products",
-						"{id}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Post product",
+			"name": "Create product",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"productId\": 3,\n    \"name\": \"TestPost\",\n    \"description\": \"Some text about the product...\",\n    \"supplier\": \"Ide Møbler\",\n    \"number\": \"ION451551133\",\n    \"certificate\": \"Some certificate\",\n    \"picture\": \"www.picturelibrary.dk/paustian\",\n    \"link\": \"www.brochurelibrary.dk/paustian\"\n}",
+					"raw": "     {\n        \"itemNumber\": 12345678,\n        \"name\": \"In Between Chair\",\n        \"description\": \"SK1 Chair smoked oiled oak wood\",\n        \"subCategoryId\":\"Stol\",\n        \"supplierId\": 324235,\n        \"ecolabels\": \"EU Eco Label\",\n        \"co2Mesurability\": \"Numbers currently under verification by Målbar\",\n        \"tests\": \"EN 1022:2005 and EN 16139:2013.Test severity L2.\",\n        \"picture\": \"https://picturelibrary.dk/paustian\",\n        \"link\": \"https://brochurelibrary.dk/paustian\"\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
+				"url": {
+					"raw": "http://20.234.221.47/products",
+					"protocol": "http",
+					"host": [
+						"20",
+						"234",
+						"221",
+						"47"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read all products",
+			"request": {
+				"method": "GET",
+				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/api/products",
 					"protocol": "http",
@@ -76,13 +56,35 @@
 			"response": []
 		},
 		{
-			"name": "Put product",
+			"name": "Read product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.234.221.47/products/1",
+					"protocol": "http",
+					"host": [
+						"20",
+						"234",
+						"221",
+						"47"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"productId\": 1,\n    \"name\": \"TestProductNew\",\n    \"description\": \"Some text about the product...\",\n    \"supplier\": \"Ide Møbler\",\n    \"number\": \"ION451551133\",\n    \"certificate\": \"Some certificate\",\n    \"picture\": \"www.picturelibrary.dk/paustian\",\n    \"link\": \"www.brochurelibrary.dk/paustian\"\n}",
+					"raw": "  {\n        \"productId\": 2,\n        \"itemNumber\": 12345678,\n        \"name\": \"In Between Chair 2\",\n        \"description\": \"SK1 Chair smoked oiled oak wood\",\n        \"subCategoryId\":\"Stol\",\n        \"supplierId\": 234567,\n        \"ecolabels\": \"EU Eco Label\",\n        \"co2Mesurability\": \"Numbers currently under verification by Målbar\",\n        \"tests\": \"EN 1022:2005 and EN 16139:2013.Test severity L2.\",\n        \"picture\": \"https://picturelibrary.dk/paustian\",\n        \"link\": \"https://brochurelibrary.dk/paustian\"\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -90,16 +92,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/products/1",
+					"raw": "http://20.234.221.47/products/2",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"20",
+						"234",
+						"221",
+						"47"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"products",
-						"1"
+						"2"
 					]
 				}
 			},
