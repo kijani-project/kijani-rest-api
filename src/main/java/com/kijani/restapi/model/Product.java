@@ -15,6 +15,10 @@ public class Product {
   @Column(name = "product_id", nullable = false)
   private Integer productId;
 
+  @ManyToOne
+  @JoinColumn(name = "supplier_id")
+  private Supplier supplier;
+
   private Integer itemNumber;
 
   private String name;
@@ -22,8 +26,6 @@ public class Product {
   private String description;
 
   private String subCategoryId;
-
-  private Integer supplierId;
 
   private String ecolabels;
 
