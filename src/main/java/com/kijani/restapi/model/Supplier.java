@@ -10,6 +10,7 @@ import java.util.List;
  * @author roed
  */
 @Entity
+@Table(name = "Supplier")
 @Setter
 @Getter
 public class Supplier {
@@ -29,4 +30,8 @@ public class Supplier {
   private String ecolabels;
 
   private Integer roleId;
+
+  @ManyToOne
+  @JoinColumn(name = "product_id")
+  private Product product;
 }
