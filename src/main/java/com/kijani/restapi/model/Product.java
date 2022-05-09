@@ -27,8 +27,6 @@ public class Product {
 
   private String subCategoryId;
 
-  private String ecolabels;
-
   @Column(name = "co2_mesurability")
   private String co2Mesurability;
 
