@@ -4,6 +4,7 @@ import com.kijani.restapi.model.Product;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProductService {
 
@@ -13,7 +14,9 @@ public interface ProductService {
 
   Product findByName(String name);
 
-  void create(Product product);
+  Product findByNameAndDescription(String name, String description);
+
+  Product create(Product product);
 
   ResponseEntity<Product> update(int id, Product product);
 
