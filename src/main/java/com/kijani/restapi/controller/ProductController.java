@@ -23,19 +23,10 @@ public class ProductController {
     return productService.findAll();
   }
 
-
-  @GetMapping("/{id}")
-  public List<Product> findProductsBySupplierId(@PathVariable int id) {
-    return productRepository.findProductBySupplierSupplierId(id);
-  }
-
-/*
   @GetMapping("/{id}")
   public Product findProductById(@PathVariable int id) {
     return productService.findById(id);
   }
-
- */
 
   @PostMapping()
   @ResponseStatus(HttpStatus.CREATED)
