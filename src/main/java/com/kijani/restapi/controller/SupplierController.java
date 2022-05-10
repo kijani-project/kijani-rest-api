@@ -1,14 +1,14 @@
 package com.kijani.restapi.controller;
 
+import com.kijani.restapi.model.Product;
 import com.kijani.restapi.model.Supplier;
-import com.kijani.restapi.repository.SupplierRepository;
+import com.kijani.restapi.service.impl.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @CrossOrigin
@@ -16,10 +16,20 @@ import java.util.List;
 public class SupplierController {
 
   @Autowired
-  SupplierRepository supplierRepository;
+  SupplierService supplierService;
+
 
   @GetMapping()
   public List<Supplier> findAllSuppliers() {
-    return supplierRepository.findAll();
+    return supplierService.getSuppliers();
+  }
+
+  @GetMapping("/{id}")
+  public Supplier getSupplierById(@PathVariable int id) {
+    Supplier supplier = supplierService.getById(id);
+    //ArrayList<Product> products = (ArrayList<Product>) supplierService.getProducts(id);
+    //supplier.setProducts( (Set<Product>) products);
+    System.out.println(supplier.getProducts());
+    return supplier;
   }
 }

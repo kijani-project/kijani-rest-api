@@ -1,3 +1,4 @@
+DROP DATABASE if exists kijani;
 CREATE DATABASE IF NOT EXISTS kijani;
 
 USE kijani;
