@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -21,9 +20,7 @@ public class ProductController {
 
   @GetMapping()
   public List<Product> findAllProducts() {
-    List<Product> obj = productService.findAll();
-    System.out.println(obj);
-    return obj;
+    return productService.findAll();
   }
 
 
