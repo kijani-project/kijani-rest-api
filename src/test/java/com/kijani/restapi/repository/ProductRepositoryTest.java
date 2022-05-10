@@ -9,13 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class ProductRepositoryTest {
-  //CRUD tests
+  // CRUD tests
 
-  @Autowired
-  ProductService productService;
+  @Autowired ProductService productService;
 
-
-  //Create
+  // Create
   @Test
   void testCreateProduct() {
 
@@ -34,12 +32,11 @@ class ProductRepositoryTest {
     // Assert
     Assertions.assertEquals(productDb.getDescription(), productDesc);
 
-    //Teardown
+    // Teardown
     productService.delete(product.getProductId());
   }
 
-
-  //Read
+  // Read
   @Test
   void testFindProductByName() {
 
@@ -53,18 +50,19 @@ class ProductRepositoryTest {
     // Act
     productService.create(product);
 
-    Product productDb = productService.findByNameAndDescription(product.getName(), product.getDescription());
+    Product productDb =
+        productService.findByNameAndDescription(product.getName(), product.getDescription());
 
     // Assert
     Assertions.assertEquals(productDb.getDescription(), productDesc);
 
-    //Teardown
+    // Teardown
     productService.delete(product.getProductId());
   }
 
-  //Update
+  // Update
   @Test
-  void testUpdateProductName(){
+  void testUpdateProductName() {
 
     // Arrange
     Product product = new Product();
@@ -76,16 +74,20 @@ class ProductRepositoryTest {
     product.setName("new name");
     productService.update(product.getProductId(), product);
 
-    //Assert
-    Assertions.assertEquals(product.getName(), productService.findByNameAndDescription(product.getName(), product.getDescription()).getName());
+    // Assert
+    Assertions.assertEquals(
+        product.getName(),
+        productService
+            .findByNameAndDescription(product.getName(), product.getDescription())
+            .getName());
 
-    //Teardown
+    // Teardown
     productService.delete(product.getProductId());
   }
 
-  //Delete
+  // Delete
   @Test
-  void testDeleteProduct(){
+  void testDeleteProduct() {
     // Arrange
     Product product = new Product();
     String productName = "Test#01";
@@ -95,7 +97,7 @@ class ProductRepositoryTest {
     // Act
     productService.delete(product.getProductId());
 
-    //Assert
+    // Assert
     Assertions.assertNull(productService.findByName(product.getName()));
   }
 }

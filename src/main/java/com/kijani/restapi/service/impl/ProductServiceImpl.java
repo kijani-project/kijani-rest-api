@@ -33,18 +33,21 @@ public class ProductServiceImpl implements ProductService {
     return product.orElse(null);
   }
 
-  public Product findByNameAndDescription(String name, String description){
-    Optional<Product> product = productRepository.findProductByNameAndAndDescription(name, description);
+  public Product findByNameAndDescription(String name, String description) {
+    Optional<Product> product =
+        productRepository.findProductByNameAndAndDescription(name, description);
     return product.orElse(null);
   }
 
   @Override
   public Product create(Product product) {
-   productRepository.save(product);
-    //Optional<Product> product1 = productRepository.findProductByName(product.getName());
-    Optional<Product> product1 = productRepository.findProductByNameAndAndDescription(product.getName(), product.getDescription());
+    productRepository.save(product);
+    // Optional<Product> product1 = productRepository.findProductByName(product.getName());
+    Optional<Product> product1 =
+        productRepository.findProductByNameAndAndDescription(
+            product.getName(), product.getDescription());
     return product1.orElse(null);
-   //return product1.orElse(null);
+    // return product1.orElse(null);
   }
 
   @Override

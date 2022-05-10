@@ -8,7 +8,6 @@ import javax.persistence.*;
 /**
  * @author roed
  */
-
 @Entity
 @Setter
 @Getter
@@ -24,8 +23,8 @@ public class Role {
 
   private String supplier;
 
-  //@OneToMany
-  //@JoinColumn(name = "user_role_id")
-  //private Integer userRoleId;
+  // @OneToMany
+  // @JoinColumn(name = "user_role_id")
+  // private Integer userRoleId;
 
 }

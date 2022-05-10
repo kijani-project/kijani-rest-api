@@ -3,7 +3,6 @@ package com.kijani.restapi.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Singular;
 
 import javax.persistence.*;
 import java.util.*;
@@ -14,14 +13,13 @@ import java.util.*;
 public class Product {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name="product_id")
+  @Column(name = "product_id")
   private Integer productId;
 
   @ManyToOne
   @JsonBackReference
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
-
 
   /*@Singular
   @ManyToMany(cascade = CascadeType.MERGE)
@@ -50,6 +48,4 @@ public class Product {
   private String picture;
 
   private String link;
-
-
 }
