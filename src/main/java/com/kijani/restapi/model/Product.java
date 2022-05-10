@@ -17,18 +17,10 @@ public class Product {
   @Column(name="product_id")
   private Integer productId;
 
-  public Product() {
-  }
-
   @ManyToOne
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
-  /*
-  @ManyToMany
-  Set<Ecolabel> Ecolabel;
-
-   */
 
   @Singular
   @ManyToMany(cascade = CascadeType.MERGE)
