@@ -22,6 +22,7 @@ public class DataMapper implements CommandLineRunner {
   public void run(String... args) throws Exception {
 
     // Test data for the database..
+
     Supplier supplier = new Supplier();
     supplier.setName("Test supplier 1");
     supplierRepository.save(supplier);
