@@ -2,8 +2,8 @@ package com.kijani.restapi.model;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Setter
@@ -15,9 +15,18 @@ public class Ecolabel {
     @Column(name = "ecolabel_id", nullable = false)
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
+    public Ecolabel() {
+    }
+
+    /*
+    @ManyToMany
+    @JsonBackReference
+    private Set<Product> products;
+
+     */
+
+    @ManyToMany(mappedBy = "ecolabels")
+    private Set<Product> products;
 
     private String type;
 

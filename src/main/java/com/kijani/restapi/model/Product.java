@@ -1,13 +1,12 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.Singular;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Setter
@@ -15,12 +14,28 @@ import java.util.List;
 public class Product {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "product_id", nullable = false)
+  @Column(name="product_id")
   private Integer productId;
+
+  public Product() {
+  }
 
   @ManyToOne
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
+
+  /*
+  @ManyToMany
+  Set<Ecolabel> Ecolabel;
+
+   */
+
+  @Singular
+  @ManyToMany(cascade = CascadeType.MERGE)
+  @JoinTable(name = "product_ecolabel",
+          joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
+          inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})
+  private Set<Ecolabel> ecolabels ;
 
   private Integer itemNumber;
 

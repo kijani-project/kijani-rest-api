@@ -19,7 +19,7 @@ public class SupplierController {
   SupplierRepository supplierRepository;
 
   @GetMapping()
-  public List<Supplier> findAllProducts() {
+  public List<Supplier> findAllSuppliers() {
     return supplierRepository.findAll();
   }
 }

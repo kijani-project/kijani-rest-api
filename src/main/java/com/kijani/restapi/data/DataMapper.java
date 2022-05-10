@@ -17,13 +17,14 @@ public class DataMapper implements CommandLineRunner {
 
   public void run(String... args) throws Exception {
 
-    Product product = new Product();
-    product.setName("TEST2");
-    productRepository.save(product);
 
-    Supplier supplier = new Supplier();
-    supplier.setName("TEST");
-    supplier.setProduct(product);
-    supplierRepository.save(supplier);
+
+
+
+
+
+
+
+
   }
 }

@@ -1,23 +1,31 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 /**
  * @author roed
  */
 @Entity
-@Table(name = "Supplier")
 @Setter
 @Getter
 public class Supplier {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "supplier_id", nullable = false)
+  @Column(name="supplier_id")
   private Integer supplierId;
+
+  @OneToMany()
+  @JsonBackReference
+  @JoinColumn(name="supplier_id")
+  private Set<Product> products;
+
+  public Supplier() {
+  }
 
   private String name;
 
@@ -31,7 +39,5 @@ public class Supplier {
 
   private Integer roleId;
 
-  @ManyToOne
-  @JoinColumn(name = "product_id")
-  private Product product;
+
 }
