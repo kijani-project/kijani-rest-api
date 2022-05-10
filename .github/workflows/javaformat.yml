@@ -13,7 +13,8 @@ jobs:
   formatting:
     runs-on: ubuntu-latest
 
-    permissions: write-all
+    permissions:
+      pull-requests: write
 
     steps:
       - if: github.event_name != 'pull_request'
