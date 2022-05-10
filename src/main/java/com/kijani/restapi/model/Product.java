@@ -5,7 +5,8 @@ import lombok.Setter;
 import lombok.Singular;
 
 import javax.persistence.*;
-import java.util.*;
+import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Setter
@@ -13,20 +14,22 @@ import java.util.*;
 public class Product {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name="product_id")
+  @Column(name = "product_id")
   private Integer productId;
 
   @ManyToOne
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
-
   @Singular
   @ManyToMany(cascade = CascadeType.MERGE)
-  @JoinTable(name = "product_ecolabel",
-          joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
-          inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})
-  private Set<Ecolabel> ecolabels ;
+  @JoinTable(
+      name = "product_ecolabel",
+      joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
+      inverseJoinColumns = {
+        @JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")
+      })
+  private Set<Ecolabel> ecolabels;
 
   private Integer itemNumber;
 
@@ -46,6 +49,4 @@ public class Product {
   private String picture;
 
   private String link;
-
-
 }

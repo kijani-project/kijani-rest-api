@@ -15,8 +15,7 @@ import java.util.List;
 @RequestMapping("/suppliers")
 public class SupplierController {
 
-  @Autowired
-  SupplierRepository supplierRepository;
+  @Autowired SupplierRepository supplierRepository;
 
   @GetMapping()
   public List<Supplier> findAllSuppliers() {

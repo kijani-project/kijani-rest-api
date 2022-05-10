@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,26 +24,25 @@ public class DataMapper implements CommandLineRunner {
 
   public void run(String... args) throws Exception {
 
-      //Test data for the database..
+    // Test data for the database..
 
-      Ecolabel ecolabel = new Ecolabel();
-      ecolabel.setType("Ecolabel");
-      ecolabelRepository.save(ecolabel);
-      Set<Ecolabel> ecolabels = new HashSet<>();
-      ecolabels.add(ecolabel);
+    Ecolabel ecolabel = new Ecolabel();
+    ecolabel.setType("Ecolabel");
+    ecolabelRepository.save(ecolabel);
+    Set<Ecolabel> ecolabels = new HashSet<>();
+    ecolabels.add(ecolabel);
 
-      Product product = new Product();
-      product.setName("Test product");
-      product.setEcolabels(ecolabels);
-      productRepository.save(product);
+    Product product = new Product();
+    product.setName("Test product");
+    product.setEcolabels(ecolabels);
+    productRepository.save(product);
 
-      Set<Product> products = new HashSet<>();
-      products.add(product);
+    Set<Product> products = new HashSet<>();
+    products.add(product);
 
-      Supplier supplier = new Supplier();
-      supplier.setName("TEstData supplier");
-      supplier.setProducts(products);
-      supplierRepository.save(supplier);
-
+    Supplier supplier = new Supplier();
+    supplier.setName("TEstData supplier");
+    supplier.setProducts(products);
+    supplierRepository.save(supplier);
   }
 }
