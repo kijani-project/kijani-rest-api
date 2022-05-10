@@ -20,6 +20,5 @@ public class Ecolabel {
   @JoinColumn(name = "product_id")
   private Product product;
 
-    private String type;
-
+  private String type;
 }
