@@ -2,9 +2,10 @@ package com.kijani.restapi.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.Singular;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 @Entity
 @Setter
@@ -12,8 +13,20 @@ import java.util.Date;
 public class Product {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "product_id", nullable = false)
+  @Column(name="product_id")
   private Integer productId;
+
+  @ManyToOne
+  @JoinColumn(name = "supplier_id")
+  private Supplier supplier;
+
+
+  @Singular
+  @ManyToMany(cascade = CascadeType.MERGE)
+  @JoinTable(name = "product_ecolabel",
+          joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
+          inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})
+  private Set<Ecolabel> ecolabels ;
 
   private Integer itemNumber;
 
@@ -22,10 +35,6 @@ public class Product {
   private String description;
 
   private String subCategoryId;
-
-  private Integer supplierId;
-
-  private String ecolabels;
 
   @Column(name = "co2_mesurability")
   private String co2Mesurability;
@@ -37,4 +46,6 @@ public class Product {
   private String picture;
 
   private String link;
+
+
 }
