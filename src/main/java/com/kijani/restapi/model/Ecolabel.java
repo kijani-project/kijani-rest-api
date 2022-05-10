@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
@@ -18,14 +19,8 @@ public class Ecolabel {
     public Ecolabel() {
     }
 
-    /*
-    @ManyToMany
-    @JsonBackReference
-    private Set<Product> products;
-
-     */
-
     @ManyToMany(mappedBy = "ecolabels")
+    @JsonBackReference
     private Set<Product> products;
 
     private String type;
