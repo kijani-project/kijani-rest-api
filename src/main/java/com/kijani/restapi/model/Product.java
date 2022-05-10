@@ -27,6 +27,7 @@ public class Product {
           joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
           inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})*/
   @OneToMany
+  @JsonBackReference
   @JoinColumn(name = "product_id")
   private List<Ecolabel> ecolabels;
 

@@ -17,7 +17,7 @@ public class Supplier {
   @Column(name = "supplier_id")
   private Integer supplierId;
 
-  @OneToMany()
+  @OneToMany
   @JoinColumn(name = "supplier_id")
   private List<Product> products;
 
