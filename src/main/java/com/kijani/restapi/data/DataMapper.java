@@ -27,24 +27,43 @@ public class DataMapper implements CommandLineRunner {
 
       //Test data for the database..
 
-      Ecolabel ecolabel = new Ecolabel();
-      ecolabel.setType("Ecolabel");
-      ecolabelRepository.save(ecolabel);
-      Set<Ecolabel> ecolabels = new HashSet<>();
-      ecolabels.add(ecolabel);
-
-      Product product = new Product();
-      product.setName("Test product");
-      product.setEcolabels(ecolabels);
-      productRepository.save(product);
-
-      Set<Product> products = new HashSet<>();
-      products.add(product);
-
       Supplier supplier = new Supplier();
-      supplier.setName("TEstData supplier");
-      supplier.setProducts(products);
+      supplier.setName("Test supplier 1");
       supplierRepository.save(supplier);
+
+      Product product1 = new Product();
+      product1.setName("Test product 1");
+      product1.setDescription("Dette er en sofa");
+      product1.setSupplier(supplier);
+      productRepository.save(product1);
+
+      Product product2 = new Product();
+      product2.setName("Test product 2");
+      product2.setDescription("Dette er en Stol");
+      product2.setSupplier(supplier);
+      productRepository.save(product2);
+
+
+      /*
+      Label label1 = new Label();
+      label1.setName("Label 1 test");
+      label1.setType("Miljø A-klasse");
+      label1.setProduzt(produzt1);
+      labelRepository.save(label1);
+
+      Label label2 = new Label();
+      label2.setName("Label 2 test");
+      label2.setType("Miljø B-klasse");
+      label2.setProduzt(produzt1);
+      labelRepository.save(label2);
+
+      Label label3 = new Label();
+      label3.setName("Label 3 test");
+      label3.setType("Miljø C-klasse");
+      label3.setProduzt(produzt2);
+      labelRepository.save(label3);
+
+       */
 
   }
 }
