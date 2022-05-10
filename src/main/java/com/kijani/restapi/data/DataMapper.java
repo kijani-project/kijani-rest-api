@@ -26,25 +26,30 @@ public class DataMapper implements CommandLineRunner {
   public void run(String... args) throws Exception {
 
       //Test data for the database..
+    Supplier supplier = new Supplier();
+    supplier.setName("Test supplier 1");
+    supplierRepository.save(supplier);
 
-      Ecolabel ecolabel = new Ecolabel();
-      ecolabel.setType("Ecolabel");
-      ecolabelRepository.save(ecolabel);
-      Set<Ecolabel> ecolabels = new HashSet<>();
-      ecolabels.add(ecolabel);
+    Product product1 = new Product();
+    product1.setName("Test product 1");
+    product1.setDescription("Dette er en sofa");
+    product1.setSupplier(supplier);
+    productRepository.save(product1);
 
-      Product product = new Product();
-      product.setName("Test product");
-      product.setEcolabels(ecolabels);
-      productRepository.save(product);
+    Product product2 = new Product();
+    product2.setName("Test product 2");
+    product2.setDescription("Dette er en Stol");
+    product2.setSupplier(supplier);
+    productRepository.save(product2);
 
-      Set<Product> products = new HashSet<>();
-      products.add(product);
+    Ecolabel ecolabel1 = new Ecolabel();
+    ecolabel1.setType("Miljø A-klasse");
+    ecolabel1.setProduct(product1);
+    ecolabelRepository.save(ecolabel1);
 
-      Supplier supplier = new Supplier();
-      supplier.setName("TEstData supplier");
-      supplier.setProducts(products);
-      supplierRepository.save(supplier);
-
+    Ecolabel ecolabel2 = new Ecolabel();
+    ecolabel2.setType("Miljø B-klasse");
+    ecolabel2.setProduct(product1);
+    ecolabelRepository.save(ecolabel2);
   }
 }

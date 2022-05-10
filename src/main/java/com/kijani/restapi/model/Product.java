@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.Singular;
@@ -17,18 +18,21 @@ public class Product {
   private Integer productId;
 
   @ManyToOne
+  @JsonBackReference
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
 
-  @Singular
+  /*@Singular
   @ManyToMany(cascade = CascadeType.MERGE)
   @JoinTable(name = "product_ecolabel",
           joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
-          inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})
-  private Set<Ecolabel> ecolabels ;
+          inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})*/
+  @OneToMany
+  @JoinColumn(name = "product_id")
+  private List<Ecolabel> ecolabels;
 
-  private Integer itemNumber;
+  private String itemNumber;
 
   private String name;
 
