@@ -19,9 +19,10 @@ public class Ecolabel {
     public Ecolabel() {
     }
 
-    @ManyToMany(mappedBy = "ecolabels")
+    @ManyToOne
     @JsonBackReference
-    private Set<Product> products;
+    @JoinColumn(name ="product_id")
+    private Product product;
 
     private String type;
 

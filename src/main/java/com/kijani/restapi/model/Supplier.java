@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -18,13 +19,9 @@ public class Supplier {
   @Column(name="supplier_id")
   private Integer supplierId;
 
-  @OneToMany()
-  @JsonBackReference
-  @JoinColumn(name="supplier_id")
-  private Set<Product> products;
-
-  public Supplier() {
-  }
+  @OneToMany
+  @JoinColumn(name = "supplier_id")
+  private List<Product> products;
 
   private String name;
 
