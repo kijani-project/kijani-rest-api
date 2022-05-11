@@ -1,8 +1,6 @@
 package com.kijani.restapi.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -45,7 +43,7 @@ public class Product {
   @ManyToMany
   // Måske værd at bruge JsonIgnore i stedet for JsonBackRefrence
   // @JsonIgnore
-  //@JsonBackReference(value = "SetProductCategory")
+  // @JsonBackReference(value = "SetProductCategory")
   @JsonBackReference
   @JoinTable(
       name = "product_category",

@@ -20,8 +20,7 @@ public class ProductServiceImpl implements ProductService {
   @Autowired ProductRepository productRepository;
   @Autowired SupplierRepository supplierRepository;
 
-  @Autowired
-  SubCategoryRepository subCategoryRepository;
+  @Autowired SubCategoryRepository subCategoryRepository;
 
   @Override
   public List<Product> findProductsBySupplierId(int supplierId) {
@@ -82,7 +81,7 @@ public class ProductServiceImpl implements ProductService {
     }
   }
 
-  //TODO TEST METODE
+  // TODO TEST METODE
   @Override
   public List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId) {
     System.out.println("Im adding");
