@@ -1,7 +1,6 @@
 package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Product;
-import com.kijani.restapi.repository.ProductRepository;
 import com.kijani.restapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,32 +16,32 @@ public class ProductController {
 
   @Autowired ProductService productService;
 
-  @Autowired ProductRepository productRepository;
-
-  @GetMapping()
-  public List<Product> findAllProducts() {
-    return productService.findAll();
+  // TODO This method is redundant, because you get products when you fetch supplierBySupplierID
+  @GetMapping("/suppliers/{supplierId}")
+  public List<Product> findProductsBySupplierId(@PathVariable int supplierId) {
+    return productService.findProductsBySupplierId(supplierId);
   }
 
-  @GetMapping("/{id}")
-  public Product findProductById(@PathVariable int id) {
-    return productService.findById(id);
+  @GetMapping("/{productId}")
+  public Product findProductById(@PathVariable int productId) {
+    return productService.findById(productId);
   }
 
-  @PostMapping()
+  @PostMapping("/{supplierId}")
   @ResponseStatus(HttpStatus.CREATED)
-  public void createProduct(@RequestBody Product product) {
-    productService.create(product);
+  public Product createProduct(@RequestBody Product product, @PathVariable int supplierId) {
+    return productService.create(product, supplierId);
   }
 
-  @PutMapping("/{id}")
+  @PutMapping("/{productId}")
   public ResponseEntity<Product> updateProduct(
-      @PathVariable Integer id, @RequestBody Product product) {
-    return productService.update(id, product);
+      @PathVariable int productId, @RequestBody Product product) {
+    product.setProductId(productId);
+    return productService.update(product);
   }
 
-  @DeleteMapping("/{id}")
-  public ResponseEntity<String> deleteProduct(@PathVariable int id) {
-    return productService.delete(id);
+  @DeleteMapping("/{productId}")
+  public ResponseEntity<String> deleteProduct(@PathVariable int productId) {
+    return productService.delete(productId);
   }
 }

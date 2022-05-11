@@ -12,12 +12,13 @@ class ProductRepositoryTest {
   // CRUD tests
 
   @Autowired ProductService productService;
-
+  private int supplierId = 1;
   // Create
   @Test
   void testCreateProduct() {
 
     // Arrange
+
     Product product = new Product();
     String productName = "createProduct";
     String productDesc = "Test product creation";
@@ -25,7 +26,7 @@ class ProductRepositoryTest {
     product.setDescription(productDesc);
 
     // Act
-    productService.create(product);
+    productService.create(product, supplierId);
 
     Product productDb = productService.findByName(productName);
 
@@ -48,7 +49,7 @@ class ProductRepositoryTest {
     product.setDescription(productDesc);
 
     // Act
-    productService.create(product);
+    productService.create(product, supplierId);
 
     Product productDb =
         productService.findByNameAndDescription(product.getName(), product.getDescription());
@@ -68,11 +69,11 @@ class ProductRepositoryTest {
     Product product = new Product();
     String productName = "Test#01";
     product.setName(productName);
-    product = productService.create(product);
+    product = productService.create(product, supplierId);
 
     // Act
     product.setName("new name");
-    productService.update(product.getProductId(), product);
+    productService.update(product);
 
     // Assert
     Assertions.assertEquals(
@@ -92,7 +93,7 @@ class ProductRepositoryTest {
     Product product = new Product();
     String productName = "Test#01";
     product.setName(productName);
-    product = productService.create(product);
+    product = productService.create(product, supplierId);
 
     // Act
     productService.delete(product.getProductId());

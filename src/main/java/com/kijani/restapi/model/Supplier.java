@@ -12,13 +12,16 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
+// @NoArgsConstructor
 public class Supplier {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "supplier_id")
   private Integer supplierId;
 
   @OneToMany
+  // @JsonBackReference
   @JoinColumn(name = "supplier_id")
   private List<Product> products;
 

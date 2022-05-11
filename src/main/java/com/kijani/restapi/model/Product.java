@@ -6,19 +6,22 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 @Entity
 @Setter
 @Getter
+// @NoArgsConstructor
 public class Product {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "product_id")
   private Integer productId;
 
   @ManyToOne
-  @JsonBackReference
+  @JsonBackReference(value = "setSupplier")
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
@@ -28,7 +31,7 @@ public class Product {
           joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
           inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})*/
   @OneToMany
-  @JsonBackReference
+  @JsonBackReference(value = "setEcoLabel")
   @JoinColumn(name = "product_id")
   private List<Ecolabel> ecolabels;
 
@@ -38,16 +41,31 @@ public class Product {
 
   private String description;
 
-  private String subCategoryId;
+  @ManyToMany
+  // Måske værd at bruge JsonIgnore i stedet for JsonBackRefrence
+  // @JsonIgnore
+  @JsonBackReference(value = "SetProductCategory")
+  @JoinTable(
+      name = "product_category",
+      joinColumns = @JoinColumn(name = "product_id"),
+      inverseJoinColumns = @JoinColumn(name = "sub_category_id"))
+  private List<SubCategory> subCategories = new LinkedList<>();
 
   @Column(name = "co2_mesurability")
   private String co2Mesurability;
 
+  // Bliver til list senere
   private String tests;
 
-  private Date created;
+  private Date createdAt;
 
-  private String picture;
+  private Date updatedAt;
 
-  private String link;
+  private String imageLink;
+
+  private String brochureLink;
+
+  public void addSubCategory(SubCategory subCategory) {
+    subCategories.add(subCategory);
+  }
 }
