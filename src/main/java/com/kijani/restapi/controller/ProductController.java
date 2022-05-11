@@ -1,6 +1,7 @@
 package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Product;
+import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -43,5 +44,11 @@ public class ProductController {
   @DeleteMapping("/{productId}")
   public ResponseEntity<String> deleteProduct(@PathVariable int productId) {
     return productService.delete(productId);
+  }
+
+  //TODO TEST METODE skal slettes senere
+  @PutMapping("/test/{productId}/{subCategoryId}")
+  public List<SubCategory> addSubCategoryToProduct(@PathVariable int productId, @PathVariable int subCategoryId){
+    return productService.addSubCategoryToProduct(productService.findById(productId), subCategoryId);
   }
 }

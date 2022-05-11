@@ -1,6 +1,7 @@
 package com.kijani.restapi.service;
 
 import com.kijani.restapi.model.Product;
+import com.kijani.restapi.model.SubCategory;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
@@ -20,4 +21,6 @@ public interface ProductService {
   ResponseEntity<Product> update(Product product);
 
   ResponseEntity<String> delete(int id);
+
+  List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId);
 }

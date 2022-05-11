@@ -56,10 +56,11 @@ public class DataMapper implements CommandLineRunner {
     SubCategory subCategory1 = new SubCategory();
     subCategory1.setSubCategoryName("Lounge");
     subCategory1.setCategory(category1);
-    subCategory1.setCategory(category1);
     subCategoryRepository.save(subCategory1);
 
     product1.addSubCategory(subCategory1);
+    productRepository.save(product1);
+
     // subCategory1.addProduct(product1);
 
   }

@@ -1,7 +1,9 @@
 package com.kijani.restapi.service.impl;
 
 import com.kijani.restapi.model.Product;
+import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.repository.ProductRepository;
+import com.kijani.restapi.repository.SubCategoryRepository;
 import com.kijani.restapi.repository.SupplierRepository;
 import com.kijani.restapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,9 @@ public class ProductServiceImpl implements ProductService {
 
   @Autowired ProductRepository productRepository;
   @Autowired SupplierRepository supplierRepository;
+
+  @Autowired
+  SubCategoryRepository subCategoryRepository;
 
   @Override
   public List<Product> findProductsBySupplierId(int supplierId) {
@@ -75,5 +80,14 @@ public class ProductServiceImpl implements ProductService {
     } catch (Exception err) {
       return new ResponseEntity<>("Error deleting: " + id, HttpStatus.NO_CONTENT);
     }
+  }
+
+  //TODO TEST METODE
+  @Override
+  public List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId) {
+    System.out.println("Im adding");
+    product.addSubCategory(subCategoryRepository.findById(subCategoryId).get());
+    System.out.println("I added " + product.getSubCategories().get(0).getSubCategoryName());
+    return product.getSubCategories();
   }
 }
