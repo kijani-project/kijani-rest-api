@@ -15,9 +15,9 @@ public interface ProductService {
 
   Product findByNameAndDescription(String name, String description);
 
-  Product create(Product product);
+  Product create(Product product, int supplierId);
 
-  ResponseEntity<Product> update(int id, Product product);
+  ResponseEntity<Product> update(Product product);
 
   ResponseEntity<String> delete(int id);
 }
