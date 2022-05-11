@@ -23,6 +23,7 @@ public class SubCategory {
   private Integer id;
 
   @ManyToOne()
+  @JsonBackReference
   @JoinColumn(name = "category_id")
   private Category category;
 
