@@ -15,5 +15,5 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
   List<Product> findProductBySupplier(Supplier supplier);
 
-  public List<Product> findProductBySupplierSupplierId(int supplierId);
+  List<Product> findProductBySupplierSupplierId(int supplierId);
 }

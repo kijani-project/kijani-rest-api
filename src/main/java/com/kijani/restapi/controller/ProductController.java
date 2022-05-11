@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin
@@ -21,9 +20,10 @@ public class ProductController {
   @Autowired
   ProductRepository productRepository;
 
-  @GetMapping()
-  public List<Product> findAllProducts() {
-    return productService.findAll();
+  //TODO This method is redundant, because you get products when you fetch supplierBySupplierID
+  @GetMapping("/suppliers/{supplierId}")
+  public List<Product> findProductsBySupplierId(@PathVariable int supplierId) {
+    return productService.findProductsBySupplierId(supplierId);
   }
 
   @GetMapping("/{productId}")
@@ -37,26 +37,12 @@ public class ProductController {
     return productService.create(product, supplierId);
   }
 
-
   @PutMapping("/{productId}")
   public ResponseEntity<Product> updateProduct(
       @PathVariable int productId, @RequestBody Product product) {
     product.setProductId(productId);
     return productService.update(product);
   }
-/*
-  @PutMapping("/{productId}")
-  public ResponseEntity<Product> updateProduct(@PathVariable int productId, @RequestBody Product product) {
-    Optional<Product> optCounty = productRepository.findById(productId);
-    if (optCounty.isPresent()) {
-      productRepository.save(product);
-      return new ResponseEntity<>(product,HttpStatus.OK);
-    } else {
-      Product notfoundProduct = new Product();
-      notfoundProduct.setName("Jeg kunne ikke finde id=" + productId);
-      return new ResponseEntity<>(notfoundProduct, HttpStatus.NOT_FOUND);
-    }
-  }*/
 
   @DeleteMapping("/{productId}")
   public ResponseEntity<String> deleteProduct(@PathVariable int productId) {

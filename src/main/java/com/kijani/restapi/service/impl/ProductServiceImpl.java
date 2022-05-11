@@ -19,10 +19,11 @@ public class ProductServiceImpl implements ProductService {
   ProductRepository productRepository;
   @Autowired
   SupplierRepository supplierRepository;
-
   @Override
-  public List<Product> findAll() {
-    return productRepository.findAll();
+  public List<Product> findProductsBySupplierId(int supplierId) {
+    List<Product> obj = productRepository.findProductBySupplierSupplierId(supplierId);
+    System.out.println(obj.size());
+    return productRepository.findProductBySupplierSupplierId(supplierId);
   }
 
   @Override
