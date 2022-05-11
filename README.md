@@ -4,12 +4,12 @@
 
 The app defines following CRUD APIs.
 
-### Projects
+### Products
 
-| Method | Url                 | Description          | Sample Valid Request Body |
-|--------|---------------------|----------------------| ------------------------- |
-| GET    | /products       | Get all projects     | |
-| GET    | /products/{id}      | Get project by ID    | |
-| POST   | /products           | Create project       | |
-| PUT    | /products/{project} | Update project       | |
-| DELETE | /products/{id}      | Delete project by ID | |
+| Method | Url                    | Description                 | Sample Valid Request Body |
+|--------|------------------------|-----------------------------| ------------------------- |
+| GET    | /products/{supplierId} | Get all products by supplier| |
+| GET    | /products/{productId}  | Get product by ID           | |
+| POST   | /products/{supplierId} | Create product              | |
+| PUT    | /products/{product}    | Update product              | |
+| DELETE | /products/{productId}  | Delete product by ID        | |
