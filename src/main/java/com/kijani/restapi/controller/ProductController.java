@@ -1,7 +1,6 @@
 package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Product;
-import com.kijani.restapi.repository.ProductRepository;
 import com.kijani.restapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,8 +16,6 @@ public class ProductController {
 
   @Autowired
   ProductService productService;
-  @Autowired
-  ProductRepository productRepository;
 
   //TODO This method is redundant, because you get products when you fetch supplierBySupplierID
   @GetMapping("/suppliers/{supplierId}")
