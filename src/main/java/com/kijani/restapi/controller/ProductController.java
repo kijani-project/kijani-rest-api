@@ -14,10 +14,9 @@ import java.util.List;
 @RequestMapping("/products")
 public class ProductController {
 
-  @Autowired
-  ProductService productService;
+  @Autowired ProductService productService;
 
-  //TODO This method is redundant, because you get products when you fetch supplierBySupplierID
+  // TODO This method is redundant, because you get products when you fetch supplierBySupplierID
   @GetMapping("/suppliers/{supplierId}")
   public List<Product> findProductsBySupplierId(@PathVariable int supplierId) {
     return productService.findProductsBySupplierId(supplierId);
@@ -45,5 +44,4 @@ public class ProductController {
   public ResponseEntity<String> deleteProduct(@PathVariable int productId) {
     return productService.delete(productId);
   }
-
 }

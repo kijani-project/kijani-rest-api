@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * @author roed
  */
-
 @Entity
 @Setter
 @Getter

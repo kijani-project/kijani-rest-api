@@ -15,10 +15,9 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-  @Autowired
-  ProductRepository productRepository;
-  @Autowired
-  SupplierRepository supplierRepository;
+  @Autowired ProductRepository productRepository;
+  @Autowired SupplierRepository supplierRepository;
+
   @Override
   public List<Product> findProductsBySupplierId(int supplierId) {
     List<Product> obj = productRepository.findProductBySupplierSupplierId(supplierId);
@@ -46,19 +45,20 @@ public class ProductServiceImpl implements ProductService {
 
   @Override
   public Product create(Product product, int supplierId) {
-    //Set supplier to product
+    // Set supplier to product
     product.setSupplier(supplierRepository.getById(supplierId));
 
-    //If Statement if null????
-    //return Product from DB when created
+    // If Statement if null????
+    // return Product from DB when created
     return productRepository.save(product);
   }
 
   @Override
   public ResponseEntity<Product> update(Product product) {
-    //TODO Skal valideres på om supplier_id = null.
+    // TODO Skal valideres på om supplier_id = null.
     Optional<Product> existingProduct = productRepository.findById(product.getProductId());
-    product.setSupplier(supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
+    product.setSupplier(
+        supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
     if (existingProduct.isPresent()) {
       productRepository.save(product);
       return new ResponseEntity<>(product, HttpStatus.OK);

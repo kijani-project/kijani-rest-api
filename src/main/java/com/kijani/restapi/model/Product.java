@@ -2,7 +2,6 @@ package com.kijani.restapi.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -13,9 +12,8 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
-//@NoArgsConstructor
+// @NoArgsConstructor
 public class Product {
-
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,19 +42,19 @@ public class Product {
   private String description;
 
   @ManyToMany
-  //Måske værd at bruge JsonIgnore i stedet for JsonBackRefrence
-  //@JsonIgnore
+  // Måske værd at bruge JsonIgnore i stedet for JsonBackRefrence
+  // @JsonIgnore
   @JsonBackReference(value = "SetProductCategory")
-  @JoinTable(name = "product_category",
-  joinColumns = @JoinColumn(name  = "product_id"),
-      inverseJoinColumns = @JoinColumn(name = "sub_category_id")
-  )
+  @JoinTable(
+      name = "product_category",
+      joinColumns = @JoinColumn(name = "product_id"),
+      inverseJoinColumns = @JoinColumn(name = "sub_category_id"))
   private List<SubCategory> subCategories = new LinkedList<>();
 
   @Column(name = "co2_mesurability")
   private String co2Mesurability;
 
-  //Bliver til list senere
+  // Bliver til list senere
   private String tests;
 
   private Date createdAt;

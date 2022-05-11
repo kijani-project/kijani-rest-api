@@ -2,12 +2,10 @@ package com.kijani.restapi.data;
 
 import com.kijani.restapi.model.*;
 import com.kijani.restapi.repository.*;
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 
 @Component
 public class DataMapper implements CommandLineRunner {
@@ -20,8 +18,7 @@ public class DataMapper implements CommandLineRunner {
 
   @Autowired CategoryRepository categoryRepository;
 
-  @Autowired
-  SubCategoryRepository subCategoryRepository;
+  @Autowired SubCategoryRepository subCategoryRepository;
 
   public void run(String... args) throws Exception {
 
@@ -64,10 +61,7 @@ public class DataMapper implements CommandLineRunner {
     subCategoryRepository.save(subCategory1);
 
     product1.addSubCategory(subCategory1);
-    //subCategory1.addProduct(product1);
-
-
-
+    // subCategory1.addProduct(product1);
 
   }
 }
