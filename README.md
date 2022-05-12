@@ -6,10 +6,51 @@ The app defines following CRUD APIs.
 
 ### Products
 
-| Method | Url                              | Description                 | Sample Valid Request Body |
-|--------|----------------------------------|-----------------------------| ------------------------- |
-| GET    | /products/suppliers/{supplierId} | Get all products by supplier| |
-| GET    | /products/{productId}            | Get product by ID           | |
-| POST   | /products/{supplierId}           | Create product              | |
-| PUT    | /products/{product}              | Update product              | |
-| DELETE | /products/{productId}            | Delete product by ID        | |
+| Method | Url                      | Description                      | Sample Valid Request Body |
+|--------|--------------------------|----------------------------------| ------------------------- |
+| GET    | /products/{productId}    | Get a product by product Id      | |
+| GET    | /products                | Get all products                 | |
+| POST   | /products/{productId}    | Update a product by product Id   | |
+| PUT    | /products/{productId}    | Edit a product by product Id     | |
+| DELETE | /products/{productId}    | Delete a product by product Id   | |
+
+### Suppliers
+
+| Method | Url                                          | Description                      | Sample Valid Request Body |
+|--------|----------------------------------------------|----------------------------------| ------------------------- |
+| GET    | /suppliers                                   | Get all suppliers                | |
+| GET    | /suppliers/{supplierId}/profile              | Get a supplier profile by Id     | |
+| GET    | /suppliers/{supplierId}/products             | Get all products from a supplier | |
+| GET    | /suppliers/{supplierId}/products/{productId} | Get a product by from a supplier | |
+| POST   | /suppliers/{supplierId}                      | Update a supplier by supplierId  | |
+| PUT    | /suppliers/{supplierId}                      | Edit a supplier by supplierId    | |
+| DELETE | /suppliers/{supplierId}                      | Delete a supplier by supplierId  | |
+
+### Categories
+
+| Method | Url                      | Description                                    | Sample Valid Request Body |
+|--------|--------------------------|------------------------------------------------| ------------------------- |
+| GET    | /categories/{categoryId} | Get a category and subcategories by categoryId | |
+| GET    | /categories              | Get all categories and subcategories           | |
+| POST   | /categories/{categoryId} | Update a category by category Id               | |
+| PUT    | /categories/{categoryId} | Edit a category by category Id                 | |
+| DELETE | /categories/{categoryId} | Delete a category by category Id               | |
+
+### SubCategories
+
+| Method | Url                         | Description                                | Sample Valid Request Body |
+|--------|-----------------------------|--------------------------------------------| ------------------------- |
+| GET    | /subCategories/{categoryId} | Get a subCategories by Id                  | |
+| POST   | /subCategories/{categoryId} | Update a subCategories by subCategories Id | |
+| PUT    | /subCategories/{categoryId} | Edit a subCategories by subCategories Id   | |
+| DELETE | /subCategories/{categoryId} | Delete a subCategories by subCategories Id | |
+
+### EcoLabels
+
+| Method | Url                     | Description                                | Sample Valid Request Body |
+|--------|-------------------------|--------------------------------------------| ------------------------- |
+| GET    | /ecoLabels              | Get all ecolabels                          | |
+| GET    | /ecoLabels/{ecoLabelId} | Get a ecolabel by Id                       | |
+| POST   | /ecoLabels/{ecoLabelId} | Update a ecolabel by ecolabel Id | |
+| PUT    | /ecoLabels/{ecoLabelId} | Edit a ecolabel by ecolabel Id   | |
+| DELETE | /ecoLabels/{ecoLabelId} | Delete a ecolabel by ecolabel Id | |
