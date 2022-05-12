@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -26,7 +27,7 @@ public class SubCategory {
   private Category category;
 
   @ManyToMany(mappedBy = "subCategories")
-  private List<Product> products;
+  private List<Product> products = new LinkedList<>();
 
   private String subCategoryName;
 

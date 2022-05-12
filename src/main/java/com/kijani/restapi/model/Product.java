@@ -21,7 +21,7 @@ public class Product {
   private Integer productId;
 
   @ManyToOne
-  @JsonBackReference(value = "setSupplier")
+  @JsonBackReference
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
@@ -31,7 +31,6 @@ public class Product {
           joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
           inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})*/
   @OneToMany
-  @JsonBackReference(value = "setEcoLabel")
   @JoinColumn(name = "product_id")
   private List<Ecolabel> ecolabels;
 
@@ -44,7 +43,8 @@ public class Product {
   @ManyToMany
   // Måske værd at bruge JsonIgnore i stedet for JsonBackRefrence
   // @JsonIgnore
-  @JsonBackReference(value = "SetProductCategory")
+  // @JsonBackReference(value = "SetProductCategory")
+  @JsonBackReference
   @JoinTable(
       name = "product_category",
       joinColumns = @JoinColumn(name = "product_id"),

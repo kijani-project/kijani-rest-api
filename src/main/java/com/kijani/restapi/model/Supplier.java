@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +22,7 @@ public class Supplier {
   private Integer supplierId;
 
   @OneToMany
-  // @JsonBackReference
+  @JsonManagedReference
   @JoinColumn(name = "supplier_id")
   private List<Product> products;
 
