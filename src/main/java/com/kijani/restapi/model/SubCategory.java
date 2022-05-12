@@ -1,6 +1,7 @@
 package com.kijani.restapi.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,7 +20,7 @@ public class SubCategory {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "sub_category_id", nullable = false)
-  private Integer id;
+  private Integer subCategoryId;
 
   @ManyToOne()
   @JsonBackReference
@@ -27,6 +28,7 @@ public class SubCategory {
   private Category category;
 
   @ManyToMany(mappedBy = "subCategories")
+  @JsonIgnore
   private List<Product> products = new LinkedList<>();
 
   private String subCategoryName;

@@ -1,6 +1,7 @@
 package com.kijani.restapi.service.impl;
 
 import com.kijani.restapi.model.Category;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -13,4 +14,8 @@ public interface CategoryService {
   Category getCategoryByCategoryId(int categoryId);
 
   Category createCategory(Category category);
+
+  ResponseEntity<String> update(Category category);
+
+  ResponseEntity<String> deleteCategory(int categoryId);
 }
