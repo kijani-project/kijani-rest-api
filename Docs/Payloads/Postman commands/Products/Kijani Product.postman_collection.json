@@ -1,135 +1,159 @@
 {
-  "info": {
-    "_postman_id": "55c238e0-a00d-4c42-945f-8448837ce295",
-    "name": "Kijani Product",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "Create product",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "     {\n        \"itemNumber\": 12345678,\n        \"name\": \"In Between Chair\",\n        \"description\": \"SK1 Chair smoked oiled oak wood\",\n        \"subCategoryId\":\"Stol\",\n        \"supplierId\": 324235,\n        \"ecolabels\": \"EU Eco Label\",\n        \"co2Mesurability\": \"Numbers currently under verification by Målbar\",\n        \"tests\": \"EN 1022:2005 and EN 16139:2013.Test severity L2.\",\n        \"picture\": \"https://picturelibrary.dk/paustian\",\n        \"link\": \"https://brochurelibrary.dk/paustian\"\n    }",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://20.234.221.47/products",
-          "protocol": "http",
-          "host": [
-            "20",
-            "234",
-            "221",
-            "47"
-          ],
-          "path": [
-            "products"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Read all products",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://20.234.221.47/products",
-          "protocol": "http",
-          "host": [
-            "20",
-            "234",
-            "221",
-            "47"
-          ],
-          "path": [
-            "products"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Read product by id",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://20.234.221.47/products/1",
-          "protocol": "http",
-          "host": [
-            "20",
-            "234",
-            "221",
-            "47"
-          ],
-          "path": [
-            "products",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Update product",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "  {\n        \"productId\": 1,\n        \"itemNumber\": 12345678,\n        \"name\": \"In Between Chair 1\",\n        \"description\": \"SK1 Chair smoked oiled oak wood\",\n        \"subCategoryId\":\"Stol\",\n        \"supplierId\": 234567,\n        \"ecolabels\": \"EU Eco Label\",\n        \"co2Mesurability\": \"Numbers currently under verification by Målbar\",\n        \"tests\": \"EN 1022:2005 and EN 16139:2013.Test severity L2.\",\n        \"picture\": \"https://picturelibrary.dk/paustian\",\n        \"link\": \"https://brochurelibrary.dk/paustian\"\n    }",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://20.234.221.47/products/1",
-          "protocol": "http",
-          "host": [
-            "20",
-            "234",
-            "221",
-            "47"
-          ],
-          "path": [
-            "products",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Delete product",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://20.234.221.47/products/5",
-          "protocol": "http",
-          "host": [
-            "20",
-            "234",
-            "221",
-            "47"
-          ],
-          "path": [
-            "products",
-            "5"
-          ]
-        }
-      },
-      "response": []
-    }
-  ]
+	"info": {
+		"_postman_id": "d5085829-bad4-4ae3-a8ba-7bc84a230df5",
+		"name": "Kijani Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get ProductsBySupplierId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.224.83.97/products/suppliers/1",
+					"protocol": "http",
+					"host": [
+						"20",
+						"224",
+						"83",
+						"97"
+					],
+					"path": [
+						"products",
+						"suppliers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.224.83.97/products",
+					"protocol": "http",
+					"host": [
+						"20",
+						"224",
+						"83",
+						"97"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by productId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.224.83.97/products/1",
+					"protocol": "http",
+					"host": [
+						"20",
+						"224",
+						"83",
+						"97"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PostMan Product\",\n    \"description\": \"Postman description\",\n    \"number\": \"ION451551133\",\n    \"certificate\": \"Some certificate\",\n    \"picture\": \"www.picturelibrary.dk/paustian\",\n    \"link\": \"www.brochurelibrary.dk/paustian\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.224.83.97/products/1",
+					"protocol": "http",
+					"host": [
+						"20",
+						"224",
+						"83",
+						"97"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"itemNumber\": \"SK1\",\n    \"name\": \"TestProductUpdatedByPostman\",\n    \"description\": \"This has been updated\",\n    \"co2Mesurability\": \"test\",\n    \"tests\": \"test\",\n    \"createdAt\": null,\n    \"updatedAt\": null,\n    \"imageLink\": \"Helloworld.com\",\n    \"brochureLink\": \"Helloworld.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.224.83.97/products/1",
+					"protocol": "http",
+					"host": [
+						"20",
+						"224",
+						"83",
+						"97"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://20.224.83.97/products/1",
+					"protocol": "http",
+					"host": [
+						"20",
+						"224",
+						"83",
+						"97"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }

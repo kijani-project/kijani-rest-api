@@ -13,7 +13,6 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
-// @NoArgsConstructor
 public class Supplier {
 
   @Id

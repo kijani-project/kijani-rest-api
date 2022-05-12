@@ -12,7 +12,6 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
-// @NoArgsConstructor
 public class Product {
 
   @Id
@@ -25,11 +24,6 @@ public class Product {
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
-  /*@Singular
-  @ManyToMany(cascade = CascadeType.MERGE)
-  @JoinTable(name = "product_ecolabel",
-          joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
-          inverseJoinColumns = {@JoinColumn(name = "ecolabel_id", referencedColumnName = "ecolabel_id")})*/
   @OneToMany
   @JoinColumn(name = "product_id")
   private List<Ecolabel> ecolabels;
@@ -41,9 +35,6 @@ public class Product {
   private String description;
 
   @ManyToMany
-  // Måske værd at bruge JsonIgnore i stedet for JsonBackRefrence
-  // @JsonIgnore
-  // @JsonBackReference(value = "SetProductCategory")
   @JsonBackReference
   @JoinTable(
       name = "product_category",
