@@ -1,6 +1,7 @@
 package com.kijani.restapi.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,6 +26,7 @@ public class Product {
   private Supplier supplier;
 
   @OneToMany
+  @JsonManagedReference
   @JoinColumn(name = "product_id")
   private List<Ecolabel> ecolabels;
 

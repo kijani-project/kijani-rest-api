@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,7 @@ public class Ecolabel {
   private Integer id;
 
   @ManyToOne()
+  @JsonBackReference
   @JoinColumn(name = "product_id")
   private Product product;
 
