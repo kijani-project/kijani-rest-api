@@ -24,6 +24,11 @@ public class ProductServiceImpl implements ProductService {
   SubCategoryRepository subCategoryRepository;
 
   @Override
+  public List<Product> getAllProducts() {
+    return productRepository.findAll();
+  }
+
+  @Override
   public List<Product> findProductsBySupplierId(int supplierId) {
     List<Product> obj = productRepository.findProductBySupplierSupplierId(supplierId);
     System.out.println(obj.size());

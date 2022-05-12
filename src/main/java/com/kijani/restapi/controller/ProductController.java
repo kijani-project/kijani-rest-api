@@ -28,6 +28,11 @@ public class ProductController {
     return productService.findById(productId);
   }
 
+  @GetMapping()
+  public List<Product> getAllProducts() {
+    return productService.getAllProducts();
+  }
+
   @PostMapping("/{supplierId}")
   @ResponseStatus(HttpStatus.CREATED)
   public Product createProduct(@RequestBody Product product, @PathVariable int supplierId) {
