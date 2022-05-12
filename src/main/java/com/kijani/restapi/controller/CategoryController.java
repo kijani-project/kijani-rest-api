@@ -17,9 +17,8 @@ public class CategoryController {
 
   @Autowired CategoryService categoryService;
 
-
   @GetMapping("/{categoryId}")
-  public Category findCategory(@PathVariable int categoryId){
+  public Category findCategory(@PathVariable int categoryId) {
     return categoryService.getCategoryByCategoryId(categoryId);
   }
 
@@ -29,14 +28,14 @@ public class CategoryController {
   }
 
   @PostMapping()
-  public Category createCategory(@RequestBody Category category){
+  public Category createCategory(@RequestBody Category category) {
     return categoryService.createCategory(category);
   }
 
   /*
-  @PutMapping
-  public Category editCategory(){}
+    @PutMapping
+    public Category editCategory(){}
 
-*/
+  */
 
 }
