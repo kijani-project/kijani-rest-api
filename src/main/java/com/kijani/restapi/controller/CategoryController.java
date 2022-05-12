@@ -3,10 +3,7 @@ package com.kijani.restapi.controller;
 import com.kijani.restapi.model.Category;
 import com.kijani.restapi.service.impl.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,8 +17,26 @@ public class CategoryController {
 
   @Autowired CategoryService categoryService;
 
+
+  @GetMapping("/{categoryId}")
+  public Category findCategory(@PathVariable int categoryId){
+    return categoryService.getCategoryByCategoryId(categoryId);
+  }
+
   @GetMapping()
-  public List<Category> findAllCategories() {
+  public List<Category> getCategories() {
     return categoryService.getCategories();
   }
+
+  @PostMapping()
+  public Category createCategory(@RequestBody Category category){
+    return categoryService.createCategory(category);
+  }
+
+  /*
+  @PutMapping
+  public Category editCategory(){}
+
+*/
+
 }

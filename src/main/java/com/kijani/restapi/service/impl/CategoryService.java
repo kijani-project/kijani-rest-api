@@ -9,4 +9,8 @@ import java.util.List;
  */
 public interface CategoryService {
   List<Category> getCategories();
+
+  Category getCategoryByCategoryId(int categoryId);
+
+  Category createCategory(Category category);
 }

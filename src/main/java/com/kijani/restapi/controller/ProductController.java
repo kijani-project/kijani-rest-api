@@ -14,29 +14,17 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("/products")
 public class ProductController {
-
   @Autowired ProductService productService;
 
-  // TODO This method is redundant, because you get products when you fetch supplierBySupplierID
-  @GetMapping("/suppliers/{supplierId}")
-  public List<Product> findProductsBySupplierId(@PathVariable int supplierId) {
-    return productService.findProductsBySupplierId(supplierId);
-  }
-
+  //Endpoints sat op efter new README
   @GetMapping("/{productId}")
-  public Product findProductById(@PathVariable int productId) {
+  public Product findProduct(@PathVariable int productId) {
     return productService.findById(productId);
   }
 
   @GetMapping()
-  public List<Product> getAllProducts() {
+  public List<Product> getProducts() {
     return productService.getAllProducts();
-  }
-
-  @PostMapping("/{supplierId}")
-  @ResponseStatus(HttpStatus.CREATED)
-  public Product createProduct(@RequestBody Product product, @PathVariable int supplierId) {
-    return productService.create(product, supplierId);
   }
 
   @PutMapping("/{productId}")
@@ -47,9 +35,28 @@ public class ProductController {
   }
 
   @DeleteMapping("/{productId}")
-  public ResponseEntity<String> deleteProduct(@PathVariable int productId) {
+  public ResponseEntity<Product> deleteProduct(@PathVariable int productId) {
     return productService.delete(productId);
   }
+
+//__________________________________________ALT HER UNDER SKAL VÆK_________________________________________________
+
+
+
+
+
+
+
+//TODO Disse metoder skal fjernes - JUNK Metoder
+  // TODO This method is redundant, because you get products when you fetch supplierBySupplierID
+
+
+  @PostMapping("/{supplierId}")
+  @ResponseStatus(HttpStatus.CREATED)
+  public Product createProduct(@RequestBody Product product, @PathVariable int supplierId) {
+    return productService.create(product, supplierId);
+  }
+
 
   // TODO TEST METODE skal slettes senere
   @PutMapping("/test/{productId}/{subCategoryId}")

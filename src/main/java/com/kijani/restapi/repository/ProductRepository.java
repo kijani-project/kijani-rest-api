@@ -13,7 +13,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
   Optional<Product> findProductByNameAndAndDescription(String name, String description);
 
-  List<Product> findProductBySupplier(Supplier supplier);
+  Optional<Product> findProductByProductIdAndSupplierSupplierId(int productId, int supplierId);
 
   List<Product> findProductBySupplierSupplierId(int supplierId);
 }

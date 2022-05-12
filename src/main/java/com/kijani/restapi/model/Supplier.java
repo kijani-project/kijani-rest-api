@@ -20,10 +20,12 @@ public class Supplier {
   @Column(name = "supplier_id")
   private Integer supplierId;
 
+  /*
   @OneToMany
   @JsonManagedReference
   @JoinColumn(name = "supplier_id")
   private List<Product> products;
+*/
 
   private String name;
 

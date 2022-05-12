@@ -10,8 +10,6 @@ public interface ProductService {
 
   List<Product> getAllProducts();
 
-  List<Product> findProductsBySupplierId(int supplierId);
-
   Product findById(int id);
 
   Product findByName(String name);
@@ -22,7 +20,7 @@ public interface ProductService {
 
   ResponseEntity<Product> update(Product product);
 
-  ResponseEntity<String> delete(int id);
+  ResponseEntity<Product> delete(int id);
 
   List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId);
 }
