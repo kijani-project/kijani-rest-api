@@ -28,13 +28,6 @@ public class ProductServiceImpl implements ProductService {
   }
 
   @Override
-  public List<Product> findProductsBySupplierId(int supplierId) {
-    List<Product> obj = productRepository.findProductBySupplierSupplierId(supplierId);
-    System.out.println(obj.size());
-    return productRepository.findProductBySupplierSupplierId(supplierId);
-  }
-
-  @Override
   public Product findById(int id) {
     Optional<Product> product = productRepository.findById(id);
     return product.orElse(null);
@@ -77,12 +70,13 @@ public class ProductServiceImpl implements ProductService {
   }
 
   @Override
-  public ResponseEntity<String> delete(int id) {
+  public ResponseEntity<Product> delete(int productId) {
+    Product product = productRepository.findById(productId).get();
     try {
-      productRepository.deleteById(id);
-      return new ResponseEntity<>("Deleted: " + id, HttpStatus.OK);
+      productRepository.deleteById(productId);
+      return new ResponseEntity<>(product, HttpStatus.OK);
     } catch (Exception err) {
-      return new ResponseEntity<>("Error deleting: " + id, HttpStatus.NO_CONTENT);
+      return new ResponseEntity<>(product, HttpStatus.NO_CONTENT);
     }
   }
 
