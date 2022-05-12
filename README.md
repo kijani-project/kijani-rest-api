@@ -10,7 +10,6 @@ The app defines following CRUD APIs.
 |--------|--------------------------|----------------------------------| ------------------------- |
 | GET    | /products/{productId}    | Get a product by product Id      | |
 | GET    | /products                | Get all products                 | |
-| POST   | /products/{productId}    | Create a product by product Id   | |
 | PUT    | /products/{productId}    | Edit a product by product Id     | |
 | DELETE | /products/{productId}    | Delete a product by product Id   | |
 
@@ -22,7 +21,8 @@ The app defines following CRUD APIs.
 | GET    | /suppliers/{supplierId}/profile              | Get a supplier profile by Id     | |
 | GET    | /suppliers/{supplierId}/products             | Get all products from a supplier | |
 | GET    | /suppliers/{supplierId}/products/{productId} | Get a product by from a supplier | |
-| POST   | /suppliers/{supplierId}                      | Create a supplier by supplierId  | |
+| POST	 | /suppliers/{supplierId}/products             |	Create a product by supplierId   | |
+| POST   | /suppliers                                   | Create a supplier                | |
 | PUT    | /suppliers/{supplierId}                      | Edit a supplier by supplierId    | |
 | DELETE | /suppliers/{supplierId}                      | Delete a supplier by supplierId  | |
 
