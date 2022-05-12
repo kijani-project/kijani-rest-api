@@ -1,6 +1,5 @@
 package com.kijani.restapi.service.impl;
 
-import com.kijani.restapi.model.Category;
 import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.repository.SubCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import java.util.Optional;
 /**
  * @author roed
  */
-
 @Service
 public class SubCategoryServiceImpl implements SubCategoryService {
 
@@ -32,7 +30,8 @@ public class SubCategoryServiceImpl implements SubCategoryService {
 
   @Override
   public ResponseEntity<String> editSubCategory(SubCategory subCategory) {
-    Optional<SubCategory> existingProduct = subCategoryRepository.findById(subCategory.getSubCategoryId());
+    Optional<SubCategory> existingProduct =
+        subCategoryRepository.findById(subCategory.getSubCategoryId());
     if (existingProduct.isPresent()) {
       subCategoryRepository.save(subCategory);
       return ResponseEntity.ok()
@@ -40,7 +39,6 @@ public class SubCategoryServiceImpl implements SubCategoryService {
     } else {
       return new ResponseEntity<>("Error in Editing", HttpStatus.NOT_FOUND);
     }
-
   }
 
   @Override

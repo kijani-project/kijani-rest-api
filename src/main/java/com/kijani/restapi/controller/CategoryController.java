@@ -34,17 +34,15 @@ public class CategoryController {
     return categoryService.createCategory(category);
   }
 
-
-    @PutMapping("/{categoryId}")
-    public ResponseEntity<String> editCategory(@PathVariable int categoryId, @RequestBody Category category){
+  @PutMapping("/{categoryId}")
+  public ResponseEntity<String> editCategory(
+      @PathVariable int categoryId, @RequestBody Category category) {
     category.setCategoryId(categoryId);
     return categoryService.update(category);
-    }
+  }
 
-    @DeleteMapping("/{categoryId}")
-  public ResponseEntity<String> deleteCategory(@PathVariable int categoryId){
+  @DeleteMapping("/{categoryId}")
+  public ResponseEntity<String> deleteCategory(@PathVariable int categoryId) {
     return categoryService.deleteCategory(categoryId);
-    }
-
-
+  }
 }

@@ -33,7 +33,7 @@ public class CategoryServiceImpl implements CategoryService {
     return categoryRepository.save(category);
   }
 
-  //TODO Skal ændres og valideres
+  // TODO Skal ændres og valideres
   @Override
   public ResponseEntity<String> update(Category category) {
     Optional<Category> existingProduct = categoryRepository.findById(category.getCategoryId());
@@ -55,6 +55,4 @@ public class CategoryServiceImpl implements CategoryService {
       return new ResponseEntity<>("Error deleting", HttpStatus.NO_CONTENT);
     }
   }
-
-
 }

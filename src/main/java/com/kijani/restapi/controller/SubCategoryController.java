@@ -13,7 +13,7 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/subcategories") //Kan den ikke kaldes for sub?????????????????
+@RequestMapping("/subcategories") // Kan den ikke kaldes for sub?????????????????
 public class SubCategoryController {
   @Autowired SubCategoryService subCategoryService;
 
@@ -23,22 +23,23 @@ public class SubCategoryController {
   }
 
   @PostMapping("/{categoryId}")
-  public SubCategory createSubCategory(@PathVariable int categoryId, @RequestBody SubCategory subCategory){
+  public SubCategory createSubCategory(
+      @PathVariable int categoryId, @RequestBody SubCategory subCategory) {
     subCategory.setSubCategoryId(categoryId);
     return subCategoryService.createSubCategory(subCategory);
   }
 
-  //TODO Attribut skal ændres fra INTEGER til INT på Modellen.
+  // TODO Attribut skal ændres fra INTEGER til INT på Modellen.
   @PutMapping("/{subCategoryId}")
-  public ResponseEntity<String> editSubCategory(@PathVariable Integer subCategoryId, @RequestBody SubCategory subCategory){
+  public ResponseEntity<String> editSubCategory(
+      @PathVariable Integer subCategoryId, @RequestBody SubCategory subCategory) {
     subCategory.setSubCategoryId(subCategoryId);
     return subCategoryService.editSubCategory(subCategory);
   }
 
-  //TODO Problemer med med parent row - deleter ikke
+  // TODO Problemer med med parent row - deleter ikke
   @DeleteMapping("/{subCategoryID}")
-  public ResponseEntity<String> deleteSubCategory(@PathVariable int subCategoryID ){
+  public ResponseEntity<String> deleteSubCategory(@PathVariable int subCategoryID) {
     return subCategoryService.deleteSubCategory(subCategoryID);
   }
-
 }
