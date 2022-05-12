@@ -27,13 +27,14 @@ public class ProductController {
     return productService.getAllProducts();
   }
 
+  //TODO Not working Error 415
   @PutMapping("/{productId}")
-  public ResponseEntity<Product> updateProduct(
-      @PathVariable int productId, @RequestBody Product product) {
+  public ResponseEntity<Product> updateProduct(@PathVariable int productId, @RequestBody Product product) {
     product.setProductId(productId);
     return productService.update(product);
   }
 
+  //TODO gets deleted - returns wrong answer error 500
   @DeleteMapping("/{productId}")
   public ResponseEntity<Product> deleteProduct(@PathVariable int productId) {
     return productService.delete(productId);

@@ -38,9 +38,10 @@ public class SupplierController {
     return supplierService.getProductByProductIdAndSupplierId(supplierId, productId);
   }
 
+  //TODO virker ikke fejl 415 HUSK AT BRUGE Supplier id
   @PostMapping("/{supplierId}/products")
-  public Product createProduct(@RequestBody Product product) {
-    return supplierService.createProduct(product);
+  public Product createProduct(@PathVariable int supplierId, @RequestBody Product product) {
+    return supplierService.createProduct(supplierId, product);
   }
 
   @PostMapping()
@@ -48,11 +49,13 @@ public class SupplierController {
     return supplierService.createSupplier(supplier);
   }
 
+  //TODO Giver fejl 500
   @PutMapping("/{supplierId}")
   public ResponseEntity<Supplier> editSupplier(@RequestBody Supplier supplier) {
     return supplierService.editSupplier(supplier);
   }
 
+  //TODO FEJL 500 bliver ikke slettet.
   @DeleteMapping("/{productId}")
   public ResponseEntity<Supplier> deleteSupplier(@PathVariable int supplierID) {
     return supplierService.delete(supplierID);

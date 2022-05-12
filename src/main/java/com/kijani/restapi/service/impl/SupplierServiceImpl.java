@@ -55,7 +55,8 @@ public class SupplierServiceImpl implements SupplierService {
 
   //TODO SKAL FLYTTES NÅR DER KOMMER ROLES PÅ.
   @Override
-  public Product createProduct(Product product) {
+  public Product createProduct(int supplierId, Product product) {
+    product.setSupplier(supplierRepository.getSupplierBySupplierId(supplierId).get());
     return productRepository.save(product);
   }
 

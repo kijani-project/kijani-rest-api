@@ -60,9 +60,8 @@ public class ProductServiceImpl implements ProductService {
   public ResponseEntity<Product> update(Product product) {
     // TODO Skal valideres på om supplier_id = null.
     Optional<Product> existingProduct = productRepository.findById(product.getProductId());
-    product.setSupplier(
-        supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
     if (existingProduct.isPresent()) {
+      product.setSupplier(supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
       productRepository.save(product);
       return new ResponseEntity<>(product, HttpStatus.OK);
     } else {

@@ -21,7 +21,7 @@ public interface SupplierService {
 
   Product getProductByProductIdAndSupplierId(int supplierId, int productId);
 
-  Product createProduct(Product product);
+  Product createProduct(int supplierId, Product product);
 
   Supplier createSupplier(Supplier supplier);
 
