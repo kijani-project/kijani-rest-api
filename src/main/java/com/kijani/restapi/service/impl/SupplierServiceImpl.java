@@ -18,17 +18,14 @@ import java.util.Optional;
 @Service
 public class SupplierServiceImpl implements SupplierService {
 
-  @Autowired
-  SupplierRepository supplierRepository;
-  @Autowired
-  ProductRepository productRepository;
+  @Autowired SupplierRepository supplierRepository;
+  @Autowired ProductRepository productRepository;
 
   @Override
   public Supplier getById(int id) {
     Optional<Supplier> supplier = supplierRepository.getSupplierBySupplierId(id);
     return supplier.orElse(null);
   }
-
 
   @Override
   public List<Supplier> getSuppliers() {
@@ -49,11 +46,12 @@ public class SupplierServiceImpl implements SupplierService {
 
   @Override
   public Product getProductByProductIdAndSupplierId(int supplierId, int productId) {
-    return productRepository.findProductByProductIdAndSupplierSupplierId(productId, supplierId).orElse(null);
+    return productRepository
+        .findProductByProductIdAndSupplierSupplierId(productId, supplierId)
+        .orElse(null);
   }
 
-
-  //TODO SKAL FLYTTES NÅR DER KOMMER ROLES PÅ.
+  // TODO SKAL FLYTTES NÅR DER KOMMER ROLES PÅ.
   @Override
   public Product createProduct(int supplierId, Product product) {
     product.setSupplier(supplierRepository.getSupplierBySupplierId(supplierId).get());
@@ -68,7 +66,7 @@ public class SupplierServiceImpl implements SupplierService {
   @Override
   public ResponseEntity<Supplier> editSupplier(Supplier supplier) {
     Optional<Supplier> existingProduct = supplierRepository.findById(supplier.getSupplierId());
-    //supplier.setSupplier(supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
+    // supplier.setSupplier(supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
     if (existingProduct.isPresent()) {
       supplierRepository.save(supplier);
       return new ResponseEntity<>(supplier, HttpStatus.OK);

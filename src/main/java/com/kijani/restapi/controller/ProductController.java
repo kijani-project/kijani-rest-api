@@ -16,7 +16,7 @@ import java.util.List;
 public class ProductController {
   @Autowired ProductService productService;
 
-  //Endpoints sat op efter new README
+  // Endpoints sat op efter new README
   @GetMapping("/{productId}")
   public Product findProduct(@PathVariable int productId) {
     return productService.findById(productId);
@@ -40,24 +40,17 @@ public class ProductController {
     return productService.delete(productId);
   }
 
-//__________________________________________ALT HER UNDER SKAL VÆK_________________________________________________
+  // __________________________________________ALT HER UNDER SKAL
+  // VÆK_________________________________________________
 
-
-
-
-
-
-
-//TODO Disse metoder skal fjernes - JUNK Metoder
+  // TODO Disse metoder skal fjernes - JUNK Metoder
   // TODO This method is redundant, because you get products when you fetch supplierBySupplierID
-
 
   @PostMapping("/{supplierId}")
   @ResponseStatus(HttpStatus.CREATED)
   public Product createProduct(@RequestBody Product product, @PathVariable int supplierId) {
     return productService.create(product, supplierId);
   }
-
 
   // TODO TEST METODE skal slettes senere
   @PutMapping("/test/{productId}/{subCategoryId}")

@@ -14,10 +14,9 @@ import java.util.List;
 @RequestMapping("/suppliers")
 public class SupplierController {
 
-  @Autowired
-  SupplierService supplierService;
+  @Autowired SupplierService supplierService;
 
-  //NEW README FILE ENDPOINTS
+  // NEW README FILE ENDPOINTS
   @GetMapping()
   public List<Supplier> getSuppliers() {
     return supplierService.getSuppliers();
@@ -61,6 +60,3 @@ public class SupplierController {
     return supplierService.delete(supplierID);
   }
 }
-
-
-

@@ -1,7 +1,6 @@
 package com.kijani.restapi.repository;
 
 import com.kijani.restapi.model.Product;
-import com.kijani.restapi.model.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
