@@ -27,15 +27,18 @@ public class ProductController {
     return productService.getAllProducts();
   }
 
+  // TODO Virker nu
   @PutMapping("/{productId}")
-  public ResponseEntity<Product> updateProduct(
-      @PathVariable int productId, @RequestBody Product product) {
+  public ResponseEntity<String> updateProduct(
+      @PathVariable Integer productId, @RequestBody Product product) {
+    System.out.println("ARE WE IN HERE!!!!?? ");
     product.setProductId(productId);
     return productService.update(product);
   }
 
+  // TODO Virker nu
   @DeleteMapping("/{productId}")
-  public ResponseEntity<Product> deleteProduct(@PathVariable int productId) {
+  public ResponseEntity<String> deleteProduct(@PathVariable Integer productId) {
     return productService.delete(productId);
   }
 

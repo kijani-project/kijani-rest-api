@@ -21,7 +21,7 @@ public class Product {
   private Integer productId;
 
   @ManyToOne
-  @JsonBackReference // Kan det slettes?
+  // @JsonBackReference // Kan det slettes?
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 

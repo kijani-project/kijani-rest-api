@@ -21,11 +21,11 @@ public interface SupplierService {
 
   Product getProductByProductIdAndSupplierId(int supplierId, int productId);
 
-  Product createProduct(Product product);
+  Product createProduct(int supplierId, Product product);
 
   Supplier createSupplier(Supplier supplier);
 
-  ResponseEntity<Supplier> editSupplier(Supplier supplier);
+  ResponseEntity<String> editSupplier(Supplier supplier);
 
-  ResponseEntity<Supplier> delete(int supplierID);
+  ResponseEntity<String> delete(int supplierID);
 }

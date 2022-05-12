@@ -37,9 +37,10 @@ public class SupplierController {
     return supplierService.getProductByProductIdAndSupplierId(supplierId, productId);
   }
 
+  // TODO virker nu.
   @PostMapping("/{supplierId}/products")
-  public Product createProduct(@RequestBody Product product) {
-    return supplierService.createProduct(product);
+  public Product createProduct(@PathVariable Integer supplierId, @RequestBody Product product) {
+    return supplierService.createProduct(supplierId, product);
   }
 
   @PostMapping()
@@ -47,13 +48,17 @@ public class SupplierController {
     return supplierService.createSupplier(supplier);
   }
 
+  // TODO VIRKER NU!
   @PutMapping("/{supplierId}")
-  public ResponseEntity<Supplier> editSupplier(@RequestBody Supplier supplier) {
+  public ResponseEntity<String> editSupplier(
+      @PathVariable Integer supplierId, @RequestBody Supplier supplier) {
+    supplier.setSupplierId(supplierId);
     return supplierService.editSupplier(supplier);
   }
 
-  @DeleteMapping("/{productId}")
-  public ResponseEntity<Supplier> deleteSupplier(@PathVariable int supplierID) {
-    return supplierService.delete(supplierID);
+  // TODO Cascade problem Kan ikke delete pga. produkter
+  @DeleteMapping("/{supplierId}")
+  public ResponseEntity<String> deleteSupplier(@PathVariable Integer supplierId) {
+    return supplierService.delete(supplierId);
   }
 }

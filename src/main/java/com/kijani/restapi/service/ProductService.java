@@ -18,9 +18,9 @@ public interface ProductService {
 
   Product create(Product product, int supplierId);
 
-  ResponseEntity<Product> update(Product product);
+  ResponseEntity<String> update(Product product);
 
-  ResponseEntity<Product> delete(int id);
+  ResponseEntity<String> delete(int id);
 
   List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId);
 }
