@@ -64,25 +64,25 @@ public class SupplierServiceImpl implements SupplierService {
   }
 
   @Override
-  public ResponseEntity<Supplier> editSupplier(Supplier supplier) {
+  public ResponseEntity<String> editSupplier(Supplier supplier) {
     Optional<Supplier> existingProduct = supplierRepository.findById(supplier.getSupplierId());
-    // supplier.setSupplier(supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
+    //supplier.setSupplierId(supplierRepository.getById(existingProduct.get().getSupplierId()));
     if (existingProduct.isPresent()) {
       supplierRepository.save(supplier);
-      return new ResponseEntity<>(supplier, HttpStatus.OK);
+      return new ResponseEntity<>("Success", HttpStatus.OK);
     } else {
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>("FAIL!" ,HttpStatus.NOT_FOUND);
     }
   }
 
   @Override
-  public ResponseEntity<Supplier> delete(int supplierID) {
+  public ResponseEntity<String> delete(int supplierID) {
     Supplier supplier = supplierRepository.getSupplierBySupplierId(supplierID).get();
     try {
       supplierRepository.deleteById(supplierID);
-      return new ResponseEntity<>(supplier, HttpStatus.OK);
+      return new ResponseEntity<>("was deleted", HttpStatus.OK);
     } catch (Exception err) {
-      return new ResponseEntity<>(supplier, HttpStatus.NO_CONTENT);
+      return new ResponseEntity<>("Error deleting", HttpStatus.NO_CONTENT);
     }
   }
 }

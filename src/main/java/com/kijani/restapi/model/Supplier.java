@@ -24,7 +24,6 @@ public class Supplier {
     @JoinColumn(name = "supplier_id")
     private List<Product> products;
   */
-
   private String name;
 
   private String environmentalProfile;

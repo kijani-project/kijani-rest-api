@@ -25,7 +25,7 @@ public interface SupplierService {
 
   Supplier createSupplier(Supplier supplier);
 
-  ResponseEntity<Supplier> editSupplier(Supplier supplier);
+  ResponseEntity<String> editSupplier(Supplier supplier);
 
-  ResponseEntity<Supplier> delete(int supplierID);
+  ResponseEntity<String> delete(int supplierID);
 }

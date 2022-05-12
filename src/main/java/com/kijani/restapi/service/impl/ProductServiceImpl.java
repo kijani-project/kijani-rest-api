@@ -56,26 +56,27 @@ public class ProductServiceImpl implements ProductService {
   }
 
   @Override
-  public ResponseEntity<Product> update(Product product) {
+  public ResponseEntity<String> update(Product product) {
     // TODO Skal valideres på om supplier_id = null.
     Optional<Product> existingProduct = productRepository.findById(product.getProductId());
     if (existingProduct.isPresent()) {
       product.setSupplier(supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
       productRepository.save(product);
-      return new ResponseEntity<>(product, HttpStatus.OK);
+      //return new ResponseEntity<>("all ok", HttpStatus.OK);
+      return ResponseEntity.ok().body("Product with productId: " + product.getProductId() + " Was edited");
     } else {
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>("Error in Editing", HttpStatus.NOT_FOUND);
     }
   }
 
+  //TODO Response skal ændres.
   @Override
-  public ResponseEntity<Product> delete(int productId) {
-    Product product = productRepository.findById(productId).get();
+  public ResponseEntity<String> delete(int productId) {
     try {
       productRepository.deleteById(productId);
-      return new ResponseEntity<>(product, HttpStatus.OK);
+      return new ResponseEntity<>("was deleted", HttpStatus.OK);
     } catch (Exception err) {
-      return new ResponseEntity<>(product, HttpStatus.NO_CONTENT);
+      return new ResponseEntity<>("Error deleting", HttpStatus.NO_CONTENT);
     }
   }
 

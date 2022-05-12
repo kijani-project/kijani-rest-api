@@ -37,9 +37,9 @@ public class SupplierController {
     return supplierService.getProductByProductIdAndSupplierId(supplierId, productId);
   }
 
-  //TODO virker ikke fejl 415 HUSK AT BRUGE Supplier id
+  //TODO virker nu.
   @PostMapping("/{supplierId}/products")
-  public Product createProduct(@PathVariable int supplierId, @RequestBody Product product) {
+  public Product createProduct(@PathVariable Integer supplierId, @RequestBody Product product) {
     return supplierService.createProduct(supplierId, product);
   }
 
@@ -48,15 +48,16 @@ public class SupplierController {
     return supplierService.createSupplier(supplier);
   }
 
-  //TODO Giver fejl 500
+  //TODO VIRKER NU!
   @PutMapping("/{supplierId}")
-  public ResponseEntity<Supplier> editSupplier(@RequestBody Supplier supplier) {
+  public ResponseEntity<String> editSupplier(@PathVariable Integer supplierId, @RequestBody Supplier supplier) {
+    supplier.setSupplierId(supplierId);
     return supplierService.editSupplier(supplier);
   }
 
-  //TODO FEJL 500 bliver ikke slettet.
-  @DeleteMapping("/{productId}")
-  public ResponseEntity<Supplier> deleteSupplier(@PathVariable int supplierID) {
-    return supplierService.delete(supplierID);
+  //TODO Cascade problem Kan ikke delete pga. produkter
+  @DeleteMapping("/{supplierId}")
+  public ResponseEntity<String> deleteSupplier(@PathVariable Integer supplierId) {
+    return supplierService.delete(supplierId);
   }
 }
