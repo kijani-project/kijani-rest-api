@@ -27,7 +27,7 @@ public class CategoryController {
     return categoryService.getCategories();
   }
 
-  //TODO FEJL 415
+  // TODO FEJL 415
   @PostMapping()
   public Category createCategory(@RequestBody Category category) {
     return categoryService.createCategory(category);

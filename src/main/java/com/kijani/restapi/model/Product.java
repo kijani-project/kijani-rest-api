@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.OnDelete;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -23,7 +21,7 @@ public class Product {
   private Integer productId;
 
   @ManyToOne
-  //@JsonBackReference // Kan det slettes?
+  // @JsonBackReference // Kan det slettes?
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 

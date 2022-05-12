@@ -66,12 +66,12 @@ public class SupplierServiceImpl implements SupplierService {
   @Override
   public ResponseEntity<String> editSupplier(Supplier supplier) {
     Optional<Supplier> existingProduct = supplierRepository.findById(supplier.getSupplierId());
-    //supplier.setSupplierId(supplierRepository.getById(existingProduct.get().getSupplierId()));
+    // supplier.setSupplierId(supplierRepository.getById(existingProduct.get().getSupplierId()));
     if (existingProduct.isPresent()) {
       supplierRepository.save(supplier);
       return new ResponseEntity<>("Success", HttpStatus.OK);
     } else {
-      return new ResponseEntity<>("FAIL!" ,HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>("FAIL!", HttpStatus.NOT_FOUND);
     }
   }
 

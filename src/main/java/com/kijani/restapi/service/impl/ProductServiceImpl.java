@@ -60,16 +60,18 @@ public class ProductServiceImpl implements ProductService {
     // TODO Skal valideres på om supplier_id = null.
     Optional<Product> existingProduct = productRepository.findById(product.getProductId());
     if (existingProduct.isPresent()) {
-      product.setSupplier(supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
+      product.setSupplier(
+          supplierRepository.getById(existingProduct.get().getSupplier().getSupplierId()));
       productRepository.save(product);
-      //return new ResponseEntity<>("all ok", HttpStatus.OK);
-      return ResponseEntity.ok().body("Product with productId: " + product.getProductId() + " Was edited");
+      // return new ResponseEntity<>("all ok", HttpStatus.OK);
+      return ResponseEntity.ok()
+          .body("Product with productId: " + product.getProductId() + " Was edited");
     } else {
       return new ResponseEntity<>("Error in Editing", HttpStatus.NOT_FOUND);
     }
   }
 
-  //TODO Response skal ændres.
+  // TODO Response skal ændres.
   @Override
   public ResponseEntity<String> delete(int productId) {
     try {
