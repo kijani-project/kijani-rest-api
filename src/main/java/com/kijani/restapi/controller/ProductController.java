@@ -51,9 +51,11 @@ public class ProductController {
     return productService.delete(productId);
   }
 
-  //TODO TEST METODE skal slettes senere
+  // TODO TEST METODE skal slettes senere
   @PutMapping("/test/{productId}/{subCategoryId}")
-  public List<SubCategory> addSubCategoryToProduct(@PathVariable int productId, @PathVariable int subCategoryId){
-    return productService.addSubCategoryToProduct(productService.findById(productId), subCategoryId);
+  public List<SubCategory> addSubCategoryToProduct(
+      @PathVariable int productId, @PathVariable int subCategoryId) {
+    return productService.addSubCategoryToProduct(
+        productService.findById(productId), subCategoryId);
   }
 }

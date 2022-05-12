@@ -26,7 +26,6 @@ public class SubCategory {
   @JoinColumn(name = "category_id")
   private Category category;
 
-
   @ManyToMany(mappedBy = "subCategories")
   private List<Product> products = new LinkedList<>();
 

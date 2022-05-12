@@ -35,6 +35,12 @@ public class Product {
   private String description;
 
   @ManyToMany
+<<<<<<< HEAD
+=======
+  // Måske værd at bruge JsonIgnore i stedet for JsonBackRefrence
+  // @JsonIgnore
+  // @JsonBackReference(value = "SetProductCategory")
+>>>>>>> 5a4435ec9f8aaa602bde1340efd9cf48968046b2
   @JsonBackReference
   @JoinTable(
       name = "product_category",
