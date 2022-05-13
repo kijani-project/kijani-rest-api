@@ -1,6 +1,5 @@
 package com.kijani.restapi.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,7 +36,6 @@ public class Product {
   private String description;
 
   @ManyToMany
-  @JsonBackReference
   @JoinTable(
       name = "product_category",
       joinColumns = @JoinColumn(name = "product_id"),
