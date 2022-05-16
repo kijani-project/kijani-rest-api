@@ -1,9 +1,11 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * @author roed
@@ -32,7 +34,13 @@ public class Supplier {
 
   private String freight;
 
-  private String ecolabels;
+  @ManyToMany
+  @JsonManagedReference
+  @JoinTable(
+      name = "supplier_support_ecolabel",
+      joinColumns = @JoinColumn(name = "supplier_id"),
+      inverseJoinColumns = @JoinColumn(name = "supplier_ecolabel_id"))
+  private List<SupplierEcoLabel> supplierEcolabels;
 
   private Integer roleId;
 }

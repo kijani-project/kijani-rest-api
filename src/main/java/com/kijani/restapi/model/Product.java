@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,14 +21,18 @@ public class Product {
   private Integer productId;
 
   @ManyToOne
+  @JsonIgnore
   // @JsonBackReference // Kan det slettes?
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
-  @OneToMany
+  @ManyToMany
   @JsonManagedReference
-  @JoinColumn(name = "product_id")
-  private List<Ecolabel> ecolabels;
+  @JoinTable(
+      name = "product_support_ecoLabel",
+      joinColumns = @JoinColumn(name = "product_id"),
+      inverseJoinColumns = @JoinColumn(name = "product_ecolabel_id"))
+  private List<ProductEcoLabel> productEcoLabels;
 
   private String itemNumber;
 
@@ -53,8 +58,14 @@ public class Product {
   @Column(name = "co2_mesurability")
   private String co2Mesurability;
 
-  // Bliver til list senere
-  private String tests;
+
+  @ManyToMany
+  @JsonManagedReference
+  @JoinTable(
+      name = "product_ecoTest",
+      joinColumns = @JoinColumn(name = "product_id"),
+      inverseJoinColumns = @JoinColumn(name = "ecoTest_id"))
+  private List<EcoTest> ecoTests = new LinkedList<>();
 
   private Date createdAt;
 
