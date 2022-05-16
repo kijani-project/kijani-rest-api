@@ -23,6 +23,14 @@ public class DataMapper implements CommandLineRunner {
 
     // Test data for the database..
 
+    Category category = new Category();
+    SubCategory subCategory = new SubCategory();
+    category.setCategoryName("DataMapper Test");
+    subCategory.setSubCategoryName("subCat Datamapper test");
+    categoryRepository.save(category);
+    subCategoryRepository.save(subCategory);
+
+
     Supplier supplier = new Supplier();
     supplier.setName("Test supplier 1");
     supplierRepository.save(supplier);

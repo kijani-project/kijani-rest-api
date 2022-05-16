@@ -27,11 +27,17 @@ public class ProductController {
     return productService.getAllProducts();
   }
 
+  @GetMapping("/category/{categoryId}")
+public List<Product> getProductsByCategoryId(@RequestParam(required = false) int categoryId){
+    return productService.getProductsByCategoryId(categoryId);
+  }
+
+
+
+
   // TODO Virker nu
   @PutMapping("/{productId}")
-  public ResponseEntity<String> updateProduct(
-      @PathVariable Integer productId, @RequestBody Product product) {
-    System.out.println("ARE WE IN HERE!!!!?? ");
+  public ResponseEntity<String> updateProduct(@PathVariable Integer productId, @RequestBody Product product) {
     product.setProductId(productId);
     return productService.update(product);
   }
@@ -61,4 +67,6 @@ public class ProductController {
     return productService.addSubCategoryToProduct(
         productService.findById(productId), subCategoryId);
   }
+
+
 }

@@ -2,6 +2,7 @@ package com.kijani.restapi.service.impl;
 
 import com.kijani.restapi.model.Product;
 import com.kijani.restapi.model.SubCategory;
+import com.kijani.restapi.repository.CategoryRepository;
 import com.kijani.restapi.repository.ProductRepository;
 import com.kijani.restapi.repository.SubCategoryRepository;
 import com.kijani.restapi.repository.SupplierRepository;
@@ -21,6 +22,8 @@ public class ProductServiceImpl implements ProductService {
   @Autowired SupplierRepository supplierRepository;
 
   @Autowired SubCategoryRepository subCategoryRepository;
+
+  @Autowired CategoryRepository categoryRepository;
 
   @Override
   public List<Product> getAllProducts() {
@@ -89,5 +92,10 @@ public class ProductServiceImpl implements ProductService {
     product.addSubCategory(subCategoryRepository.findById(subCategoryId).get());
     System.out.println("I added " + product.getSubCategories().get(0).getSubCategoryName());
     return product.getSubCategories();
+  }
+
+  @Override
+  public List<Product> getProductsByCategoryId(int categoryId) {
+    return null;
   }
 }

@@ -23,4 +23,6 @@ public interface ProductService {
   ResponseEntity<String> delete(int id);
 
   List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId);
+
+  List<Product> getProductsByCategoryId(int categoryId);
 }
