@@ -26,4 +26,7 @@ public class Category {
   private List<SubCategory> subCategories;
 
   private String categoryName;
+
+  private String imageLink;
+
 }
