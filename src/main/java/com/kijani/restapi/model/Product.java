@@ -37,8 +37,7 @@ public class Product {
 
   private String designer;
 
-  @Transient
-  private Size size;
+  @Transient private Size size;
 
   @ManyToMany
   @JoinTable(
