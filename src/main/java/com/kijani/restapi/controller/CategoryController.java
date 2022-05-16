@@ -29,7 +29,7 @@ public class CategoryController {
   }
 
   // TODO Fixet
-  @PutMapping()
+  @PostMapping()
   public Category createCategory(@RequestBody Category category) {
     return categoryService.createCategory(category);
   }
