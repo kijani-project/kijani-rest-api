@@ -1,8 +1,6 @@
 package com.kijani.restapi.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,12 +21,12 @@ public class Product {
 
   @ManyToOne
   @JsonIgnore
-  //@JsonBackReference
+  // @JsonBackReference
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
   @ManyToMany
-  //@JsonManagedReference
+  // @JsonManagedReference
   @JoinTable(
       name = "product_support_ecoLabel",
       joinColumns = @JoinColumn(name = "product_id"),
@@ -45,11 +43,11 @@ public class Product {
 
   @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
   @JoinColumn(name = "measurement_id")
- // @JsonManagedReference
+  // @JsonManagedReference
   private Measurement measurement;
 
   @ManyToMany
-  //@JsonManagedReference
+  // @JsonManagedReference
   @JoinTable(
       name = "product_category",
       joinColumns = @JoinColumn(name = "product_id"),
@@ -60,7 +58,7 @@ public class Product {
   private String co2Mesurability;
 
   @ManyToMany
-  //@JsonManagedReference
+  // @JsonManagedReference
   @JoinTable(
       name = "product_ecoTest",
       joinColumns = @JoinColumn(name = "product_id"),
