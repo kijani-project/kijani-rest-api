@@ -35,6 +35,13 @@ public class Product {
 
   private String description;
 
+  private String designer;
+
+  @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+  @JoinColumn(name = "measurement_id")
+  @JsonManagedReference
+  private Measurement measurement;
+
   @ManyToMany
   @JoinTable(
       name = "product_category",
