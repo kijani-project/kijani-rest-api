@@ -1,6 +1,5 @@
 DROP DATABASE if exists kijani;
 CREATE DATABASE IF NOT EXISTS kijani;
-
 USE kijani;
 
 CREATE TABLE IF NOT EXISTS `categories`
