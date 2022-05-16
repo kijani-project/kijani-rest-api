@@ -17,6 +17,7 @@ public class SupplierEcoLabel {
   private Integer id;
 
   @ManyToMany(mappedBy = "supplierEcolabels")
+  // @JsonBackReference
   private List<Supplier> suppliers;
 
   private String type;

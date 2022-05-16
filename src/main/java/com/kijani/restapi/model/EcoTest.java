@@ -20,5 +20,6 @@ public class EcoTest {
   private String ecoTestName;
 
   @ManyToMany(mappedBy = "ecoTests")
+  // @JsonBackReference
   private List<Product> product;
 }
