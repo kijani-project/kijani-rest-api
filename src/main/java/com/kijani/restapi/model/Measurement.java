@@ -17,12 +17,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Measurement {
 
-  //Skal slettes når DataMapper slettes
+  // Skal slettes når DataMapper slettes
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "measurement_id", nullable = false)
-  //Gør så id ikke bliver vist når man køre den i postman.
+  // Gør så id ikke bliver vist når man køre den i postman.
   @JsonIgnore
   private Integer measurementId;
 
@@ -35,5 +35,4 @@ public class Measurement {
   private int width;
 
   private int height;
-
 }
