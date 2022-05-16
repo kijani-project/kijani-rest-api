@@ -24,5 +24,5 @@ public interface ProductService {
 
   List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId);
 
-  List<Product> getProductsByCategoryId(int categoryId);
+  List<Product> getProductsByCategoryId(Integer categoryId);
 }

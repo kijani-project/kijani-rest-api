@@ -27,8 +27,9 @@ public class ProductController {
     return productService.getAllProducts();
   }
 
-  @GetMapping("/category/{categoryId}")
-public List<Product> getProductsByCategoryId(@RequestParam(required = false) int categoryId){
+  @GetMapping("/category")
+  @ResponseBody
+public List<Product> getProductsByCategoryId(@RequestParam(required = false) Integer categoryId){
     return productService.getProductsByCategoryId(categoryId);
   }
 

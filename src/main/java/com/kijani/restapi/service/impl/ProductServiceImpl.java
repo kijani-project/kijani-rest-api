@@ -95,7 +95,7 @@ public class ProductServiceImpl implements ProductService {
   }
 
   @Override
-  public List<Product> getProductsByCategoryId(int categoryId) {
-    return null;
+  public List<Product> getProductsByCategoryId(Integer categoryId) {
+    return productRepository.findProductsByCategoryId(categoryId);
   }
 }
