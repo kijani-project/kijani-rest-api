@@ -17,8 +17,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Measurement {
 
-  // Skal slettes når DataMapper slettes
-
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "measurement_id", nullable = false)

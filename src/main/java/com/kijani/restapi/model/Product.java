@@ -43,6 +43,7 @@ public class Product {
   private Measurement measurement;
 
   @ManyToMany
+  @JsonManagedReference
   @JoinTable(
       name = "product_category",
       joinColumns = @JoinColumn(name = "product_id"),
