@@ -32,8 +32,4 @@ public class SubCategory {
   private List<Product> products = new LinkedList<>();
 
   private String subCategoryName;
-
-  public void addProduct(Product product) {
-    products.add(product);
-  }
 }
