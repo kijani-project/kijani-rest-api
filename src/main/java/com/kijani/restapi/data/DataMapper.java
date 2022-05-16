@@ -30,7 +30,6 @@ public class DataMapper implements CommandLineRunner {
     categoryRepository.save(category);
     subCategoryRepository.save(subCategory);
 
-
     Supplier supplier = new Supplier();
     supplier.setName("Test supplier 1");
     supplierRepository.save(supplier);

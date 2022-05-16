@@ -29,16 +29,14 @@ public class ProductController {
 
   @GetMapping("/category")
   @ResponseBody
-public List<Product> getProductsByCategoryId(@RequestParam(required = false) Integer categoryId){
+  public List<Product> getProductsByCategoryId(@RequestParam(required = false) Integer categoryId) {
     return productService.getProductsByCategoryId(categoryId);
   }
 
-
-
-
   // TODO Virker nu
   @PutMapping("/{productId}")
-  public ResponseEntity<String> updateProduct(@PathVariable Integer productId, @RequestBody Product product) {
+  public ResponseEntity<String> updateProduct(
+      @PathVariable Integer productId, @RequestBody Product product) {
     product.setProductId(productId);
     return productService.update(product);
   }
@@ -68,6 +66,4 @@ public List<Product> getProductsByCategoryId(@RequestParam(required = false) Int
     return productService.addSubCategoryToProduct(
         productService.findById(productId), subCategoryId);
   }
-
-
 }
