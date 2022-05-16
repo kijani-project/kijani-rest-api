@@ -28,5 +28,4 @@ public class Category {
   private String categoryName;
 
   private String imageLink;
-
 }
