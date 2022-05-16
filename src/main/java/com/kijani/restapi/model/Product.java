@@ -35,6 +35,10 @@ public class Product {
 
   private String description;
 
+  private String designer;
+
+  private Size size;
+
   @ManyToMany
   @JoinTable(
       name = "product_category",
