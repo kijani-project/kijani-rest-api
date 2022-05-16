@@ -1,25 +1,23 @@
 package com.kijani.restapi.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Setter
 @Getter
-public class Ecolabel {
+public class SupplierEcoLabel {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "ecolabel_id", nullable = false)
+  @Column(name = "supplier_ecolabel_id", nullable = false)
   private Integer id;
 
-  @ManyToOne()
-  @JsonBackReference
-  @JoinColumn(name = "product_id")
-  private Product product;
+  @ManyToMany(mappedBy = "supplierEcolabels")
+  private List<Supplier> suppliers;
 
   private String type;
 }
