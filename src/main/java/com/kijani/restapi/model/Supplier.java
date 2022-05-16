@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,12 +21,12 @@ public class Supplier {
   @Column(name = "supplier_id")
   private Integer supplierId;
 
-  /*
-    @OneToMany
-    @JsonManagedReference
-    @JoinColumn(name = "supplier_id")
-    private List<Product> products;
-  */
+
+  @OneToMany
+  @JsonManagedReference
+  @JoinColumn(name = "supplier_id")
+  private List<Product> products;
+
   private String name;
 
   private String environmentalProfile;
@@ -35,7 +36,7 @@ public class Supplier {
   private String freight;
 
   @ManyToMany
-  @JsonManagedReference
+ // @JsonManagedReference
   @JoinTable(
       name = "supplier_support_ecolabel",
       joinColumns = @JoinColumn(name = "supplier_id"),

@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,5 +21,6 @@ public class EcoTest {
   private String ecoTestName;
 
   @ManyToMany(mappedBy = "ecoTests")
+  //@JsonBackReference
   private List<Product> product;
 }

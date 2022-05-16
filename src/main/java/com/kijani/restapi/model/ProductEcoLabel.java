@@ -18,7 +18,7 @@ public class ProductEcoLabel {
   private Integer product_ecolabel_id;
 
   @ManyToMany(mappedBy = "productEcoLabels")
-  @JsonBackReference
+  //@JsonBackReference
   private List<Product> products;
 
   private String type;

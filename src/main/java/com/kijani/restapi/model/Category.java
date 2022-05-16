@@ -1,6 +1,7 @@
 package com.kijani.restapi.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +22,7 @@ public class Category {
   private Integer categoryId;
 
   @OneToMany
-  // @JsonManagedReference
+  @JsonManagedReference
   @JsonBackReference
   @JoinColumn(name = "category_id")
   private List<SubCategory> subCategories;
