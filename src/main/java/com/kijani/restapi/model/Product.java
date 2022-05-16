@@ -37,6 +37,7 @@ public class Product {
 
   private String designer;
 
+  @Transient
   private Size size;
 
   @ManyToMany

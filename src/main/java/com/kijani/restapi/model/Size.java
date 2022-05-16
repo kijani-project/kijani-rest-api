@@ -10,7 +10,13 @@ import lombok.Setter;
 @Getter
 public class Size {
 
-  private String length;
-  private String width;
-  private String height;
+  private int length;
+  private int width;
+  private int height;
+
+  public Size(int length, int width, int height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
 }

@@ -37,6 +37,7 @@ public class DataMapper implements CommandLineRunner {
     product2.setName("Test product 2");
     product2.setDescription("Dette er en Stol");
     product2.setSupplier(supplier);
+    product2.setSize(new Size(200, 90, 74));
     productRepository.save(product2);
 
     Ecolabel ecolabel1 = new Ecolabel();
