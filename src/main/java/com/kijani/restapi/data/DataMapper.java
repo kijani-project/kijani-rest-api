@@ -53,12 +53,12 @@ public class DataMapper implements CommandLineRunner {
 
     ProductEcoLabel productEcoLabel1 = new ProductEcoLabel();
     productEcoLabel1.setType("Miljø A-klasse");
-    //productEcoLabel1.setProduct(product1);
+    // productEcoLabel1.setProduct(product1);
     ecolabelRepository.save(productEcoLabel1);
 
     ProductEcoLabel productEcoLabel2 = new ProductEcoLabel();
     productEcoLabel2.setType("Miljø B-klasse");
-    //productEcoLabel2.setProduct(product1);
+    // productEcoLabel2.setProduct(product1);
     ecolabelRepository.save(productEcoLabel2);
 
     Category category1 = new Category();

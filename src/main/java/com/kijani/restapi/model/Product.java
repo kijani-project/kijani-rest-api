@@ -58,7 +58,6 @@ public class Product {
   @Column(name = "co2_mesurability")
   private String co2Mesurability;
 
-
   @ManyToMany
   @JsonManagedReference
   @JoinTable(

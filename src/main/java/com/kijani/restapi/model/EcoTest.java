@@ -21,5 +21,4 @@ public class EcoTest {
 
   @ManyToMany(mappedBy = "ecoTests")
   private List<Product> product;
-
 }
