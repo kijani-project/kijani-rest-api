@@ -60,7 +60,6 @@ public class ProductController {
   @PutMapping("/test/{productId}/{subCategoryId}")
   public List<SubCategory> addSubCategoryToProduct(
       @PathVariable int productId, @PathVariable int subCategoryId) {
-    return productService.addSubCategoryToProduct(
-        productService.findById(productId), subCategoryId);
+    return productService.addSubCategoryToProduct(productService.findById(productId), subCategoryId);
   }
 }

@@ -1,6 +1,7 @@
 package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Category;
+import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.service.impl.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +33,13 @@ public class CategoryController {
   @PostMapping()
   public Category createCategory(@RequestBody Category category) {
     return categoryService.createCategory(category);
+  }
+
+  @PostMapping("/{categoryId}/subcategories")
+  public SubCategory createSubCategory(
+      @PathVariable int categoryId, @RequestBody SubCategory subCategory) {
+    subCategory.setCategory(categoryService.getCategoryByCategoryId(categoryId));
+    return categoryService.createSubCategory(subCategory);
   }
 
   @PutMapping("/{categoryId}")

@@ -1,7 +1,9 @@
 package com.kijani.restapi.service.impl;
 
 import com.kijani.restapi.model.Category;
+import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.repository.CategoryRepository;
+import com.kijani.restapi.repository.SubCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,8 @@ import java.util.Optional;
 public class CategoryServiceImpl implements CategoryService {
 
   @Autowired CategoryRepository categoryRepository;
+  @Autowired
+  SubCategoryRepository subCategoryRepository;
 
   @Override
   public List<Category> getCategories() {
@@ -54,5 +58,10 @@ public class CategoryServiceImpl implements CategoryService {
     } catch (Exception err) {
       return new ResponseEntity<>("Error deleting", HttpStatus.NO_CONTENT);
     }
+  }
+
+  @Override
+  public SubCategory createSubCategory(SubCategory subCategory) {
+    return subCategoryRepository.save(subCategory);
   }
 }
