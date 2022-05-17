@@ -57,9 +57,6 @@ jobs:
           spring.data.jpa.repositories.bootstrap_mode=default" >"./src/main/resources/application.properties"
       - name: Build & Test
         run: mvn -B verify --file pom.xml
-      
-      - name: Remove datamappers
-        run: rm ./src/main/java/com/kijani/restapi/data -rf
 
   CD:
     if: github.event_name != 'pull_request'
