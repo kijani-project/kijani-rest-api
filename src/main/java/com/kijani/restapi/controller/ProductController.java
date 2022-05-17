@@ -23,14 +23,11 @@ public class ProductController {
   }
 
   @GetMapping()
-  public List<Product> getProducts() {
+  public List<Product> getProducts(@RequestParam(required = false) Integer categoryId) {
+    if (null != categoryId) {
+      return productService.getProductsByCategoryId(categoryId);
+    }
     return productService.getAllProducts();
-  }
-
-  @GetMapping("/category")
-  @ResponseBody
-  public List<Product> getProductsByCategoryId(@RequestParam(required = false) Integer categoryId) {
-    return productService.getProductsByCategoryId(categoryId);
   }
 
   // TODO Virker nu
