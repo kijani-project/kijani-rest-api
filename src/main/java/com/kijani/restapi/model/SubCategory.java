@@ -27,9 +27,9 @@ public class SubCategory {
   @JoinColumn(name = "category_id")
   private Category category;
 
+  private String subCategoryName;
+
   @ManyToMany(mappedBy = "subCategories")
   @JsonIgnore
   private List<Product> products = new LinkedList<>();
-
-  private String subCategoryName;
 }
