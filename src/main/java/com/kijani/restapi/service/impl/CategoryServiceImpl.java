@@ -19,8 +19,7 @@ import java.util.Optional;
 public class CategoryServiceImpl implements CategoryService {
 
   @Autowired CategoryRepository categoryRepository;
-  @Autowired
-  SubCategoryRepository subCategoryRepository;
+  @Autowired SubCategoryRepository subCategoryRepository;
 
   @Override
   public List<Category> getCategories() {

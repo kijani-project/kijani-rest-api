@@ -22,7 +22,7 @@ public class SubCategoryController {
     return subCategoryService.getSubCategories();
   }
 
-  //Er flyttet til Category
+  // Er flyttet til Category
   /*
   @PostMapping("/{categoryId}")
   public SubCategory createSubCategory(
