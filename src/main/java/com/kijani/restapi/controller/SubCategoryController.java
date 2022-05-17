@@ -22,12 +22,14 @@ public class SubCategoryController {
     return subCategoryService.getSubCategories();
   }
 
+  // Er flyttet til Category
+  /*
   @PostMapping("/{categoryId}")
   public SubCategory createSubCategory(
       @PathVariable int categoryId, @RequestBody SubCategory subCategory) {
     subCategory.setSubCategoryId(categoryId);
     return subCategoryService.createSubCategory(subCategory);
-  }
+  }*/
 
   // TODO Attribut skal ændres fra INTEGER til INT på Modellen.
   @PutMapping("/{subCategoryId}")

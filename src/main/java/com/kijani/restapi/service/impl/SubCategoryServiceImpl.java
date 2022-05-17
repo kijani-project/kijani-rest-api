@@ -24,11 +24,6 @@ public class SubCategoryServiceImpl implements SubCategoryService {
   }
 
   @Override
-  public SubCategory createSubCategory(SubCategory subCategory) {
-    return subCategoryRepository.save(subCategory);
-  }
-
-  @Override
   public ResponseEntity<String> editSubCategory(SubCategory subCategory) {
     Optional<SubCategory> existingProduct =
         subCategoryRepository.findById(subCategory.getSubCategoryId());

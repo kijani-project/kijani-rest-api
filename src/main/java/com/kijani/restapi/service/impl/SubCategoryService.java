@@ -12,8 +12,6 @@ public interface SubCategoryService {
 
   List<SubCategory> getSubCategories();
 
-  SubCategory createSubCategory(SubCategory subCategory);
-
   ResponseEntity<String> editSubCategory(SubCategory subCategory);
 
   ResponseEntity<String> deleteSubCategory(int subCategoryID);
