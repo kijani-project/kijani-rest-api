@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,10 +15,12 @@ public class ProductEcoLabel {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "product_ecolabel_id", nullable = false)
-  private Integer product_ecolabel_id;
+  private Integer productEcolabelId;
 
-  @ManyToMany(mappedBy = "productEcoLabels")
-  // @JsonBackReference
+  @ManyToMany(
+      mappedBy = "productEcoLabels",
+      cascade = {CascadeType.ALL})
+  @JsonBackReference
   private List<Product> products;
 
   private String type;
