@@ -25,7 +25,7 @@ public class Product {
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
-  @ManyToMany
+  @ManyToMany(cascade = {CascadeType.ALL})
   // @JsonManagedReference
   @JoinTable(
       name = "product_support_ecoLabel",
