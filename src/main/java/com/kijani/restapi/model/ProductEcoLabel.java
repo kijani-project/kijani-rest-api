@@ -17,7 +17,9 @@ public class ProductEcoLabel {
   @Column(name = "product_ecolabel_id", nullable = false)
   private Integer productEcolabelId;
 
-  @ManyToMany(mappedBy = "productEcoLabels", cascade = {CascadeType.ALL})
+  @ManyToMany(
+      mappedBy = "productEcoLabels",
+      cascade = {CascadeType.ALL})
   @JsonBackReference
   private List<Product> products;
 
