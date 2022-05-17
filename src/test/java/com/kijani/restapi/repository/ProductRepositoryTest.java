@@ -1,16 +1,11 @@
 package com.kijani.restapi.repository;
 
-import com.kijani.restapi.model.Product;
-import com.kijani.restapi.service.ProductService;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class ProductRepositoryTest {
   // CRUD tests
-/*
+  /*
   @Autowired ProductService productService;
   private int supplierId = 1;
   // Create
