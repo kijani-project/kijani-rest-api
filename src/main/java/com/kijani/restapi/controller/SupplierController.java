@@ -45,7 +45,6 @@ public class SupplierController {
 
   @PostMapping()
   public Supplier createSupplier(@RequestBody Supplier supplier) {
-    System.out.println("Kommer vi her ind " + supplier.getName());
     return supplierService.createSupplier(supplier);
   }
 
