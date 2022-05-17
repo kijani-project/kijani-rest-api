@@ -15,9 +15,9 @@ public class ProductEcoLabel {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "product_ecolabel_id", nullable = false)
-  private Integer product_ecolabel_id;
+  private Integer productEcolabelId;
 
-  @ManyToMany(mappedBy = "productEcoLabels")
+  @ManyToMany(mappedBy = "productEcoLabels", cascade = {CascadeType.ALL})
   @JsonBackReference
   private List<Product> products;
 
