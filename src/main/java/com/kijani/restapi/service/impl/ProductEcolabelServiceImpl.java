@@ -16,43 +16,43 @@ import java.util.Optional;
 @Service
 public class ProductEcolabelServiceImpl implements ProductEcolabelService {
 
-    @Autowired
-    ProductEcolabelRepository productEcolabelRepository;
+  @Autowired ProductEcolabelRepository productEcolabelRepository;
 
-    @Override
-    public List<ProductEcoLabel> getProductEcolabels() {
-        return productEcolabelRepository.findAll();
+  @Override
+  public List<ProductEcoLabel> getProductEcolabels() {
+    return productEcolabelRepository.findAll();
+  }
+
+  @Override
+  public ProductEcoLabel createEcolabel(ProductEcoLabel productEcoLabel) {
+    return productEcolabelRepository.save(productEcoLabel);
+  }
+
+  @Override
+  public ProductEcoLabel getProductEcolabelById(int ecolabelId) {
+    return productEcolabelRepository.findById(ecolabelId).orElse(null);
+  }
+
+  @Override
+  public ResponseEntity<String> updateEcolabel(ProductEcoLabel productEcoLabel) {
+    Optional<ProductEcoLabel> ecolabelDb =
+        productEcolabelRepository.findById(productEcoLabel.getProductEcolabelId());
+    if (ecolabelDb.isPresent()) {
+      productEcolabelRepository.save(productEcoLabel);
+      return ResponseEntity.ok()
+          .body("You edited an ecolabel " + productEcoLabel.getProductEcolabelId());
+    } else {
+      return new ResponseEntity<>("Error ", HttpStatus.NOT_FOUND);
     }
+  }
 
-    @Override
-    public ProductEcoLabel createEcolabel(ProductEcoLabel productEcoLabel) {
-        return productEcolabelRepository.save(productEcoLabel);
+  @Override
+  public ResponseEntity<String> delete(int ecolabelId) {
+    try {
+      productEcolabelRepository.deleteById(ecolabelId);
+      return new ResponseEntity<>("Ecolabel was deleted ", HttpStatus.OK);
+    } catch (Exception err) {
+      return new ResponseEntity<>("Error Ecolabel not found ", HttpStatus.I_AM_A_TEAPOT);
     }
-
-    @Override
-    public ProductEcoLabel getProductEcolabelById(int ecolabelId) {
-        return productEcolabelRepository.findById(ecolabelId).orElse(null);
-    }
-
-    @Override
-    public ResponseEntity<String> updateEcolabel(ProductEcoLabel productEcoLabel) {
-        Optional<ProductEcoLabel>ecolabelDb = productEcolabelRepository.findById(productEcoLabel.getProductEcolabelId());
-        if (ecolabelDb.isPresent()) {
-         productEcolabelRepository.save(productEcoLabel);
-         return ResponseEntity.ok().body("You edited an ecolabel " + productEcoLabel.getProductEcolabelId());
-        } else{
-            return new ResponseEntity<>("Error " , HttpStatus.NOT_FOUND);
-        }
-
-    }
-
-    @Override
-    public ResponseEntity<String> delete(int ecolabelId) {
-        try{
-            productEcolabelRepository.deleteById(ecolabelId);
-            return new ResponseEntity<>("Ecolabel was deleted ",HttpStatus.OK);
-        }catch(Exception err){
-            return new ResponseEntity<>("Error Ecolabel not found ",HttpStatus.I_AM_A_TEAPOT);
-        }
-    }
+  }
 }

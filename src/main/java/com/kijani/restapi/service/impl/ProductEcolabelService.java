@@ -10,14 +10,13 @@ import java.util.List;
  */
 public interface ProductEcolabelService {
 
+  List<ProductEcoLabel> getProductEcolabels();
 
-    List<ProductEcoLabel> getProductEcolabels();
+  ProductEcoLabel createEcolabel(ProductEcoLabel productEcoLabel);
 
-    ProductEcoLabel createEcolabel(ProductEcoLabel productEcoLabel);
+  ProductEcoLabel getProductEcolabelById(int ecolabelId);
 
-    ProductEcoLabel getProductEcolabelById(int ecolabelId);
+  ResponseEntity<String> updateEcolabel(ProductEcoLabel productEcoLabel);
 
-    ResponseEntity<String> updateEcolabel(ProductEcoLabel productEcoLabel);
-
-    ResponseEntity<String> delete(int ecolabelId);
+  ResponseEntity<String> delete(int ecolabelId);
 }
