@@ -6,7 +6,5 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataMapper implements CommandLineRunner {
 
-  public void run(String... args) throws Exception {
-
-  }
+  public void run(String... args) throws Exception {}
 }
