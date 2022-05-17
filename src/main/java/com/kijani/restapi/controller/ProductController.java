@@ -24,7 +24,7 @@ public class ProductController {
 
   @GetMapping()
   public List<Product> getProducts(@RequestParam(required = false) Integer categoryId) {
-    if (null != categoryId){
+    if (null != categoryId) {
       return productService.getProductsByCategoryId(categoryId);
     }
     return productService.getAllProducts();
