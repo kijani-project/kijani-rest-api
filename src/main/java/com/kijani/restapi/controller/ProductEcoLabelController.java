@@ -1,4 +1,5 @@
-package com.kijani.restapi.controller;/**
+package com.kijani.restapi.controller;
+/**
  * @author Christopher
- */public class ProductEcoLabelController {
-}
+ */
+public class ProductEcoLabelController {}

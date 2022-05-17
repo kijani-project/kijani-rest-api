@@ -1,4 +1,5 @@
-package com.kijani.restapi.service.impl;/**
+package com.kijani.restapi.service.impl;
+/**
  * @author Christopher
- */public interface ProductEcolabelService {
-}
+ */
+public interface ProductEcolabelService {}

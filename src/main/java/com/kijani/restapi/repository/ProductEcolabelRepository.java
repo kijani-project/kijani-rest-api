@@ -1,4 +1,5 @@
-package com.kijani.restapi.repository;/**
+package com.kijani.restapi.repository;
+/**
  * @author Christopher
- */public interface ProductEcolabelRepository {
-}
+ */
+public interface ProductEcolabelRepository {}
