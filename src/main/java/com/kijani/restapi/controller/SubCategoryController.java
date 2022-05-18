@@ -1,7 +1,7 @@
 package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.SubCategory;
-import com.kijani.restapi.service.impl.SubCategoryService;
+import com.kijani.restapi.service.SubCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/subcategories") // Kan den ikke kaldes for sub?????????????????
+@RequestMapping("/subCategories")
 public class SubCategoryController {
   @Autowired SubCategoryService subCategoryService;
 
@@ -22,26 +22,15 @@ public class SubCategoryController {
     return subCategoryService.getSubCategories();
   }
 
-  // Er flyttet til Category
-  /*
-  @PostMapping("/{categoryId}")
-  public SubCategory createSubCategory(
-      @PathVariable int categoryId, @RequestBody SubCategory subCategory) {
-    subCategory.setSubCategoryId(categoryId);
-    return subCategoryService.createSubCategory(subCategory);
-  }*/
-
-  // TODO Attribut skal ændres fra INTEGER til INT på Modellen.
   @PutMapping("/{subCategoryId}")
-  public ResponseEntity<String> editSubCategory(
+  public ResponseEntity<String> updateSubCategory(
       @PathVariable Integer subCategoryId, @RequestBody SubCategory subCategory) {
     subCategory.setSubCategoryId(subCategoryId);
-    return subCategoryService.editSubCategory(subCategory);
+    return subCategoryService.updateSubCategory(subCategory);
   }
 
-  // TODO Problemer med med parent row - deleter ikke
-  @DeleteMapping("/{subCategoryID}")
-  public ResponseEntity<String> deleteSubCategory(@PathVariable int subCategoryID) {
-    return subCategoryService.deleteSubCategory(subCategoryID);
+  @DeleteMapping("/{subCategoryId}")
+  public ResponseEntity<String> deleteSubCategory(@PathVariable int subCategoryId) {
+    return subCategoryService.deleteSubCategory(subCategoryId);
   }
 }

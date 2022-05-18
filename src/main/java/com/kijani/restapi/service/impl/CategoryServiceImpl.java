@@ -4,6 +4,7 @@ import com.kijani.restapi.model.Category;
 import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.repository.CategoryRepository;
 import com.kijani.restapi.repository.SubCategoryRepository;
+import com.kijani.restapi.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class CategoryServiceImpl implements CategoryService {
   }
 
   @Override
-  public Category getCategoryByCategoryId(int categoryId) {
+  public Category getCategory(int categoryId) {
     return categoryRepository.findById(categoryId).orElse(null);
   }
 
@@ -38,7 +39,7 @@ public class CategoryServiceImpl implements CategoryService {
 
   // TODO Skal ændres og valideres
   @Override
-  public ResponseEntity<String> update(Category category) {
+  public ResponseEntity<String> updateCategory(Category category) {
     Optional<Category> existingProduct = categoryRepository.findById(category.getCategoryId());
     if (existingProduct.isPresent()) {
       categoryRepository.save(category);

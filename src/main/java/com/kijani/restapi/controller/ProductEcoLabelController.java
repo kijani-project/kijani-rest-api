@@ -1,7 +1,7 @@
 package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.ProductEcoLabel;
-import com.kijani.restapi.service.impl.ProductEcolabelService;
+import com.kijani.restapi.service.ProductEcoLabelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,34 +13,34 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/ecolabels")
+@RequestMapping("/productEcoLabels")
 public class ProductEcoLabelController {
-  @Autowired ProductEcolabelService productEcolabelService;
+  @Autowired ProductEcoLabelService productEcolabelService;
 
   @GetMapping()
-  public List<ProductEcoLabel> getProductsEcolabels() {
-    return productEcolabelService.getProductEcolabels();
+  public List<ProductEcoLabel> getProductsEcoLabels() {
+    return productEcolabelService.getProductEcoLabels();
   }
 
-  @GetMapping("/{ecolabelId}")
-  public ProductEcoLabel getProductsEcolabels(@PathVariable int ecolabelId) {
-    return productEcolabelService.getProductEcolabelById(ecolabelId);
+  @GetMapping("/{productEcoLabelId}")
+  public ProductEcoLabel getProductsEcoLabels(@PathVariable int productEcoLabelId) {
+    return productEcolabelService.getProductEcoLabel(productEcoLabelId);
   }
 
   @PostMapping()
-  public ProductEcoLabel createEcolabel(@RequestBody ProductEcoLabel productEcoLabel) {
-    return productEcolabelService.createEcolabel(productEcoLabel);
+  public ProductEcoLabel createProductEcoLabel(@RequestBody ProductEcoLabel productEcoLabel) {
+    return productEcolabelService.createProductEcoLabel(productEcoLabel);
   }
 
-  @PutMapping("/{ecolabelId}")
-  public ResponseEntity<String> updateEcolabel(
-      @PathVariable int ecolabelId, @RequestBody ProductEcoLabel productEcoLabel) {
-    productEcoLabel.setProductEcolabelId(ecolabelId);
-    return productEcolabelService.updateEcolabel(productEcoLabel);
+  @PutMapping("/{productEcoLabelId}")
+  public ResponseEntity<String> updateProductEcoLabel(
+      @PathVariable int productEcoLabelId, @RequestBody ProductEcoLabel productEcoLabel) {
+    productEcoLabel.setProductEcoLabelId(productEcoLabelId);
+    return productEcolabelService.updateProductEcoLabel(productEcoLabel);
   }
 
-  @DeleteMapping("/{ecolabelId}")
-  public ResponseEntity<String> deleteEcolabel(@PathVariable int ecolabelId) {
-    return productEcolabelService.delete(ecolabelId);
+  @DeleteMapping("/{productEcoLabelId}")
+  public ResponseEntity<String> deleteProductEcoLabel(@PathVariable int productEcoLabelId) {
+    return productEcolabelService.deleteProductEcoLabel(productEcoLabelId);
   }
 }

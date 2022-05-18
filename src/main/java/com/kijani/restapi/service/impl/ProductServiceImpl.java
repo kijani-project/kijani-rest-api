@@ -1,7 +1,6 @@
 package com.kijani.restapi.service.impl;
 
 import com.kijani.restapi.model.Product;
-import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.repository.CategoryRepository;
 import com.kijani.restapi.repository.ProductRepository;
 import com.kijani.restapi.repository.SubCategoryRepository;
@@ -26,40 +25,19 @@ public class ProductServiceImpl implements ProductService {
   @Autowired CategoryRepository categoryRepository;
 
   @Override
-  public List<Product> getAllProducts() {
+  public List<Product> getProducts() {
     return productRepository.findAll();
   }
 
   @Override
-  public Product findById(int id) {
+  public Product findProduct(int id) {
     Optional<Product> product = productRepository.findById(id);
     return product.orElse(null);
   }
 
+  // TODO Response skal ændres.
   @Override
-  public Product findByName(String name) {
-    Optional<Product> product = productRepository.findProductByName(name);
-    return product.orElse(null);
-  }
-
-  public Product findByNameAndDescription(String name, String description) {
-    Optional<Product> product =
-        productRepository.findProductByNameAndAndDescription(name, description);
-    return product.orElse(null);
-  }
-
-  @Override
-  public Product create(Product product, int supplierId) {
-    // Set supplier to product
-    product.setSupplier(supplierRepository.getById(supplierId));
-
-    // If Statement if null????
-    // return Product from DB when created
-    return productRepository.save(product);
-  }
-
-  @Override
-  public ResponseEntity<String> update(Product product) {
+  public ResponseEntity<String> updateProduct(Product product) {
     // TODO Skal valideres på om supplier_id = null.
     Optional<Product> existingProduct = productRepository.findById(product.getProductId());
     if (existingProduct.isPresent()) {
@@ -76,22 +54,13 @@ public class ProductServiceImpl implements ProductService {
 
   // TODO Response skal ændres.
   @Override
-  public ResponseEntity<String> delete(int productId) {
+  public ResponseEntity<String> deleteProduct(int productId) {
     try {
       productRepository.deleteById(productId);
       return new ResponseEntity<>("was deleted", HttpStatus.OK);
     } catch (Exception err) {
       return new ResponseEntity<>("Error deleting", HttpStatus.NO_CONTENT);
     }
-  }
-
-  // TODO TEST METODE
-  @Override
-  public List<SubCategory> addSubCategoryToProduct(Product product, int subCategoryId) {
-    System.out.println("Im adding");
-    product.addSubCategory(subCategoryRepository.findById(subCategoryId).get());
-    System.out.println("I added " + product.getSubCategories().get(0).getSubCategoryName());
-    return product.getSubCategories();
   }
 
   @Override

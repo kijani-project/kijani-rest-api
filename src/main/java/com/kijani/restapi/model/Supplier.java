@@ -16,11 +16,9 @@ public class Supplier {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "supplier_id")
   private Integer supplierId;
 
   @OneToMany
-  // @JsonManagedReference
   @JoinColumn(name = "supplier_id")
   private List<Product> products;
 
@@ -36,12 +34,11 @@ public class Supplier {
   private String freight;
 
   @ManyToMany
-  // @JsonManagedReference
   @JoinTable(
-      name = "supplier_support_ecolabel",
+      name = "supplier_support_eco_label",
       joinColumns = @JoinColumn(name = "supplier_id"),
-      inverseJoinColumns = @JoinColumn(name = "supplier_ecolabel_id"))
-  private List<SupplierEcoLabel> supplierEcolabels;
+      inverseJoinColumns = @JoinColumn(name = "supplier_eco_label_id"))
+  private List<SupplierEcoLabel> supplierEcoLabels;
 
   private Integer roleId;
 }

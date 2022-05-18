@@ -21,16 +21,14 @@ public class Product {
 
   @ManyToOne
   @JsonIgnore
-  // @JsonBackReference
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
   @ManyToMany(cascade = CascadeType.MERGE)
-  // @JsonManagedReference
   @JoinTable(
-      name = "product_support_ecoLabel",
+      name = "product_support_eco_label",
       joinColumns = @JoinColumn(name = "product_id"),
-      inverseJoinColumns = @JoinColumn(name = "product_ecolabel_id"))
+      inverseJoinColumns = @JoinColumn(name = "product_eco_label_id"))
   private List<ProductEcoLabel> productEcoLabels;
 
   private String itemNumber;
@@ -44,38 +42,30 @@ public class Product {
 
   @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
   @JoinColumn(name = "measurement_id")
-  // @JsonManagedReference
   private Measurement measurement;
 
   @ManyToMany
-  // @JsonManagedReference
   @JoinTable(
       name = "product_category",
       joinColumns = @JoinColumn(name = "product_id"),
       inverseJoinColumns = @JoinColumn(name = "sub_category_id"))
   private List<SubCategory> subCategories = new LinkedList<>();
 
-  @Column(name = "co2_mesurability")
-  private String co2Mesurability;
+  @Column(name = "co2_measurability")
+  private String co2Measurability;
 
   @ManyToMany
-  // @JsonManagedReference
   @JoinTable(
-      name = "product_ecoTest",
+      name = "product_eco_test",
       joinColumns = @JoinColumn(name = "product_id"),
-      inverseJoinColumns = @JoinColumn(name = "ecoTest_id"))
+      inverseJoinColumns = @JoinColumn(name = "eco_test_id"))
   private List<EcoTest> ecoTests = new LinkedList<>();
 
-  private Date createdAt;
+  private Date createdAt; // TODO
 
-  private Date updatedAt;
+  private Date updatedAt; // TODO
 
   private String imageLink;
 
   private String brochureLink;
-
-  @JsonIgnore
-  public void addSubCategory(SubCategory subCategory) {
-    subCategories.add(subCategory);
-  }
 }
