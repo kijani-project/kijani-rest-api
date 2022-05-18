@@ -46,12 +46,12 @@ The app defines following CRUD APIs.
 | PUT    | /subCategories/{categoryId} | Edit a subCategories by subCategories Id   | |
 | DELETE | /subCategories/{categoryId} | Delete a subCategories by subCategories Id | |
 
-### EcoLabels
+### ProductEcoLabels
 
-| Method | Url                     | Description                                | Sample Valid Request Body |
-|--------|-------------------------|--------------------------------------------| ------------------------- |
-| GET    | /ecoLabels              | Get all ecolabels                          | |
-| GET    | /ecoLabels/{ecoLabelId} | Get a ecolabel by Id                       | |
-| POST   | /ecoLabels/{ecoLabelId} | Create a ecolabel by ecolabel Id | |
+| Method | Url                     | Description                      | Sample Valid Request Body |
+|--------|-------------------------|----------------------------------| ------------------------- |
+| GET    | /ecolabels              | Get all ecolabels                | |
+| GET    | /ecoLabels/{ecoLabelId} | Get a ecolabel by Id             | |
+| POST   | /ecoLabels              | Create a ecolabel                | |
 | PUT    | /ecoLabels/{ecoLabelId} | Edit a ecolabel by ecolabel Id   | |
 | DELETE | /ecoLabels/{ecoLabelId} | Delete a ecolabel by ecolabel Id | |

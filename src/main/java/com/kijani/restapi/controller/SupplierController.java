@@ -23,17 +23,17 @@ public class SupplierController {
   }
 
   @GetMapping("/{id}/profile")
-  public Supplier findSupplier(@PathVariable int id) {
+  public Supplier findSupplier(@PathVariable Integer id) {
     return supplierService.getById(id);
   }
 
   @GetMapping("/{supplierId}/products")
-  public List<Product> getProducts(@PathVariable int supplierId) {
+  public List<Product> getProducts(@PathVariable Integer supplierId) {
     return supplierService.getProductsBySupplierId(supplierId);
   }
 
   @GetMapping("/{supplierId}/products/{productId}")
-  public Product findProduct(@PathVariable int supplierId, @PathVariable int productId) {
+  public Product findProduct(@PathVariable Integer supplierId, @PathVariable Integer productId) {
     return supplierService.getProductByProductIdAndSupplierId(supplierId, productId);
   }
 
