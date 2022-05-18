@@ -26,10 +26,13 @@ public class Supplier {
 
   private String name;
 
+  @Column(length = 1024)
   private String environmentalProfile;
 
+  @Column(length = 1024)
   private String packaging;
 
+  @Column(length = 1024)
   private String freight;
 
   @ManyToMany

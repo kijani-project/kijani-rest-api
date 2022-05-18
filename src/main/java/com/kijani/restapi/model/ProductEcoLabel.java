@@ -19,7 +19,7 @@ public class ProductEcoLabel {
 
   @ManyToMany(
       mappedBy = "productEcoLabels",
-      cascade = {CascadeType.ALL})
+      cascade = CascadeType.ALL)
   @JsonBackReference
   private List<Product> products;
 
