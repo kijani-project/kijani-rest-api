@@ -106,7 +106,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"itemNumber\": null,\r\n    \"name\": \"TEST1345\",\r\n    \"description\": \"Dette er en Stol\",\r\n    \"tests\": null,\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"brochureLink\": null,\r\n    \"measurement\": {\r\n        \"length\": 10,\r\n        \"height\": 10,\r\n        \"width\": 10\r\n    }\r\n}",
+							"raw": "{\r\n    \"itemNumber\": \"Item1\",\r\n    \"name\": \"TEST1345\",\r\n    \"description\": \"Dette er en Stol\",\r\n    \"designer\": \"Arne Jakobsen\",\r\n    \"measurement\": {\r\n        \"length\": 10,\r\n        \"width\": 10,\r\n        \"height\": 10\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 1\r\n        },\r\n        {\r\n            \"subCategoryId\": 2\r\n        }\r\n    ],\r\n    \"co2Mesurability\": \"test string\",\r\n    \"productEcoLabels\": [\r\n        {\r\n            \"productEcoLabelId\": 1\r\n        },\r\n        {\r\n            \"productEcoLabelId\": 2\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://demo.com/img.png\",\r\n    \"brochureLink\": \"https://demo.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -423,12 +423,53 @@
 					"response": []
 				},
 				{
+					"name": "/categories/{categoryId}/subcategories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 2,\r\n            \"subCategoryName\": \"Stole\"\r\n        }\r\n    ],\r\n    \"categoryName\": \"Hjemmekontor\",\r\n    \"imageLink\": \"https://sw28470.sfstatic.io/upload_dir/pics/_thumbs/main.cat3-700x1400.w1400.h700.crop.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "/categories/{categoryId}",
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"subCategories\": [],\r\n        \"categoryName\": \"DataMapper Test\",\r\n        \"imageLink\": \"https://sw28470.sfstatic.io/upload_dir/pics/_thumbs/main.cat1-700x1400-1.w1400.h700.crop.png\"\r\n    }"
+						},
 						"url": {
-							"raw": "/categories/1",
+							"raw": "http://20.224.83.97/categories/1",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
 							"path": [
 								"categories",
 								"1"
@@ -468,28 +509,6 @@
 					"name": "/subCategories/{categoryId}",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://20.224.83.97/subCategories/1",
-							"protocol": "http",
-							"host": [
-								"20",
-								"224",
-								"83",
-								"97"
-							],
-							"path": [
-								"subCategories",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/subCategories/{subCategoryId}",
-					"request": {
-						"method": "POST",
 						"header": [],
 						"url": {
 							"raw": "http://20.224.83.97/subCategories/1",
