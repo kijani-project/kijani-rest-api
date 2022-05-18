@@ -35,7 +35,7 @@ public class SupplierServiceImpl implements SupplierService {
 
   @Override
   public List<Product> getProducts(int supplierId) {
-    return productRepository.findProducts(supplierId);
+    return productRepository.findProductBySupplierSupplierId(supplierId);
   }
 
   @Override
