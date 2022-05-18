@@ -14,12 +14,11 @@ public class EcoTest {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "ecotest_id", nullable = false)
+  @Column(name = "eco_test_id", nullable = false)
   private Integer ecoTestId;
 
   private String ecoTestName;
 
   @ManyToMany(mappedBy = "ecoTests")
-  // @JsonBackReference
-  private List<Product> product;
+  private List<Product> products;
 }

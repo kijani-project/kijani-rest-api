@@ -2,6 +2,7 @@ package com.kijani.restapi.service.impl;
 
 import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.repository.SubCategoryRepository;
+import com.kijani.restapi.service.SubCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ public class SubCategoryServiceImpl implements SubCategoryService {
   }
 
   @Override
-  public ResponseEntity<String> editSubCategory(SubCategory subCategory) {
+  public ResponseEntity<String> updateSubCategory(SubCategory subCategory) {
     Optional<SubCategory> existingProduct =
         subCategoryRepository.findById(subCategory.getSubCategoryId());
     if (existingProduct.isPresent()) {
@@ -37,9 +38,9 @@ public class SubCategoryServiceImpl implements SubCategoryService {
   }
 
   @Override
-  public ResponseEntity<String> deleteSubCategory(int subCategoryID) {
+  public ResponseEntity<String> deleteSubCategory(int subCategoryId) {
     try {
-      subCategoryRepository.deleteById(subCategoryID);
+      subCategoryRepository.deleteById(subCategoryId);
       return new ResponseEntity<>("was deleted", HttpStatus.OK);
     } catch (Exception err) {
       return new ResponseEntity<>("Error deleting", HttpStatus.NO_CONTENT);

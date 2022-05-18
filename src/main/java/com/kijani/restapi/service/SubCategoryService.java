@@ -1,4 +1,4 @@
-package com.kijani.restapi.service.impl;
+package com.kijani.restapi.service;
 
 import com.kijani.restapi.model.SubCategory;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ public interface SubCategoryService {
 
   List<SubCategory> getSubCategories();
 
-  ResponseEntity<String> editSubCategory(SubCategory subCategory);
+  ResponseEntity<String> updateSubCategory(SubCategory subCategory);
 
-  ResponseEntity<String> deleteSubCategory(int subCategoryID);
+  ResponseEntity<String> deleteSubCategory(int subCategoryId);
 }

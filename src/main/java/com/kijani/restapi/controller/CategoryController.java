@@ -2,7 +2,7 @@ package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Category;
 import com.kijani.restapi.model.SubCategory;
-import com.kijani.restapi.service.impl.CategoryService;
+import com.kijani.restapi.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +21,7 @@ public class CategoryController {
 
   @GetMapping("/{categoryId}")
   public Category findCategory(@PathVariable int categoryId) {
-    return categoryService.getCategoryByCategoryId(categoryId);
+    return categoryService.getCategory(categoryId);
   }
 
   @GetMapping()
@@ -29,24 +29,23 @@ public class CategoryController {
     return categoryService.getCategories();
   }
 
-  // TODO Fixet
   @PostMapping()
   public Category createCategory(@RequestBody Category category) {
     return categoryService.createCategory(category);
   }
 
-  @PostMapping("/{categoryId}/subcategories")
+  @PostMapping("/{categoryId}/subCategories")
   public SubCategory createSubCategory(
       @PathVariable int categoryId, @RequestBody SubCategory subCategory) {
-    subCategory.setCategory(categoryService.getCategoryByCategoryId(categoryId));
+    subCategory.setCategory(categoryService.getCategory(categoryId));
     return categoryService.createSubCategory(subCategory);
   }
 
   @PutMapping("/{categoryId}")
-  public ResponseEntity<String> editCategory(
+  public ResponseEntity<String> updateCategory(
       @PathVariable int categoryId, @RequestBody Category category) {
     category.setCategoryId(categoryId);
-    return categoryService.update(category);
+    return categoryService.updateCategory(category);
   }
 
   @DeleteMapping("/{categoryId}")

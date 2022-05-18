@@ -13,11 +13,10 @@ public class SupplierEcoLabel {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "supplier_ecolabel_id", nullable = false)
-  private Integer id;
+  @Column(name = "supplier_eco_label_id", nullable = false)
+  private Integer supplierEcoLabelId;
 
-  @ManyToMany(mappedBy = "supplierEcolabels")
-  // @JsonBackReference
+  @ManyToMany(mappedBy = "supplierEcoLabels")
   private List<Supplier> suppliers;
 
   private String type;

@@ -2,7 +2,7 @@ package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Product;
 import com.kijani.restapi.model.Supplier;
-import com.kijani.restapi.service.impl.SupplierService;
+import com.kijani.restapi.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,6 @@ public class SupplierController {
 
   @Autowired SupplierService supplierService;
 
-  // NEW README FILE ENDPOINTS
   @GetMapping()
   public List<Supplier> getSuppliers() {
     return supplierService.getSuppliers();
@@ -24,23 +23,23 @@ public class SupplierController {
 
   @GetMapping("/{id}/profile")
   public Supplier findSupplier(@PathVariable Integer id) {
-    return supplierService.getById(id);
+    return supplierService.getSupplier(id);
   }
 
   @GetMapping("/{supplierId}/products")
   public List<Product> getProducts(@PathVariable Integer supplierId) {
-    return supplierService.getProductsBySupplierId(supplierId);
+    return supplierService.getProducts(supplierId);
   }
 
   @GetMapping("/{supplierId}/products/{productId}")
   public Product findProduct(@PathVariable Integer supplierId, @PathVariable Integer productId) {
-    return supplierService.getProductByProductIdAndSupplierId(supplierId, productId);
+    return supplierService.getProductBySupplierId(supplierId, productId);
   }
 
-  // TODO virker nu.
   @PostMapping("/{supplierId}/products")
   public Product createProduct(@PathVariable Integer supplierId, @RequestBody Product product) {
-    return supplierService.createProduct(supplierId, product);
+    product.setSupplier(supplierService.getSupplier(supplierId));
+    return supplierService.createProduct(product);
   }
 
   @PostMapping()
@@ -48,17 +47,15 @@ public class SupplierController {
     return supplierService.createSupplier(supplier);
   }
 
-  // TODO VIRKER NU!
   @PutMapping("/{supplierId}")
-  public ResponseEntity<String> editSupplier(
+  public ResponseEntity<String> updateSupplier(
       @PathVariable Integer supplierId, @RequestBody Supplier supplier) {
     supplier.setSupplierId(supplierId);
-    return supplierService.editSupplier(supplier);
+    return supplierService.updateSupplier(supplier);
   }
 
-  // TODO Cascade problem Kan ikke delete pga. produkter
   @DeleteMapping("/{supplierId}")
   public ResponseEntity<String> deleteSupplier(@PathVariable Integer supplierId) {
-    return supplierService.delete(supplierId);
+    return supplierService.deleteSupplier(supplierId);
   }
 }
