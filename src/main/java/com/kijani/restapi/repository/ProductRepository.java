@@ -1,7 +1,6 @@
 package com.kijani.restapi.repository;
 
 import com.kijani.restapi.model.Product;
-import com.kijani.restapi.model.ProductEcoLabel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -25,6 +24,11 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
   List<Product> findProductsByDesigner(String designer);
 
-  @Query(value = "Select * from product INNER JOIN product_support_eco_label psel on product.product_id = psel.product_id join product_eco_label pel on pel.product_eco_label_id = psel.product_eco_label_id where pel.product_eco_label_id = ?1", nativeQuery = true)
+  @Query(
+      value =
+          "Select * from product INNER JOIN product_support_eco_label psel on product.product_id ="
+              + " psel.product_id join product_eco_label pel on pel.product_eco_label_id ="
+              + " psel.product_eco_label_id where pel.product_eco_label_id = ?1",
+      nativeQuery = true)
   List<Product> findProductsByProductEcoLabelsId(int productEcoLabelId);
 }

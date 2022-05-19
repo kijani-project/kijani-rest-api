@@ -21,8 +21,7 @@ public class ProductServiceImpl implements ProductService {
 
   @Autowired CategoryRepository categoryRepository;
 
-  @Autowired
-  ProductEcoLabelRepository productEcoLabelRepository;
+  @Autowired ProductEcoLabelRepository productEcoLabelRepository;
 
   @Override
   public List<Product> getProducts() {
