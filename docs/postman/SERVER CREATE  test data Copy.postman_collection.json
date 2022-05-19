@@ -1,0 +1,1506 @@
+{
+	"info": {
+		"_postman_id": "bd9537b1-43e5-4357-9ae4-e26033083f91",
+		"name": "SERVER CREATE  test data Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create suppliers",
+			"item": [
+				{
+					"name": "Create supplier1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"&Tradition\",\r\n    \"environmentalProfile\": \"Our collection is designed to be passed down through generations, to endure the impact of time, focusing on quality over quantity. Social responsibility and sustainable design play a large part in that process, and we are happy to share our procedures and results.\",\r\n    \"packaging\": \"Emballagen på vores nye produkter udvikles baseret på vores packaging guideline. Derduover arbejder vi på at pap og andre træbaserede materialer bliver FSC certificerede på hele det eksisterende sortiment. Samt at plastik udfases så vidt muligt. Der hvor det ikke er muligt at udfase plastik forsøger vi at skifte til genbrugsplast.\",\r\n    \"freight\": \"&Tradition benytter Maersk Eco delivery (https://www.maersk.com/transportation-services/eco-delivery)\",\r\n    \"supplierEcoLabels\": null,\r\n    \"roleId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create supplier2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Carl Hansen & Søn\",\r\n    \"environmentalProfile\": \"Focus on sustainability, In addition to working with the very best designers and the finest materials, Carl Hansen & Søn has been committed to sustainable development for many years. Read 3 short stories here about how we at Carl Hansen & Søn work with sustainability in different ways.\",\r\n    \"packaging\": null,\r\n    \"freight\": null,\r\n    \"supplierEcoLabels\": null,\r\n    \"roleId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create supplier3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fritz Hansen\",\r\n    \"environmentalProfile\": \"Positive change, by collaborating with designers, partners and suppliers who share our values, we combine our expertise with specialist knowledge to bring about positive, sustainable change\",\r\n    \"packaging\": \"Alt emballage er produceret af genbrugsmatrialer\",\r\n    \"supplierEcoLabels\": null,\r\n    \"roleId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create supplier4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Muuto\",\r\n    \"environmentalProfile\": \"At Muuto, we aim to take responsibility for our operations and reflect on the choices we make and how our priorities affect the wellbeing of people and the environment. From the materials we select to the partners we work with, the independent institutes we test and certify our products through, and all the way down to our packaging. Our approach is based on knowledge and staying curious. With each new advancement in the field and as new research emerge, we keep searching for new perspectives on sustainability across all our operations. Listening. Learning. And improving.\",\r\n    \"packaging\": null,\r\n    \"supplierEcoLabels\": null,\r\n    \"roleId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create supplier5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"HAY\",\r\n    \"environmentalProfile\": \"HAY focuses on developing long-lasting products that minimise our environmental impact. We optimise the use of sustainable materials such as recycled materials, FSC-certified wood and water-based lacquer, with a growing number of eco-certified products. We have strict regulatory requirements, and the majority of our products are tested to comply with international standards for strength, durability and safety.\",\r\n    \"packaging\": \"We minimise the packaging material used for our products to reduce our environmental impact and to lower the use of co2. We mainly use cardboard as packaging material\",\r\n    \"freight\":\"Freight transportation plays a fundamental role in global sustainable development, which is why it has become a focus area for HAY. In our efforts to minimise our carbon footprint, we sought to find the most environmentally-friendly solution for transporting or products worldwide. This has resulted in a new partnership with Maersk ECO Delivery, which replaces fossil fuels with sustaiable, low-carbon fuel certified by the International Sustainability and Carbon Certification (ISCC) body and manufactured from recycled sustainable biomass.\",\r\n    \"supplierEcoLabels\": null,\r\n    \"roleId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create supplier6",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"FDB Møbler\",\r\n    \"environmentalProfile\": \"We aim to be Denmark’s most responsible furniture company—that is the foundation and starting point for everything we do. The footprint we care most about leaving is in the form of stories from the lives of people who have felt at home with our furniture. Everything we produce in wood is FSC certified® (FSC-C164841), just as all our textiles bear the OEKO-TEX label. Our overall goal is to see everything from the smallest stool to the largest corner sofa qualify for the Nordic Swan label. Last but not least, we want to be CO2 neutral; we continually calculate the best ways to achieve that, then manufacture in only the most responsible facilities. FDB Møbler’s history dates proudly back to 1942, and we consider it our responsibility to help ensure that our grandchildren’s children get to hear our story in a world still blessed by the gifts of sun, wind and water.\",\r\n    \"packaging\": null,\r\n    \"freight\":null,\r\n    \"supplierEcoLabels\": null,\r\n    \"roleId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create supplier7",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Flokk\",\r\n    \"environmentalProfile\": \"Flokk aspires to be an environmentally conscious market leader whose circular products, services and processes are resource and energy-efficient, generate minimum greenhouse gas emissions, do not present a risk to health or the environment and result in minimal waste generation. We are continually raising the bar when it comes to our environmental ambitions. We have created a range of sustainability goals, with the aim of drastically reducing our carbon footprint and using even more sustainable resources. In 2011 Flokk published its first sustainability report in GRI Format (Global Reporting Initiative), a thorough examination of every aspect of the company, creating the clearest picture to date of our overall impact on the environment. Since then we have set ambitious long term targets with three focus areas; reducing our impact on the climate, using fewer resources, and removing harmful chemicals which can affect people’s health.\",\r\n    \"freight\":null,\r\n    \"supplierEcoLabels\": null,\r\n    \"roleId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create category",
+			"item": [
+				{
+					"name": "Create category1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\": \"Kontor\",\r\n    \"imageLink\": \"https://usercontent.one/wp/www.paustianweekly.com/wp-content/uploads/2019/01/R5Q9636_50.jpg?media=1637679518\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create category2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\": \"Hjemmekontor\",\r\n    \"imageLink\": \"https://sw28470.sfstatic.io/upload_dir/pics/_thumbs/main.cat3-700x1400.w1400.h700.crop.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create category3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\": \"Uddannelse\",\r\n    \"imageLink\": \"https://erhvervsindretning.dk/wp-content/uploads/2020/03/undervisningslokale_efter.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create category4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\": \"Havemøbler\",\r\n    \"imageLink\": \"https://erhvervsindretning.dk/wp-content/uploads/2020/03/undervisningslokale_efter.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create subcategory",
+			"item": [
+				{
+					"name": "Create subcategory1,1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Mødebord\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/1/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory1,2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Hæve-sænke bord\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/1/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory1,3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Kontorstol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/1/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory1,4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Stol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/1/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory1,5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Lounge\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/1/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory2,1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Skrivebord\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/2/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"2",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory2,2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Kontorstol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/2/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"2",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory2,3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Hæve-/sænkebord\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/2/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"2",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory2,4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Stol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/2/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"2",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory3,1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Skrivebord\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/1/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory3,2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Højbord\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/3/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"3",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory3,3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Højstol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/3/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"3",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory4,1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Havebord\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/4/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"4",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory4,2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Havestol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/4/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"4",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create subcategory4,3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryName\": \"Bænk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/categories/4/subCategories",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"categories",
+								"4",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create ecolabel",
+			"item": [
+				{
+					"name": "Create ecolabel1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Svanemærket\",\n    \"imageLink\": \"https://www.ecolabel.dk/~/media/Ecolabel/Images/Temasider/Article_image_745x300/svanemaerket_1_745x300.ashx?h=300&la=da&w=745\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/productEcoLabels",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"productEcoLabels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create ecolabel2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"EcoLabel\",\n    \"imageLink\": \"https://www.ecolabel.dk/~/media/Ecolabel/Images/Icons/Logoer/Blomsten/EU-Blomsten---DK/EU-Blomsten---farver/Blomsten_PNG_m_baggrund.ashx?h=230&la=da&w=230\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/productEcoLabels",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"productEcoLabels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create ecolabe3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Blauer Engel\",\n    \"imageLink\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/BLUE_ANGEL_Logo.png/1200px-BLUE_ANGEL_Logo.png?20201125163535\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/productEcoLabels",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"productEcoLabels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create ecolabe4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"GreenTag\",\n    \"imageLink\": \"https://getlogo.net/wp-content/uploads/2020/04/global-greentag-logo-vector.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/productEcoLabels",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"productEcoLabels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create ecolabe5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"MøbelFakta\",\n    \"imageLink\": \"https://shop13404.sfstatic.io/upload_dir/shop/category/_thumbs/moebel1.w1200.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/productEcoLabels",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"productEcoLabels"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create product",
+			"item": [
+				{
+					"name": "Create product1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AACECO12\",\r\n    \"name\": \"AAC ECO 12 WALNUT WATER-BASED LACQUERED SOLID WALNUT - ECO BLACK\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAC chair from a more sustainable perspective, the About A Chair AAC 12 ECO uses recycled plastic (PP) to form the gently curved, open shell and symmetrical solid base that is consistent with the rest of the series. The lack of armrests ensures a clean, clutter-free silhouette, whilst the shaped back provides optimal comfort. The wooden frame with elegant, rounded legs conveys warmth and character, and ensures greater stability and a longer lifetime. The recycled shell is available in eco black and the base is available in solid FSC-certified oak with a water-based lacquer. The chair is EU Ecolabelled as a sign of environmental commitment, along with the other models in the ECO series – the AAC 22 ECO and AAS 32 in low and high versions.\",\r\n    \"designer\": \"Hee Welling\",\r\n    \"measurement\": {\r\n        \"length\": 510,\r\n        \"width\": 505,\r\n        \"height\": 785\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.haystatic.com/img_20211214085952/globalassets/inriver/integration/service/943357zzzzzzzzzzzzzz_aac-12-eco-eco-black-shell_wb-lacquer-walnut-base_1220x1220_brandvariant.jpg?w=1100\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/chairs-b2b-626f7346/about-a-chair/aac12-eco-water-based-lacquered-walnut-base-eco-black-shell-\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/5/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"5",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AACECO22\",\r\n    \"name\": \"AAC ECO 22 WALNUT WATER-BASED LACQUERED WALNUT VENEER - ECO WHITE\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAC chair from a more sustainable perspective, the About A Chair AAC 22 ECO uses recycled plastic (PP) to compose the functional simplicity that is characteristic of this entire series. The solid shell comprises a curved back with armrests, providing excellent comfort and a soft, unified silhouette, while the four-legged wooden base adds a timeless, classic expression, ensuring greater stability and a longer lifetime. The recycled shell is available in eco black and the base is available in FSC-certified oak with a water-based lacquer. The chair is EU Ecolabelled as a sign of environmental commitment, along with the other models in the ECO series – the AAC12 ECO and AAC 32 in low and high versions.\",\r\n    \"designer\": \"Hee Welling\",\r\n    \"measurement\": {\r\n        \"length\": 520,\r\n        \"width\": 590,\r\n        \"height\": 790\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.haystatic.com/img_20211214082840/globalassets/inriver/integration/service/943448zzzzzzzzzzzzzz_aac-22-eco-eco-white_wb-lacquer-walnut-base_gb_910x1100_brandvariant.jpg?w=1100\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/chairs-b2b-626f7346/aac-eco-series-b2b/aac22-eco-water-based-lacquered-walnut-base-eco-white-shell\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/5/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"5",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AASECO32\",\r\n    \"name\": \"AAS ECO 32\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAS stool from a more sustainable perspective, the About a Stool AAS 32 ECO uses recycled plastic (PP) to form the functional and minimalistic seat and backrest that is characteristic of this entire series. With its curved form and long, elegant wooden legs, it enjoys a simple yet strong visual presence that makes it ideal as a barstool in a public environment, as well as for informal meetings and meals. The recycled seat is available in eco black, the base is crafted in FSC-certified oak with a water-based lacquer and the footrest is made of steel. The stool is EU Ecolabelled as a sign of environmental commitment, along with the other chairs in the ECO series – the AAC 12 ECO and AAC 22. AAS 32 Eco is available in two different heights.\",\r\n    \"designer\": \"Hee Welling\",\r\n    \"measurement\": {\r\n        \"length\": 430,\r\n        \"width\": 500,\r\n        \"height\": 850\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 12\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.haystatic.com/img_20211214094746/globalassets/inriver/integration/service/aas-eco-32_brandmodel.jpg?w=1100\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/bar-stool/aas-eco-series-b2b/aas-eco-32\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/5/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"5",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }, \r\n    {\r\n        \"productEcoLabelId\" : 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"J45300210\",\r\n    \"name\": \"J45\",\r\n    \"description\": \"Eg, Natur, Lakeret\",\r\n    \"designer\": \"Børge Mogensen\",\r\n    \"measurement\": {\r\n        \"length\": 470,\r\n        \"width\": 470,\r\n        \"height\": 780\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.fdbmobler.dk/~/pir/products/ean/5715054006773%20(1).jpg?etag=68250B9&type=GenerateThumb&w=1180&h=1361\",\r\n    \"brochureLink\": \"https://www.fdbmobler.dk/da/shop/stole/j45-stol-svanemaerket-j45s300210/natur/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/6/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"6",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }, \r\n    {\r\n        \"productEcoLabelId\" : 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"J52B310101\",\r\n    \"name\": \"J52B\",\r\n    \"description\": \"Bøg, Sort, Malet/Svanemærket\",\r\n    \"designer\": \"Børge Mogensen\",\r\n    \"measurement\": {\r\n        \"length\": 560,\r\n        \"width\": 615,\r\n        \"height\": 901\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.fdbmobler.dk/~/pir/products/ean/5715054005516%20(1).jpg?etag=6825232&type=GenerateThumb&w=1140&h=1315\",\r\n    \"brochureLink\": \"https://www.fdbmobler.dk/da/shop/laenestole/j52b-stol-j52b310112/sort-ral-9005/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/6/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"6",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product6",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"SK1\",\r\n    \"name\": \"In Between Chair\",\r\n    \"description\": \"Sk1 chair smoked olied oak wood\",\r\n    \"designer\": \"Sami Kallio\",\r\n    \"measurement\": {\r\n        \"length\": 540,\r\n        \"width\": 580,\r\n        \"height\": 770\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://330827-1014958-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/09/ATD_lifestyle_2019_Inbetween_SK1-1200x1600.jpg\",\r\n    \"brochureLink\": \"https://www.andtradition.com/products/in-between-sk1?variant=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/1/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product7",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AV1\",\r\n    \"name\": \"Pavilion Dinning Chair\",\r\n    \"description\": \"AV1 Lacquered Oak. The Pavilion chair has an airy feeling, with slim arms and legs that give it a light appearance. Now available in a contemporary chrome frame.\",\r\n    \"designer\": \"Anderssen and Voll\",\r\n    \"measurement\": {\r\n        \"length\": 50,\r\n        \"width\": 525,\r\n        \"height\": 765\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://330827-1014958-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/11/Pavilion-AV1-side-oak-1-1200x1600.jpg\",\r\n    \"brochureLink\": \"https://www.andtradition.com/products/pavilion-av1?variant=3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/1/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product8",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AV7\",\r\n    \"name\": \"Pavilion Counter Chair\",\r\n    \"description\": \"AV7 Black Lacquered Oak. The Pavilion chair has an airy feeling, with slim arms and legs that give it a light appearance. Now available in a contemporary chrome frame.\",\r\n    \"designer\": \"Anderssen and Voll\",\r\n    \"measurement\": {\r\n        \"length\": 380,\r\n        \"width\": 530,\r\n        \"height\": 410\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 12\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://330827-1014958-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/07/Pavilion-AV7_oak-2-1200x1600.jpg\",\r\n    \"brochureLink\": \"https://www.andtradition.com/products/pavilion-av7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/1/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product9",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 4\r\n    }\r\n    ],\r\n    \"itemNumber\": \"60039\",\r\n    \"name\": \"Around Coffee Table\",\r\n    \"description\": \"Cafe bord i FSC-certificeret træ med vandlak. The Around Coffee Table brings a new perspective to its typology through the characterful wooden veneer frame that runs along the edge of the table, echoing the ideas of Scandinavian design. With its round shape and multiple sizes, the Around Coffee Table can be used in a multitude of settings, on its own or in groups, in any living room, lounge setting, lobby area or hotel room\",\r\n    \"designer\": \"Thomas Bentzen\",\r\n    \"measurement\": {\r\n        \"width\": 720,\r\n        \"height\": 360\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 5\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.muuto.com/globalassets/digizuite/11533-around-large-stained-dark-brown------.tif?mediaformatid=50101&extension=.png&revision=6\",\r\n    \"brochureLink\": \"https://www.muuto.com/product/Around-Coffee-Table--p1920/p1920/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/4/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"4",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product10",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 4\r\n    }\r\n    ],\r\n    \"itemNumber\": \"60039\",\r\n    \"name\": \"Cover Counter Stool\",\r\n    \"description\": \"With its curved backrest that folds elegantly around its back legs and ties the design together, the Cover Counter Stool challenges the possibilities of veneer through a forward-thinking approach, echoing the ideas of Scandinavian design. The design is lightweight and features a tall, enveloping back for extensive comfort that allows one to be seated in its seat for hours on end, be it for a dinner, a drink or even working at a counter desk\",\r\n    \"designer\": \"Thomas Bentzen\",\r\n    \"measurement\": {\r\n        \"length\": 550,\r\n        \"width\": 500,\r\n        \"height\": 960\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 5\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.muuto.com/globalassets/digizuite/14693-cover-counter-stool-65-cm-oakrefine-cognac-leather-packshot.tif?mediaformatid=50101&extension=.png&revision=6\",\r\n    \"brochureLink\": \"https://www.muuto.com/product/Cover-Counter-Stool--p44789/p44789/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/4/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"4",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product11",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"8106\",\r\n    \"name\": \"HÅG CAPISCO 8106 - CLASSIC SADDLE SEAT\",\r\n    \"description\": \"The HÅG Capisco 8106 is the classic bestseller model. The saddle seat can be adjusted between low and high working positions, all the way up to a standing position, enabling you to be more dynamic in your movements while still sitting in a balanced position.\",\r\n    \"designer\": \"Peter Opsvik\",\r\n    \"measurement\": {\r\n        \"length\": 200,\r\n        \"width\": 410,\r\n        \"height\": 550\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 3\r\n        },\r\n        {\r\n            \"subCategoryId\": 7\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://flokk-cdn-visualization-prod.azureedge.net/011CQ4.jpg?shot=front&v=6&width=370&height=650\",\r\n    \"brochureLink\": \"https://store.flokk.com/denmark/en-GB/products/hag-capisco?model=8106-STD&code=011CQ4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/7/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"7",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product12",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"9520-STD\",\r\n    \"name\": \"HÅG Conventio 9520 \",\r\n    \"description\": \"The HÅG Conventio 9520 comes with a fully upholstered seat and backrest. Aluminium legs available in either black or silver. Dress up the chair for dinner at night with a HÅG SlipCover as an optional extra. HÅG in Balance® technology ensures more subconscious movement. Armrests and the HÅG Writing Tablet available as optional extras. The chairs can be stacked fifteen high.\",\r\n    \"designer\": \"Peter Opsvik\",\r\n    \"measurement\": {\r\n        \"length\": 590,\r\n        \"width\": 560,\r\n        \"height\": 870\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 3\r\n        },\r\n        {\r\n            \"subCategoryId\": 7\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://flokk-cdn-visualization-prod.azureedge.net/00M1VY.jpg?shot=front&v=6&width=370&height=650\",\r\n    \"brochureLink\": \"https://store.flokk.com/denmark/en-gb/products/hag-conventio?model=9520-STD&code=00M1VY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/7/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"7",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product13",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"7200\",\r\n    \"name\": \"HÅG SOFI 7200\",\r\n    \"description\": \"The HÅG SoFi 7200 has a medium-height backrest. HÅG in Balance® technology ensures more subconscious movement. Adjustable seat height and depth, and lumbar support. Available with HÅG SlideBack™ armrests which allow you to move closer to your desk, invite you to sit sideways or use the armrests as elbow support. The height, width and forward position of the armrests can easily be adjusted. The optional headrest provides support and rest for your shoulders, neck and head.\",\r\n    \"designer\": \"Flokk design team, Aleksander Borgenhov and Frost Produkt\",\r\n    \"measurement\": {\r\n        \"length\": 380,\r\n        \"width\": 450,\r\n        \"height\": 396\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 3\r\n        },\r\n        {\r\n            \"subCategoryId\": 7\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://flokk-cdn-visualization-prod.azureedge.net/00T5QS.jpg?shot=front&v=6&width=370&height=650\",\r\n    \"brochureLink\": \"https://store.flokk.com/denmark/en-GB/products/hag-sofi?model=7200-STD&code=00T5QS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/7/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"7",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product14",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"7302\",\r\n    \"name\": \"HÅG SOFI COMM 7302\",\r\n    \"description\": \"The HÅG SoFi Communication 7302 has a high backrest. HÅG in Balance® technology ensures more subconscious movement. Fully upholstered seat and backrest allow you to adjust your sitting posture for excellent comfort. Height and seat depth easily adjustable to suit the individual user.\",\r\n    \"designer\": \"Flokk design team, Aleksander Borgenhov and Frost Produkt\",\r\n    \"measurement\": {\r\n        \"length\": 380,\r\n        \"width\": 450,\r\n        \"height\": 396\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 3\r\n        },\r\n        {\r\n            \"subCategoryId\": 7\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://flokk-cdn-visualization-prod.azureedge.net/01IRG9.jpg?shot=front&v=6&width=370&height=650\",\r\n    \"brochureLink\": \"https://store.flokk.com/denmark/en-GB/products/hag-sofi?model=7302-STD&code=01IRG9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/7/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"7",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product15",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 5\r\n    }\r\n    ],\r\n    \"itemNumber\": \"OpenCircle\",\r\n    \"name\": \"Font, Open Circle\",\r\n    \"description\": \"Font is a sofa system designed for Nationalmuseum, which originally opened in Stockholm in 1866, was reinaugurated in 2018 after a five-year renovation.\",\r\n    \"designer\": \"Matti Klenell\",\r\n    \"measurement\": {\r\n        \"length\": 2730,\r\n        \"width\": 2730,\r\n        \"height\": 755\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 5\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.offecct.com/wp-content/uploads/2019/02/Font-Sofas-Matti-Klenell-offecct-14210.jpg\",\r\n    \"brochureLink\": \"https://www.offecct.com/product/font-open-circle/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/7/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"7",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product16",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"CarryOn\",\r\n    \"name\": \"Carry On\",\r\n    \"description\": \"Carry On is a portable seating solution that works perfectly by itself but also as a complement to other products. Today we work more in projects and need environments that can be easily adapted to different needs. \",\r\n    \"designer\": \"Mattias Stenberg\",\r\n    \"measurement\": {\r\n        \"length\": 490,\r\n        \"width\": 490,\r\n        \"height\": 450\r\n    },\r\n    \"co2Measurability\": null,\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.offecct.com/wp-content/uploads/2017/05/CARRY-ON-Stools-Mattias-Stenberg-offecct-118170-12376.jpg\",\r\n    \"brochureLink\": \"https://www.offecct.com/product/carry-on/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.224.83.97/suppliers/7/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"224",
+								"83",
+								"97"
+							],
+							"path": [
+								"suppliers",
+								"7",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
