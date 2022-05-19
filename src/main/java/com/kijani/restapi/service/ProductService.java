@@ -16,4 +16,8 @@ public interface ProductService {
   ResponseEntity<String> deleteProduct(int id);
 
   List<Product> getProductsByCategoryId(Integer categoryId);
+
+  List<Product> getProductsByDesigner(String designer);
+
+  List<Product> getProductsByEcoLabelId(Integer ecoLabelId);
 }

@@ -1,10 +1,7 @@
 package com.kijani.restapi.service.impl;
 
 import com.kijani.restapi.model.Product;
-import com.kijani.restapi.repository.CategoryRepository;
-import com.kijani.restapi.repository.ProductRepository;
-import com.kijani.restapi.repository.SubCategoryRepository;
-import com.kijani.restapi.repository.SupplierRepository;
+import com.kijani.restapi.repository.*;
 import com.kijani.restapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +20,8 @@ public class ProductServiceImpl implements ProductService {
   @Autowired SubCategoryRepository subCategoryRepository;
 
   @Autowired CategoryRepository categoryRepository;
+
+  @Autowired ProductEcoLabelRepository productEcoLabelRepository;
 
   @Override
   public List<Product> getProducts() {
@@ -66,5 +65,15 @@ public class ProductServiceImpl implements ProductService {
   @Override
   public List<Product> getProductsByCategoryId(Integer categoryId) {
     return productRepository.findProductsByCategoryId(categoryId);
+  }
+
+  @Override
+  public List<Product> getProductsByDesigner(String designer) {
+    return productRepository.findProductsByDesigner(designer);
+  }
+
+  @Override
+  public List<Product> getProductsByEcoLabelId(Integer ecoLabelId) {
+    return productRepository.findProductsByProductEcoLabelsId(ecoLabelId);
   }
 }

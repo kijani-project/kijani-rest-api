@@ -20,9 +20,16 @@ public class ProductController {
   }
 
   @GetMapping()
-  public List<Product> getProducts(@RequestParam(required = false) Integer categoryId) {
+  public List<Product> getProducts(
+      @RequestParam(required = false) Integer categoryId,
+      @RequestParam(required = false) String designer,
+      @RequestParam Integer ecoLabelId) {
     if (null != categoryId) {
       return productService.getProductsByCategoryId(categoryId);
+    } else if (null != designer) {
+      return productService.getProductsByDesigner(designer);
+    } else if (null != ecoLabelId) {
+      return productService.getProductsByEcoLabelId(ecoLabelId);
     }
     return productService.getProducts();
   }
