@@ -696,7 +696,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"Svanemærket\"\n}",
+          "raw": "{\n    \"type\": \"EcoLabel\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -726,7 +726,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"Svanemærket\"\n}",
+          "raw": "{\n    \"type\": \"Blauer Engel\"\n}",
           "options": {
             "raw": {
               "language": "json"
