@@ -10,8 +10,8 @@ The app defines following CRUD APIs.
 |--------|-----------------------------------|--------------------------------|------------------------------|
 | GET    | /products/{productId}             | Get a product by product Id    |                              |
 | GET    | /products                         | Get all products               |                              |
-| GET    | /products?category={categoryId}   | Filter by category             |                              |
-| GET    | /products?designer={designerName} | Get products by designer       | Write whole name of designer |
+| GET    | /products?categoryId={categoryId}   | Filter by category             |                              |
+| GET    | /products?designerName={designerName} | Get products by designer       | Write whole name of designer |
 | PUT    | /products/{productId}             | Edit a product by product Id   |                              |
 | DELETE | /products/{productId}             | Delete a product by product Id |                              |
 
