@@ -19,7 +19,7 @@ public class Measurement {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "measurement_id", nullable = false)
+  @Column(name = "measurement_id")
   // Gør så id ikke bliver vist når man køre den i postman.
   @JsonIgnore
   private Integer measurementId;
