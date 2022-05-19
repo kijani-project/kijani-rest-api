@@ -23,7 +23,7 @@ public class ProductController {
   public List<Product> getProducts(
       @RequestParam(required = false) Integer categoryId,
       @RequestParam(required = false) String designer,
-      @RequestParam Integer productEcoLabelId) {
+      @RequestParam(required = false) Integer productEcoLabelId){
     if (null != categoryId) {
       return productService.getProductsByCategoryId(categoryId);
     } else if (null != designer) {
