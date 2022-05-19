@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "3f2298e5-0ed9-4e13-81f4-f68122807c58",
+    "_postman_id": "b2f6ebc6-c480-4922-96a4-6140a692e8d3",
     "name": "SERVER CREATE  test data",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
@@ -882,7 +882,9 @@
         "header": [],
         "body": {
           "mode": "raw",
+          
           "raw": "{\r\n   \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }, \r\n    {\r\n        \"productEcolabelId\" : 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"J45300210\",\r\n    \"name\": \"J45\",\r\n    \"description\": \"Eg, Natur, Lakeret\",\r\n    \"designer\": \"Børge Mogensen\",\r\n    \"measurement\": {\r\n        \"length\": 470,\r\n        \"width\": 470,\r\n        \"height\": 780\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.fdbmobler.dk/~/pir/products/ean/5715054006773%20(1).jpg?etag=68250B9&type=GenerateThumb&w=1180&h=1361\",\r\n    \"brochureLink\": \"https://www.fdbmobler.dk/da/shop/stole/j45-stol-svanemaerket-j45s300210/natur/\"\r\n}",
+
           "options": {
             "raw": {
               "language": "json"
@@ -914,7 +916,9 @@
         "header": [],
         "body": {
           "mode": "raw",
+
           "raw": "{\r\n     \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }, \r\n    {\r\n        \"productEcolabelId\" : 1\r\n    }\r\n    ],\r\n    \"itemNumber\": \"J52B310101\",\r\n    \"name\": \"J52B\",\r\n    \"description\": \"Bøg, Sort, Malet/Svanemærket\",\r\n    \"designer\": \"Børge Mogensen\",\r\n    \"measurement\": {\r\n        \"length\": 560,\r\n        \"width\": 615,\r\n        \"height\": 901\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.fdbmobler.dk/~/pir/products/ean/5715054005516%20(1).jpg?etag=6825232&type=GenerateThumb&w=1140&h=1315\",\r\n    \"brochureLink\": \"https://www.fdbmobler.dk/da/shop/laenestole/j52b-stol-j52b310112/sort-ral-9005/\"\r\n}",
+
           "options": {
             "raw": {
               "language": "json"
