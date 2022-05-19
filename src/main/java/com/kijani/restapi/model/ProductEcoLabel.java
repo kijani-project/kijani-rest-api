@@ -17,7 +17,7 @@ public class ProductEcoLabel {
   @Column(name = "product_eco_label_id", nullable = false)
   private Integer productEcoLabelId;
 
-  @ManyToMany(mappedBy = "productEcoLabels", cascade = CascadeType.MERGE)
+  @ManyToMany(mappedBy = "productEcoLabels")
   @JsonBackReference
   private List<Product> products;
 

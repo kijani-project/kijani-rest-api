@@ -24,7 +24,7 @@ public class Product {
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
-  @ManyToMany(cascade = CascadeType.ALL)
+  @ManyToMany(cascade = {CascadeType.MERGE})
   @JoinTable(
       name = "product_support_eco_label",
       joinColumns = @JoinColumn(name = "product_id"),
