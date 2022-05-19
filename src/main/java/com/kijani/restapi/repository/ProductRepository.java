@@ -21,4 +21,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
               + "    JOIN category c on c.category_id = sc.category_id where c.category_id = ?1",
       nativeQuery = true)
   List<Product> findProductsByCategoryId(Integer categoryId);
+
+  List<Product> findProductsByDesigner(String designer);
 }

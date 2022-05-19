@@ -27,6 +27,11 @@ public class ProductController {
     return productService.getProducts();
   }
 
+  @GetMapping("/designer/{designer}")
+  public List<Product> getProductsByDesigner(@PathVariable String designer) {
+    return productService.getProductsByDesigner(designer);
+  }
+
   @PutMapping("/{productId}")
   public ResponseEntity<String> updateProduct(
       @PathVariable Integer productId, @RequestBody Product product) {

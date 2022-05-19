@@ -24,7 +24,7 @@ public class Product {
   @JoinColumn(name = "supplier_id")
   private Supplier supplier;
 
-  @ManyToMany(cascade = CascadeType.MERGE)
+  @ManyToMany(cascade = CascadeType.ALL)
   @JoinTable(
       name = "product_support_eco_label",
       joinColumns = @JoinColumn(name = "product_id"),
@@ -44,7 +44,7 @@ public class Product {
   @JoinColumn(name = "measurement_id")
   private Measurement measurement;
 
-  @ManyToMany
+  @ManyToMany()
   @JoinTable(
       name = "product_category",
       joinColumns = @JoinColumn(name = "product_id"),
