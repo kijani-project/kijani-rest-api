@@ -20,16 +20,13 @@ public class ProductController {
   }
 
   @GetMapping()
-  public List<Product> getProducts(@RequestParam(required = false) Integer categoryId) {
+  public List<Product> getProducts(@RequestParam(required = false) Integer categoryId, @RequestParam(required = false) String designer) {
     if (null != categoryId) {
       return productService.getProductsByCategoryId(categoryId);
+    } else if (null != designer){
+      return productService.getProductsByDesigner(designer);
     }
     return productService.getProducts();
-  }
-
-  @GetMapping("/designer/{designer}")
-  public List<Product> getProductsByDesigner(@PathVariable String designer) {
-    return productService.getProductsByDesigner(designer);
   }
 
   @PutMapping("/{productId}")
