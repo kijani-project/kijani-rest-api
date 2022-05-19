@@ -23,13 +23,13 @@ public class ProductController {
   public List<Product> getProducts(
       @RequestParam(required = false) Integer categoryId,
       @RequestParam(required = false) String designer,
-      @RequestParam Integer ecoLabelId) {
+      @RequestParam Integer productEcoLabelId) {
     if (null != categoryId) {
       return productService.getProductsByCategoryId(categoryId);
     } else if (null != designer) {
       return productService.getProductsByDesigner(designer);
-    } else if (null != ecoLabelId) {
-      return productService.getProductsByEcoLabelId(ecoLabelId);
+    } else if (null != productEcoLabelId) {
+      return productService.getProductsByEcoLabelId(productEcoLabelId);
     }
     return productService.getProducts();
   }
