@@ -34,7 +34,7 @@ public class DesignerController {
   }
 
   @DeleteMapping("/{productId}")
-  public ResponseEntity<String> deleteProduct(@PathVariable Integer designerId) {
+  public ResponseEntity<String> deleteDesigner(@PathVariable Integer designerId) {
     return designerService.deleteDesigner(designerId);
   }
 }
