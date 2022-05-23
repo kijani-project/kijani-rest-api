@@ -67,10 +67,10 @@ public class ProductServiceImpl implements ProductService {
     return productRepository.findProductsByCategoryId(categoryId);
   }
 
-   @Override
-    public List<Product> getProductsByDesigner(Integer designerId) {
-      return productRepository.findProductsByDesigners(designerId);
-    }
+  @Override
+  public List<Product> getProductsByDesigner(Integer designerId) {
+    return productRepository.findProductsByDesigners(designerId);
+  }
 
   @Override
   public List<Product> getProductsByEcoLabelId(Integer ecoLabelId) {
