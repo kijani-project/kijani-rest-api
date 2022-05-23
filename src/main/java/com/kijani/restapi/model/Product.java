@@ -38,7 +38,12 @@ public class Product {
   @Column(length = 1024)
   private String description;
 
-  private String designer;
+  @ManyToMany()
+  @JoinTable(
+      name = "product_designer",
+      joinColumns = @JoinColumn(name = "product_id"),
+      inverseJoinColumns = @JoinColumn(name = "designer_id"))
+  private List<Designer> designers = new LinkedList<>();
 
   @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
   @JoinColumn(name = "measurement_id")

@@ -17,7 +17,7 @@ public interface ProductService {
 
   List<Product> getProductsByCategoryId(Integer categoryId);
 
-  List<Product> getProductsByDesigner(String designer);
+ // List<Product> getProductsByDesigner(String designer);
 
   List<Product> getProductsByEcoLabelId(Integer ecoLabelId);
 }

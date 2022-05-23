@@ -22,13 +22,13 @@ public class ProductController {
   @GetMapping()
   public List<Product> getProducts(
       @RequestParam(required = false) Integer categoryId,
-      @RequestParam(required = false) String designer,
+     /* @RequestParam(required = false) String designer,*/
       @RequestParam(required = false) Integer productEcoLabelId) {
     if (null != categoryId) {
       return productService.getProductsByCategoryId(categoryId);
-    } else if (null != designer) {
+    } /*else if (null != designer) {
       return productService.getProductsByDesigner(designer);
-    } else if (null != productEcoLabelId) {
+    }*/ else if (null != productEcoLabelId) {
       return productService.getProductsByEcoLabelId(productEcoLabelId);
     }
     return productService.getProducts();
