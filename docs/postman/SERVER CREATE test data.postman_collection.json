@@ -290,7 +290,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryName\": \"Uddannelse\",\r\n    \"imageLink\": \"https://erhvervsindretning.dk/wp-content/uploads/2020/03/undervisningslokale_efter.jpg\"\r\n}",
+							"raw": "{\r\n    \"categoryName\": \"Uddannelse\",\r\n    \"imageLink\": \"https://scx1.b-cdn.net/csz/news/800a/2020/grouptableso.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
