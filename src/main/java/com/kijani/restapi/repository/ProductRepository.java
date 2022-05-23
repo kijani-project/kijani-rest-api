@@ -22,7 +22,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
       nativeQuery = true)
   List<Product> findProductsByCategoryId(Integer categoryId);
 
-  List<Product> findProductsByDesigner(String designer);
+  // List<Product> findProductsByDesigner(String designer);
 
   @Query(
       value =

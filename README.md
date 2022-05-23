@@ -49,6 +49,16 @@ The app defines following CRUD APIs.
 | PUT    | /subCategories/{subCategoryId}  | Edit a subCategories by subCategories subCategoryId   |                           |
 | DELETE | /subCategories/{subCategoryId}  | Delete a subCategories by subCategories subCategoryId |                           |
 
+### Designers
+
+| Method | Url                    | Description                     | Sample Valid Request Body |
+|--------|------------------------|---------------------------------|---------------------------|
+| GET    | /designer              | Get all designers               |                           |
+| GET    | /designer/{designerId} | Get a designer by designerId    |                           |
+| POST   | /designer             | Create a designer               |                           |
+| DELETE | /designer/{designerId} | Delete a designer by designerId |                           |
+
+
 ### ProductEcoLabels
 
 | Method | Url                                   | Description                                    | Sample Valid Request Body |
