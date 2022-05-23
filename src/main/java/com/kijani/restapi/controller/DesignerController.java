@@ -33,7 +33,7 @@ public class DesignerController {
     return designerService.createDesigner(designer);
   }
 
-  @DeleteMapping("/{productId}")
+  @DeleteMapping("/{designerId}")
   public ResponseEntity<String> deleteDesigner(@PathVariable Integer designerId) {
     return designerService.deleteDesigner(designerId);
   }
