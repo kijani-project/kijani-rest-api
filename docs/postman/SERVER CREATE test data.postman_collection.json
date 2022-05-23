@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1fb5cef0-a3d2-4b71-a3a7-238c6dbb73d4",
+		"_postman_id": "b01f1b44-1e71-4e05-a5b5-2632174bca4f",
 		"name": "SERVER CREATE  test data Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -230,7 +230,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryName\": \"Kontor\",\r\n    \"imageLink\": \"https://migogaalborg.dk/wp-content/uploads/2020/09/Scan-Office-6-1400x840.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Kontor\",\r\n    \"imageLink\": \"https://migogaalborg.dk/wp-content/uploads/2020/09/Scan-Office-6-1400x840.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -260,7 +260,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryName\": \"Hjemmekontor\",\r\n    \"imageLink\": \"https://sw28470.sfstatic.io/upload_dir/pics/_thumbs/main.cat3-700x1400.w1400.h700.crop.png\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Hjemmekontor\",\r\n    \"imageLink\": \"https://sw28470.sfstatic.io/upload_dir/pics/_thumbs/main.cat3-700x1400.w1400.h700.crop.png\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -290,7 +290,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryName\": \"Uddannelse\",\r\n    \"imageLink\": \"https://scx1.b-cdn.net/csz/news/800a/2020/grouptableso.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Uddannelse\",\r\n    \"imageLink\": \"https://scx1.b-cdn.net/csz/news/800a/2020/grouptableso.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -320,7 +320,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryName\": \"Havemøbler\",\r\n    \"imageLink\": \"https://erhvervsindretning.dk/wp-content/uploads/2020/03/undervisningslokale_efter.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Havemøbler\",\r\n    \"imageLink\": \"https://erhvervsindretning.dk/wp-content/uploads/2020/03/undervisningslokale_efter.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -355,7 +355,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Mødebord\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Mødebord\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -387,7 +387,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Hæve-sænke bord\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Hæve-sænke bord\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -419,7 +419,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Kontorstol\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Kontorstol\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -451,7 +451,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Stol\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Stol\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -483,7 +483,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Lounge\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Lounge\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -515,7 +515,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Skrivebord\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Skrivebord\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -547,7 +547,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Kontorstol\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Kontorstol\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -579,7 +579,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Hæve-/sænkebord\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Hæve-/sænkebord\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -611,7 +611,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Stol\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Stol\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -643,7 +643,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Skrivebord\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Skrivebord\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -675,7 +675,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Højbord\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Højbord\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -707,7 +707,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Højstol\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Højstol\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -739,7 +739,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Havebord\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Havebord\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -771,7 +771,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Havestol\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Havestol\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -803,7 +803,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryName\": \"Bænk\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Bænk\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1300,7 +1300,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AACECO12\",\r\n    \"name\": \"AAC ECO 12 WALNUT WATER-BASED LACQUERED SOLID WALNUT - ECO BLACK\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAC chair from a more sustainable perspective, the About A Chair AAC 12 ECO uses recycled plastic (PP) to form the gently curved, open shell and symmetrical solid base that is consistent with the rest of the series. The lack of armrests ensures a clean, clutter-free silhouette, whilst the shaped back provides optimal comfort. The wooden frame with elegant, rounded legs conveys warmth and character, and ensures greater stability and a longer lifetime. The recycled shell is available in eco black and the base is available in solid FSC-certified oak with a water-based lacquer. The chair is EU Ecolabelled as a sign of environmental commitment, along with the other models in the ECO series – the AAC 22 ECO and AAS 32 in low and high versions.\",\r\n    \"designers\":[\r\n        {\r\n\"designerId\" : 1\r\n    }\r\n    ] ,\r\n    \"measurement\": {\r\n        \"length\": 510,\r\n        \"width\": 505,\r\n        \"height\": 785\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.haystatic.com/img_20211214085952/globalassets/inriver/integration/service/943357zzzzzzzzzzzzzz_aac-12-eco-eco-black-shell_wb-lacquer-walnut-base_1220x1220_brandvariant.jpg?w=1100\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/chairs-b2b-626f7346/about-a-chair/aac12-eco-water-based-lacquered-walnut-base-eco-black-shell-\"\r\n}",
+							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AACECO12\",\r\n    \"name\": \"AAC ECO 12 WALNUT WATER-BASED LACQUERED SOLID WALNUT - ECO BLACK\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAC chair from a more sustainable perspective, the About A Chair AAC 12 ECO uses recycled plastic (PP) to form the gently curved, open shell and symmetrical solid base that is consistent with the rest of the series. The lack of armrests ensures a clean, clutter-free silhouette, whilst the shaped back provides optimal comfort. The wooden frame with elegant, rounded legs conveys warmth and character, and ensures greater stability and a longer lifetime. The recycled shell is available in eco black and the base is available in solid FSC-certified oak with a water-based lacquer. The chair is EU Ecolabelled as a sign of environmental commitment, along with the other models in the ECO series – the AAC 22 ECO and AAS 32 in low and high versions.\",\r\n    \"designers\":[\r\n        {\r\n\"designerId\" : 1\r\n    }\r\n    ] ,\r\n    \"measurement\": {\r\n        \"length\": 510,\r\n        \"width\": 505,\r\n        \"height\": 785\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://jacobsenmobler.dk/images/thumbs/0817994_650.jpeg\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/chairs-b2b-626f7346/about-a-chair/aac12-eco-water-based-lacquered-walnut-base-eco-black-shell-\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1332,7 +1332,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AACECO22\",\r\n    \"name\": \"AAC ECO 22 WALNUT WATER-BASED LACQUERED WALNUT VENEER - ECO WHITE\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAC chair from a more sustainable perspective, the About A Chair AAC 22 ECO uses recycled plastic (PP) to compose the functional simplicity that is characteristic of this entire series. The solid shell comprises a curved back with armrests, providing excellent comfort and a soft, unified silhouette, while the four-legged wooden base adds a timeless, classic expression, ensuring greater stability and a longer lifetime. The recycled shell is available in eco black and the base is available in FSC-certified oak with a water-based lacquer. The chair is EU Ecolabelled as a sign of environmental commitment, along with the other models in the ECO series – the AAC12 ECO and AAC 32 in low and high versions.\",\r\n   \"designers\":[\r\n        {\r\n\"designerId\" : 1\r\n    }\r\n    ] ,\r\n    \"measurement\": {\r\n        \"length\": 520,\r\n        \"width\": 590,\r\n        \"height\": 790\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.haystatic.com/img_20211214082840/globalassets/inriver/integration/service/943448zzzzzzzzzzzzzz_aac-22-eco-eco-white_wb-lacquer-walnut-base_gb_910x1100_brandvariant.jpg?w=1100\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/chairs-b2b-626f7346/aac-eco-series-b2b/aac22-eco-water-based-lacquered-walnut-base-eco-white-shell\"\r\n}",
+							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AACECO22\",\r\n    \"name\": \"AAC ECO 22 WALNUT WATER-BASED LACQUERED WALNUT VENEER - ECO WHITE\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAC chair from a more sustainable perspective, the About A Chair AAC 22 ECO uses recycled plastic (PP) to compose the functional simplicity that is characteristic of this entire series. The solid shell comprises a curved back with armrests, providing excellent comfort and a soft, unified silhouette, while the four-legged wooden base adds a timeless, classic expression, ensuring greater stability and a longer lifetime. The recycled shell is available in eco black and the base is available in FSC-certified oak with a water-based lacquer. The chair is EU Ecolabelled as a sign of environmental commitment, along with the other models in the ECO series – the AAC12 ECO and AAC 32 in low and high versions.\",\r\n   \"designers\":[\r\n        {\r\n\"designerId\" : 1\r\n    }\r\n    ] ,\r\n    \"measurement\": {\r\n        \"length\": 520,\r\n        \"width\": 590,\r\n        \"height\": 790\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 4\r\n        },\r\n        {\r\n            \"subCategoryId\": 9\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://jacobsenmobler.dk/images/thumbs/0818002_650.jpeg\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/chairs-b2b-626f7346/aac-eco-series-b2b/aac22-eco-water-based-lacquered-walnut-base-eco-white-shell\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1364,7 +1364,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AASECO32\",\r\n    \"name\": \"AAS ECO 32\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAS stool from a more sustainable perspective, the About a Stool AAS 32 ECO uses recycled plastic (PP) to form the functional and minimalistic seat and backrest that is characteristic of this entire series. With its curved form and long, elegant wooden legs, it enjoys a simple yet strong visual presence that makes it ideal as a barstool in a public environment, as well as for informal meetings and meals. The recycled seat is available in eco black, the base is crafted in FSC-certified oak with a water-based lacquer and the footrest is made of steel. The stool is EU Ecolabelled as a sign of environmental commitment, along with the other chairs in the ECO series – the AAC 12 ECO and AAC 22. AAS 32 Eco is available in two different heights.\",\r\n   \"designers\":[\r\n        {\r\n\"designerId\" : 1\r\n    }\r\n    ] ,\r\n    \"measurement\": {\r\n        \"length\": 430,\r\n        \"width\": 500,\r\n        \"height\": 850\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 12\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://www.haystatic.com/img_20211214094746/globalassets/inriver/integration/service/aas-eco-32_brandmodel.jpg?w=1100\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/bar-stool/aas-eco-series-b2b/aas-eco-32\"\r\n}",
+							"raw": "{\r\n    \"productEcoLabels\": [\r\n        {\r\n        \"productEcoLabelId\": 2\r\n    }\r\n    ],\r\n    \"itemNumber\": \"AASECO32\",\r\n    \"name\": \"AAS ECO 32\",\r\n    \"description\": \"With the objective of recreating HAYs iconic AAS stool from a more sustainable perspective, the About a Stool AAS 32 ECO uses recycled plastic (PP) to form the functional and minimalistic seat and backrest that is characteristic of this entire series. With its curved form and long, elegant wooden legs, it enjoys a simple yet strong visual presence that makes it ideal as a barstool in a public environment, as well as for informal meetings and meals. The recycled seat is available in eco black, the base is crafted in FSC-certified oak with a water-based lacquer and the footrest is made of steel. The stool is EU Ecolabelled as a sign of environmental commitment, along with the other chairs in the ECO series – the AAC 12 ECO and AAC 22. AAS 32 Eco is available in two different heights.\",\r\n   \"designers\":[\r\n        {\r\n\"designerId\" : 1\r\n    }\r\n    ] ,\r\n    \"measurement\": {\r\n        \"length\": 430,\r\n        \"width\": 500,\r\n        \"height\": 850\r\n    },\r\n    \"subCategories\": [\r\n        {\r\n            \"subCategoryId\": 12\r\n        }\r\n    ],\r\n    \"co2Measurability\": null,\r\n    \"ecoTests\": [],\r\n    \"createdAt\": null,\r\n    \"updatedAt\": null,\r\n    \"imageLink\": \"https://jacobsenmobler.dk/images/thumbs/0818010_650.jpeg\",\r\n    \"brochureLink\": \"https://hay.dk/en/hay/furniture/seating-18d7502d/bar-stool/aas-eco-series-b2b/aas-eco-32\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

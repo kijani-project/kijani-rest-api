@@ -17,7 +17,7 @@ public class EcoTest {
   @Column(name = "eco_test_id", nullable = false)
   private Integer ecoTestId;
 
-  private String ecoTestName;
+  private String name;
 
   @ManyToMany(mappedBy = "ecoTests")
   private List<Product> products;

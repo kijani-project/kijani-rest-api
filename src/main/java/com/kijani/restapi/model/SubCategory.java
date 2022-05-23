@@ -27,7 +27,7 @@ public class SubCategory {
   @JoinColumn(name = "category_id")
   private Category category;
 
-  private String subCategoryName;
+  private String name;
 
   @ManyToMany(mappedBy = "subCategories")
   @JsonIgnore
