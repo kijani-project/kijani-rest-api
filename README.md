@@ -55,7 +55,7 @@ The app defines following CRUD APIs.
 |--------|------------------------|---------------------------------|---------------------------|
 | GET    | /designer              | Get all designers               |                           |
 | GET    | /designer/{designerId} | Get a designer by designerId    |                           |
-| POST   | /designer/             | Create a designer               |                           |
+| POST   | /designer             | Create a designer               |                           |
 | DELETE | /designer/{designerId} | Delete a designer by designerId |                           |
 
 
