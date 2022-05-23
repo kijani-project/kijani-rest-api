@@ -37,7 +37,6 @@ public class CategoryServiceImpl implements CategoryService {
     return categoryRepository.save(category);
   }
 
-  // TODO Skal ændres - Virker ikke, den fjerner alle subKategorier når den bruges.
   @Override
   public ResponseEntity<String> updateCategory(Category category) {
     Optional<Category> existingProduct = categoryRepository.findById(category.getCategoryId());

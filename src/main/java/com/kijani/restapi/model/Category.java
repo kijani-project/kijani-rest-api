@@ -27,7 +27,7 @@ public class Category {
   @JoinColumn(name = "category_id")
   private List<SubCategory> subCategories;
 
-  private String categoryName;
+  private String name;
 
   private String imageLink;
 }

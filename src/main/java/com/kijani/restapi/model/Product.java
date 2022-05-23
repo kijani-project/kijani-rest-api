@@ -66,6 +66,7 @@ public class Product {
       inverseJoinColumns = @JoinColumn(name = "eco_test_id"))
   private List<EcoTest> ecoTests = new LinkedList<>();
 
+  @Basic
   private Date createdAt; // TODO
 
   private Date updatedAt; // TODO
@@ -73,4 +74,14 @@ public class Product {
   private String imageLink;
 
   private String brochureLink;
+
+  @PrePersist
+  protected void onCreate() {
+    createdAt = new Date();
+  }
+
+  @PreUpdate
+  protected void onUpdate() {
+    updatedAt = new Date();
+  }
 }
