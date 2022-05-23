@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c6eabf65-2ce4-4c0a-b596-017844f2013e",
+		"_postman_id": "1fb5cef0-a3d2-4b71-a3a7-238c6dbb73d4",
 		"name": "SERVER CREATE  test data Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1003,7 +1003,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1012,7 +1012,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1033,7 +1033,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1042,7 +1042,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1063,7 +1063,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1072,7 +1072,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1093,7 +1093,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1102,7 +1102,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1123,7 +1123,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1132,7 +1132,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1153,7 +1153,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1162,7 +1162,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1183,7 +1183,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1192,7 +1192,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1213,7 +1213,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1222,7 +1222,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1243,7 +1243,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1252,7 +1252,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
@@ -1273,7 +1273,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://20.224.83.97/designer",
+							"raw": "http://20.224.83.97/designers",
 							"protocol": "http",
 							"host": [
 								"20",
@@ -1282,7 +1282,7 @@
 								"97"
 							],
 							"path": [
-								"designer"
+								"designers"
 							]
 						}
 					},
