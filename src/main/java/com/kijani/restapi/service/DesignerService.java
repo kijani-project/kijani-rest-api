@@ -10,7 +10,6 @@ import java.util.List;
  */
 public interface DesignerService {
 
-
   Designer findDesigner(int designerId);
 
   Designer createDesigner(Designer designer);

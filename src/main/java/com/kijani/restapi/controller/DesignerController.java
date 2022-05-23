@@ -1,9 +1,6 @@
 package com.kijani.restapi.controller;
 
 import com.kijani.restapi.model.Designer;
-import com.kijani.restapi.model.Product;
-import com.kijani.restapi.model.ProductEcoLabel;
-import com.kijani.restapi.model.SubCategory;
 import com.kijani.restapi.service.DesignerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
