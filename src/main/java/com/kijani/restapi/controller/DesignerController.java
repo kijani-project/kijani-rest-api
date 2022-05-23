@@ -13,7 +13,7 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/designer")
+@RequestMapping("/designers")
 public class DesignerController {
 
   @Autowired DesignerService designerService;
