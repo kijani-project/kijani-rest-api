@@ -66,8 +66,7 @@ public class Product {
       inverseJoinColumns = @JoinColumn(name = "eco_test_id"))
   private List<EcoTest> ecoTests = new LinkedList<>();
 
-  @Basic
-  private Date createdAt; // TODO
+  @Basic private Date createdAt; // TODO
 
   private Date updatedAt; // TODO
 
