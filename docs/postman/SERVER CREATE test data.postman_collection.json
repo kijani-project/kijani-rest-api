@@ -230,7 +230,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryName\": \"Kontor\",\r\n    \"imageLink\": \"https://usercontent.one/wp/www.paustianweekly.com/wp-content/uploads/2019/01/R5Q9636_50.jpg?media=1637679518\"\r\n}",
+							"raw": "{\r\n    \"categoryName\": \"Kontor\",\r\n    \"imageLink\": \"https://migogaalborg.dk/wp-content/uploads/2020/09/Scan-Office-6-1400x840.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -290,7 +290,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryName\": \"Uddannelse\",\r\n    \"imageLink\": \"https://erhvervsindretning.dk/wp-content/uploads/2020/03/undervisningslokale_efter.jpg\"\r\n}",
+							"raw": "{\r\n    \"categoryName\": \"Uddannelse\",\r\n    \"imageLink\": \"https://scx1.b-cdn.net/csz/news/800a/2020/grouptableso.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
