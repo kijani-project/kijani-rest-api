@@ -1,5 +1,6 @@
 package com.kijani.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,5 +25,6 @@ public class Designer {
   private String imageLink;
 
   @ManyToMany(mappedBy = "designers")
+  @JsonBackReference
   private List<Product> products;
 }
